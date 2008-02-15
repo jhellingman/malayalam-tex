@@ -1,0 +1,66 @@
+% mmtrmacs -- macros for Malayalam text in transcription
+% (c) 1993 Jeroen Hellingman
+% last edit: 10-JAN-1993
+
+\ifx\mmtrmacsloaded\relax\endinput\else\let\mmtrmacsloaded=\relax\fi
+
+%%%%%% nothing special to start Malayalam transcription
+
+\def\mmtr{}
+
+%%%%%%  we need the mm-fonts for dotted circle and ornamental star
+
+\def\dotcircle{{\mm\char0}}
+\def\ornstar{{\mm\char255}}
+
+%%%%%% make math-mode available
+
+\def\math{$}
+\def\Math{$$}
+\def\dollar{\$}
+\def\lbrace{{\char"7B}}
+\def\rbrace{{\char"7D}}
+\def\bslash{{\char"5C}}
+
+%%%%%% accent-jiggling
+
+% double dot below accent (uses umlaut)
+\def\dd#1{\putaccentbelow{\char"7F}{#1}}
+% ring below accent
+\def\r#1{\putaccentbelow{\char"17}{#1}}
+% override default TeX definitions
+%\def\`#1{\putaccentontop{\char"12}{#1}}
+%\def\'#1{\putaccentontop{\char"13}{#1}}
+%\def\v#1{\putaccentontop{\char"14}{#1}}
+%\def\u#1{\putaccentontop{\char"15}{#1}}
+%\def\=#1{\putaccentontop{\char"16}{#1}}
+
+\def\rii{\putaccentontop{\char"16}{\d r}}
+\def\lii{\putaccentontop{\char"16}{\d l}}
+\def\Rii{\putaccentontop{\char"16}{\d R}}
+\def\Lii{\putaccentontop{\char"16}{\d L}}
+\def\RII{\Rii}
+\def\LII{\Lii}
+
+% put accent #1, which is normally put on top, centered below #2
+\def\putaccentbelow#1#2{\hskip0pt{\setbox0=\hbox{#2}\setbox1=\hbox{#1}%
+    \dimen0=.5\wd0\advance\dimen0by.5\wd1%
+    \dimen1=\dp0\advance\dimen1by\ht1\advance\dimen1by.2ex%
+    \dimen3=.5\wd0\advance\dimen3by-.5\wd1%
+    \setbox2=\hbox{\box0\kern-\dimen0\lower\dimen1\box1\kern\dimen3}%
+    \dimen4=\dp2%
+    \advance\dimen4by-1.3ex% adjust depth of box
+    \dp2=\dimen4%
+    \box2}}
+
+% put accent #1 centered on top of #2
+\def\putaccentontop#1#2{\hskip0pt{\setbox0=\hbox{#2}\setbox1=\hbox{#1}%
+    \dimen0=.5\wd0\advance\dimen0by.5\wd1%
+    \dimen1=\ht0\advance\dimen1by-1ex% was: .45em%
+    \dimen3=.5\wd0\advance\dimen3by-.5\wd1%
+    \box0\kern-\dimen0\raise\dimen1\box1\kern\dimen3}}
+
+%%%%%% That's all
+
+\endinput
+

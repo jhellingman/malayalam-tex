@@ -1,0 +1,91 @@
+
+Frequently asked questions about Malayalam-TeX and their answers
+
+1.  What is Malayalam-TeX?
+
+    Malayalam-TeX is a package to be used together with the TeX Typesetting
+    system to typeset the Malayalam language of South India. The included
+    Malayalam fonts cannot be used with other software, without a lot of
+    hard work and are not in PostScript or TrueType format.
+
+2.	Do you also have TrueType and PostScript Malayalam Fonts?
+
+	Yes, I have, but they are not yet ready for distribution. Don't ask me,
+	I will announce them.
+
+3.  How can I get Malayalam-TeX?
+
+    by anonymous FTP. You can locate sites that have Malayalam-TeX by going
+    to <http:\\www.shareware.com> in your favourite web browser and search
+    for Malayalam. The current version is complete with the Metafont sources.
+   
+    If you download this, please send me a note to tell me how you are using it.
+
+    Jeroen Hellingman             	E-mail: <jehe@kabelfoon.nl>
+    Aletta Jacobsstraat 5           Tel: +31 347 373935
+    3404 XD IJsselstein             Bank: PostBank Amsterdam,
+    The Netherlands                 Account No: 5025409.
+
+	If my E-mail changes, I will make it known at <http:\\www.four11.com>
+
+4.  What does Malayalam-TeX cost?
+
+	Nothing, except for your own effort and time to get to know it. I however
+	retain the copyright, and would certainly appreciate it if you let me
+	know your experiences or send me any works you create with it.
+	
+5.  Can Malayalam-TeX be used on system X?
+
+    This depends on 2 factors.
+    a.  is TeX available on system X.
+    b.  an ANSI C compiler is available on system X.
+
+    Malayalam-TeX has been used successfully on Atari-ST, MS-DOS, Mac, and 
+    UNIX machines.
+
+6.  How do I enter Malayalam?
+
+    Malayalam is entered in a simple to learn ASCII transcription. In this
+    transcription the Malayalam alphabet in this transcription is:
+
+    a aa i ii u uu R RR L LL e ee ai o oo au a.m a.h
+    ka kha ga gha "na ca cha ja jha ~na .ta .tha .da .dha .na
+    ta tha da dha na pa pha ba bha ma ya ra .ra la va sha .sa
+    sa ha .la zha.
+
+    The begin and end of Malayalam transcription is indicated by $-signs
+
+7.  What about scientific transcription?
+
+    Scientific transcription (i.e. with the dots and macrons) can be derived
+    from the same ASCII transcription, by changing the single $ delimiters into
+    double $$ delimitors.
+
+8.  How can I change the Malayalam transcription?
+
+    The transcription is defined in tables in the files mmr.trs (for
+    modern script), mm.trs (for traditional script) and mm.pat (for
+    scientific transcription). By editing those files, you can change the
+    transcription as you wish.
+
+    Alternatively, you can use the patc utility, included in the package
+    to translate your transcription to the standard Malayalam-TeX transcription,
+    by defining a new pattern file. An example pattern file (ack2mm.pat) which
+    translates a commonly used transcription to Malayalam-TeX transcription
+    is included in the package.
+
+9.  What about other Indian languages?
+
+    Malayalam-TeX has been tested together with Frans Velhuis' devnag font
+    for Devanagari and Rigdeways Tamil fonts. Files and instructions for
+    using those fonts smoothlessly together with Malayalam-TeX are included
+    in the package. I am currently working on an Oriya version.
+    
+10. What if I still have more questions?
+
+    A full manual is included in the package in PostScript and TeX format,
+    print it and read it. If you still have more questions
+    contact the author, his address is given in the answer to question 2.
+
+
+[End.]

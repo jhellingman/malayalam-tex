@@ -1,0 +1,105 @@
+% mmqfont.tex -- load fonts for Malayalam TeX (quickly, only essentials)
+% copyright 1993 Jeroen Hellingman
+% last edit: 02-JAN-1993
+
+\ifx\mmfontsloaded\relax\endinput\else\let\mmfontsloaded=\relax\fi
+
+%%%%%% fonts (use only the most `essential', the others will be replaced)
+
+\font\mmf=mm10                  % Malayalam Regular 10pt
+\font\mmsf=mmz10                % Malayalam Regular 10pt Subscript
+
+\font\twelvemmf=mm12            % Malayalam Regular 12pt
+\font\twelvemmsf=mmz12          % Malayalam Regular 12pt Subscript
+\font\twelverm=cmr12
+
+%%%%%% Replacements for the other fonts:
+
+\let\seventeenmmf=\twelvemmf    % Malayalam Regular 17pt
+\let\seventeenmmsf=\twelvemmsf  % Malayalam Regular 17pt Subscript
+\let\seventeenrm=\twelverm
+
+\let\sixmmf=\mmf                % Malayalam Regular 6pt
+\let\sixmmsf=\mmsf              % Malayalam Regular 6pt Subscript
+\let\sixrm=\rm
+
+\let\eightmmf=\mmf              % Malayalam Regular 8pt
+\let\eightmmsf=\mmsf            % Malayalam Regular 8pt Subscript
+
+\let\mmbf=\mmf                  % Malayalam Bold 10pt
+\let\mmbsf=\mmsf                % Malayalam Bold 10pt Subscript
+\let\mmslf=\mmf                 % Malayalam Slanted 10pt
+\let\mmslsf=\mmsf               % Malayalam Slanted 10pt Subscript
+\let\mmcf=\mmf                  % Malayalam Calligraphic Regular 10pt
+\let\mmcsf=\mmsf                % Malayalam Calligraphic Regular 10pt Subscript
+\let\mmcbf=\mmf                 % Malayalam Calligraphic Bold 10pt
+\let\mmcbsf=\mmsf               % Malayalam Calligraphic Bold 10pt Subscript
+\let\mmcslf=\mmf                % Malayalam Calligraphic Slanted 10pt
+\let\mmcslsf=\mmsf              % Malayalam Calligraphic Slanted 10pt Subscript
+
+\let\twelvemmsf=\twelvemmsf     % Malayalam Regular 12pt Subscript
+\let\twelvemmbf=\twelvemmf      % Malayalam Bold 12pt
+\let\twelvemmbsf=\twelvemmsf    % Malayalam Bold 12pt Subscript
+\let\twelvemmslf=\twelvemmf     % Malayalam Slanted 12pt
+\let\twelvemmslsf=\twelvemmsf   % Malayalam Slanted 12pt Subscript
+\let\twelvemmcf=\twelvemmf      % Malayalam Calligraphic Regular 12pt
+\let\twelvemmcsf=\twelvemmsf    % Malayalam Calligraphic Regular 12pt Subscript
+\let\twelvemmcbf=\twelvemmf     % Malayalam Calligraphic Bold 12pt
+\let\twelvemmcbsf=\twelvemmsf   % Malayalam Calligraphic Bold 12pt Subscript
+\let\twelvemmcslf=\twelvemmf    % Malayalam Calligraphic Slanted 12pt
+\let\twelvemmcslsf=\twelvemmsf  % Malayalam Calligraphic Slanted 12pt Subscript
+\let\twelvebf=\twelverm
+\let\twelvesl=\twelverm
+
+\let\seventeenmmcf=\seventeenmmf        % Malayalam Calligraphic Regular 17pt
+\let\seventeenmmcsf=\seventeenmmsf      % Malayalam Calligraphic Regular 17pt Subscript
+\let\seventeenmmbf=\seventeenmmf        % Malayalam Bold 17pt
+\let\seventeenmmbsf=\seventeenmmsf      % Malayalam Bold 17pt Subscript
+\let\seventeenmmcbf=\seventeenmmf       % Malayalam Calligraphic Bold 17pt
+\let\seventeenmmcbsf=\seventeenmmsf     % Malayalam Calligraphic Bold 17pt Subscript
+\let\seventeenbf=\seventeenrm
+
+%%%%%% font-selection macros
+
+\def\sixmmr{\let\mmcurf=\sixmmf\let\mmcursf=\sixmmsf\let\mmcurrm=\sixrm
+  \mmcbls=7.8pt\ifmmmode\setmm\fi}
+
+\def\eightmmr{\let\mmcurf=\eightmmf\let\mmcursf=\eightmmsf\let\mmcurrm=\sevenrm
+  \mmcbls=10.5pt\ifmmmode\setmm\fi}
+
+\def\mmr{\let\mmcurf=\mmf\let\mmcursf=\mmsf\let\mmcurrm=\rm
+  \mmcbls=13pt\ifmmmode\setmm\fi}
+\def\mmsl{\let\mmcurf=\mmslf\let\mmcursf=\mmslsf\let\mmcurrm=\sl
+  \mmcbls=13pt\ifmmmode\setmm\fi}
+\def\mmb{\let\mmcurf=\mmbf\let\mmcursf=\mmbsf\let\mmcurrm=\bf
+  \mmcbls=13pt\ifmmmode\setmm\fi}
+\def\mmc{\let\mmcurf=\mmcf\let\mmcursf=\mmcsf\let\mmcurrm=\rm
+  \mmcbls=13pt\ifmmmode\setmm\fi}
+\def\mmcsl{\let\mmcurf=\mmcslf\let\mmcursf=\mmcslsf\let\mmcurrm=\sl
+  \mmcbls=13pt\ifmmmode\setmm\fi}
+\def\mmcb{\let\mmcurf=\mmcbf\let\mmcursf=\mmcbsf\let\mmcurrm=\bf
+  \mmcbls=13pt\ifmmmode\setmm\fi}
+
+\def\twelvemmr{\let\mmcurf=\twelvemmf\let\mmcursf=\twelvemmsf\let\mmcurrm=\twelverm
+  \mmcbls=15.6pt\ifmmmode\setmm\fi}
+\def\twelvemmsl{\let\mmcurf=\twelvemmslf\let\mmcursf=\twelvemmslsf\let\mmcurrm=\twelvesl
+  \mmcbls=15.6pt\ifmmmode\setmm\fi}
+\def\twelvemmb{\let\mmcurf=\twelvemmbf\let\mmcursf=\twelvemmbsf\let\mmcurrm=\twelvebf
+  \mmcbls=15.6pt\ifmmmode\setmm\fi}
+\def\twelvemmc{\let\mmcurf=\twelvemmcf\let\mmcursf=\twelvemmcsf\let\mmcurrm=\twelverm
+  \mmcbls=15.6pt\ifmmmode\setmm\fi}
+\def\twelvemmcsl{\let\mmcurf=\twelvemmcslf\let\mmcursf=\twelvemmcslsf\let\mmcurrm=\twelvesl
+  \mmcbls=15.6pt\ifmmmode\setmm\fi}
+\def\twelvemmcb{\let\mmcurf=\twelvemmcbf\let\mmcursf=\twelvemmcbsf\let\mmcurrm=\twelvebf
+  \mmcbls=15.6pt\ifmmmode\setmm\fi}
+
+\def\seventeenmmr{\let\mmcurf=\seventeenmmf\let\mmcursf=\seventeenmmsf\let\mmcurrm=\seventeenrm
+  \mmcbls=22.5pt\ifmmmode\setmm\fi}
+\def\seventeenmmc{\let\mmcurf=\seventeenmmcf\let\mmcursf=\seventeenmmcsf\let\mmcurrm=\seventeenrm
+  \mmcbls=22.5pt\ifmmmode\setmm\fi}
+\def\seventeenmmb{\let\mmcurf=\seventeenmmbf\let\mmcursf=\seventeenmmbsf\let\mmcurrm=\seventeenbf
+  \mmcbls=22.5pt\ifmmmode\setmm\fi}
+\def\seventeenmmcb{\let\mmcurf=\seventeenmmcbf\let\mmcursf=\seventeenmmcbsf\let\mmcurrm=\seventeenbf
+  \mmcbls=22.5pt\ifmmmode\setmm\fi}
+
+%%%%%% end of mmqfont.tex

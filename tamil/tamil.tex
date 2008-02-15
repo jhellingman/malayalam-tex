@@ -1,0 +1,44 @@
+% tamil.tex -- guide for using wntml10 with Malayalam-TeX
+% edit: 25-DEC-1992, 29-OCT-1997
+
+\input tmlmacs
+\input mmtrmacs
+
+\beginsection How To Type Tamil
+
+Because all the ingredients where available and easily adaptable to
+Malayalam-\TeX, I decided to add the capability to typeset Tamil. The
+font used is {\tt wntml10}, available free from Washington State
+University. All you have to do to be able to type Tamil is say
+
+\medskip
+{\tt\bslash input tmlmacs}
+\medskip
+
+somewhere near the beginning of your document. Then you can enter
+{\it Tamil-mode} with {\tt<{}tm>} and leave it with {\tt<{}/tm>}.
+
+The following table shows the character(s) you have to type to produce
+a Tamil character.
+
+\bigskip
+\input tmltrans
+\bigskip
+
+When you use Tamil in your document, you have to run it once more
+through a pre-processor, to replace the transcription for \TeX-commands
+that typeset the Tamil characters. Say
+
+\medskip
+{\tt patc -p tm2tex.pat {\it input-file output-file}}
+\medskip
+to pre-process Tamil.
+
+If you
+have lots of text available in another transcription, you can convert
+it with {\tt patc} to this transcription. two pattern-files are
+provided. {\tt adami2tm.pat} translates the ADAMI transcription scheme,
+and {\tt wntml2tm.pat} translates the original transcription used
+at W.S.U.
+
+\endinput

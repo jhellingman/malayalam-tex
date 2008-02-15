@@ -1,0 +1,161 @@
+
+Subject: UNICODE-tools/SGML for language tagging in UNICODE
+
+
+Since I am trying to process several languages in TeX at the same
+time, and getting a bit fed up of several preprocessors, etc.
+I want to make one universal, table driven pre-processor in awaitance of
+a TeX that really handles things correctly. I also want to have
+it produce Unicode files so that I have a good standard for storage, file
+exchange, editing, and so on.
+
+I think (dream?) of some tools to help me in this work.
+
+transcribe
+    translate to/from transcription in ASCII to Unicode
+    given some transcription tables for the languages/scripts
+    used in the document. It should do much more than placing 00 in front
+    of every byte, also in English. It should replace quotes, dashes
+    etc for the correct signs, interpret TeX commands for accented
+    letters, and so on.
+pretex
+    pre-process a unicode file for TeX, given some script tables
+    that describe the scripts used as it is encoded in a TeX-font
+sorttext
+    sort a unicode file according to the rules of a given language,
+    on a line by line or paragraph by paragraph base.
+atou
+    create `unicode' files by placing 00 in front of every byte.
+utoa
+    create `ascii' files by stripping MS-byte.
+
+
+In the original files I create (in ASCII), I want to tag the text with
+SGML-style tags indicating the languages used. Transcribe reads
+this and translates my transcription to appropriate Unicode characters.
+(Including replacing TeX commands for accented letters for appropriate
+accents/accented characters in Unicode.) Given a transcript file for
+that language.
+A transcript file includes a list of letters and their UNICODE-values
+It knows how to handle the syllabic nature of the script, although it is
+transcribed in an alphabetic script.
+The default language is english (but not english.american).
+
+Need to decide on file formats and contents of transcript files
+
+I can sort the resulting files with sorttext, given a sort-key for a
+certain language.
+
+Need to decide on file formats and contents of sort-key files
+
+I can pre-process the files for TeX with pretex, which will turn the files
+into ASCII again, but places codes for glyphs and font changes as
+necessary for non-latin scripts, as indicated in the script file.
+For latin languages it could take care of all kinds of conventions, like the
+use of ligatures, hyphenation, spacing after sentences etc. The tags could be
+used by spell checkers.
+
+Need to decide on file formats and contents of script files (defining
+context dependent behaviour of characters, locations of glyphs in fonts,
+etc.)
+
+----
+
+SGML-style Language tags in UNICODE
+
+how to? (are the indicators floating marks or block formers?)
+
+<malayalam>Malayalam text</malayalam>
+<block language=malayalam>Malayalam text</block>
+
+it will keep those language-markers in the UNICODE file.
+
+known languages: (languages are sometimes known in several dialects or
+otherwise variations, I suggest some kind of standard here)
+
+dutch
+english
+english.american
+english.phonetic
+french
+german
+german.fractur
+hindi
+hindi.transcription
+bahasa-indonesia
+malay
+malay.arabic
+malayalam
+malayalam.traditional
+malayalam.transcription
+marathi
+sanskrit
+sanskrit.transcription
+urdu
+
+unknown
+unknown.transcribed
+
+----
+
+UNICODE representation of Malayalam
+
+U+0D00 -- U+0D7F
+
+structure assumed in parsing:
+
+vowel
+consonant
+vowel-sign
+virama
+diacritic
+joiner
+non-joiner
+other
+
+syntax:
+
+primary ::== ( <consonant> | <vowel> ) [diacritic]
+secondary ::== ( <vowel-sign> | <virama> ) [diacritic]
+consonant-cluster ::== <primary> { [<join>|<non-join>] <virama> <primary> } | <other>
+modifiers ::== { [<join>] <secondary> }
+syllabe ::== <consonant-cluster> [<modifiers>]
+text ::== { <syllabe> }
+
+semantics:
+
+The algorithm reads a syllabe from the string.
+
+build-syllabe syllabe =
+    if prebuild syllabe
+        glyphs = prebuild syllabe
+    else
+        cluster-glyphs, rest-modifiers = build-cluster cluster with modifiers
+        glyphs = apply rest-modifiers to cluster-glyphs
+    endif
+
+build-cluster cluster with modifiers =
+    if prebuild cluster
+        glyphs = prebuild syllabe
+    else
+        split-off final ya, ra, la, try again
+    else
+        split-off front ra (for repham), try again
+    else
+        split first letter from
+        build-syllabe first-part with virama
+        build-syllabe second-part with modifiers
+        rest-modifiers = nil
+    endif
+
+apply modifiers to glyphs =
+    apply first-modifier to glyphs
+    apply rest-of-modifiers to glyphs
+
+
+
+
+The algorithm ignores joins, non-join will cause virama's to be
+used
+
+<eof>

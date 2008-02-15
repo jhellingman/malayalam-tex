@@ -1,0 +1,156 @@
+% mm.trs --- Malayalam transcription definition for TeX pre-processor
+% Copyright 1992, 1998 Jeroen Hellingman
+%
+% History:
+%   04-MAY-1998 minor changes in transcription scheme
+%   13-SEP-1995 updated for new transcription scheme
+%   19-DEC-1992
+%
+% This .TRS file defines the transcription used in the input text.
+% It translates (sequences of) ASCII-characters (patterns) 
+% into the internal codes of the pre-processor.
+% You should never change the (UNICODE derived) codes of the letters,
+% but you can redefine the transcription if you take care that the
+% table does not define a pattern twice, or that it is ambigious
+% otherwise.
+
+@atbegin "<malayalam>" "<ml>" "$"       % this starts Malayalam text in ASCII
+@atend   "</malayalam>" "</ml>" "$"     % this ends Malayalam text in ASCII
+
+% @table format:
+% <pattern> <space> <command> <space> [ <parameter> ][ <comment> ]
+
+@table
+
+% vowels
+
+"a"     = "\d05"                % a
+"aa"    = "\d06"                % aa
+"i"     = "\d07"                % i
+"ii"    = "\d08"                % ii
+"u"     = "\d09"
+"uu"    = "\d10"
+"R"     = "\d11"                % vocalic r
+"RR"    = "\d96"                % vocalic rr
+"L"     = "\d12"                % vocalic l
+"LL"    = "\d97"                % vocalic ll
+"e"     = "\d14"
+"ee"    = "\d15"
+"ai"    = "\d16"
+"o"     = "\d18"
+"oo"    = "\d19"
+"au"    = "\d20"
+"~au"   = "\d87"                % au length mark
+
+% modifiers
+
+".m"	= "\d02"
+".h"	= "\d03"
+
+% consonants will be print with virama if no vowel follows
+
+"k"     = "\d21"
+"kh"    = "\d22"
+"g"     = "\d23"
+"gh"    = "\d24"
+"\"n"   = "\d25"                % nga
+
+"c"     = "\d26"
+"ch"    = "\d27"
+"j"     = "\d28"
+"jh"    = "\d29"
+"~n"    = "\d30"                % nya
+
+".t"	= "\d31"
+".th"	= "\d32"
+".d"	= "\d33"
+".dh"	= "\d34"
+".n"	= "\d35"
+
+"t"     = "\d36"
+"th"    = "\d37"
+"d"     = "\d38"
+"dh"    = "\d39"
+"n"     = "\d40"
+"..n"	= "\d40"
+
+"p"     = "\d42"
+"ph"    = "\d43"
+"f"     = "\d43"
+"b"     = "\d44"
+"bh"    = "\d45"
+"m"     = "\d46"
+
+"y"     = "\d47"
+"r"     = "\d48"
+".r"    = "\d49"
+"..t"	= "\d49"
+"l"     = "\d50"
+".l"    = "\d51"
+"zh"    = "\d52"
+"v"     = "\d53"
+"sh"    = "\d54"
+".s"	= "\d55"
+"s"     = "\d56"
+"h"     = "\d57"
+
+"+"     = "\d77\d126"       % explicit virama (virama non-join)
+"="     = "\d127\d77"		% special virama for cillu letters (join virama)
+
+% digits
+
+"0"     = "\d102"
+"1"     = "\d103"
+"2"     = "\d104"
+"3"     = "\d105"
+"4"     = "\d106"
+"5"     = "\d107"
+"6"     = "\d108"
+"7"     = "\d109"
+"8"     = "\d110"
+"9"     = "\d111"
+
+% special (arbitrary code positions)
+
+"<<"    = "\d127"               % join
+">>"    = "\d126"               % non join
+"[]"    = "\d125"               % dotted circle
+" "     = "\d124"               % space
+"\t"    = "\d124"               % tab = space
+
+% interpunction
+
+% non malayalam things
+
+">"     f                       % eliminate ambiguities
+"\\"    t                       % copy TeX command
+"^"     f                       % forget about capital letters
+"\\$"   p "\\$"
+"%"     s                       % skip comment
+"{"     p "{"
+"}"     p "}"
+"\n"    p "\n"                  % newline
+
+% things borrowed from roman
+
+"."     p "{\\RMF.}"
+","     p "{\\RMF,}"
+":"     p "{\\RMF:}"
+";"     p "{\\RMF;}"
+"`"     p "{\\RMF`}"
+"``"    p "{\\RMF``}"
+"'"     p "{\\RMF'}"
+"''"    p "{\\RMF''}"
+"-"     p "{\\RMF-}"
+"--"    p "{\\RMF--}"
+"---"   p "{\\RMF---}"
+"?"     p "{\\RMF?}"
+"!"     p "{\\RMF!}"
+"("     p "{\\RMF(}"
+")"     p "{\\RMF)}"
+"["     p "{\\RMF[}"
+"]"     p "{\\RMF]}"
+"/"     p "{\\RMF/}"
+"\\%"   p "{\\RMF\\%}"
+
+@end

@@ -1,0 +1,83 @@
+@hindi
+% dngtrans.dng -- Devanagari transcription table
+% Copyright 1993, 1995 Jeroen Hellingman
+%
+% History:
+%   23-NOV-1995 Updated for new transcription scheme (JH)
+%   07-JAN-1993 Created (Jeroen Hellingman)
+
+\bgroup
+\def\dngstrut{\vtop to4pt{}\vbox to10pt{}}
+\def\q{\quad\hfill}
+\def\x{\vrule\ }
+\def\xx{\vrule width.8pt}
+\offinterlineskip
+\halign{\dngstrut\xx\ \tt#\q&\x#\q&\x#\q\xx\ &\tt#\q&\x#\q&\x#\q\xx\ &\tt#\q&\x#\q&\x#\q\xx\cr
+\noalign{\hrule height.8pt}
+OM  & {\dn .o}  & {\dntr O\dots M}  &
+ka, qa  & {\dn ka, qa} & {\dntr ka, qa}  &
+pa  & {\dn pa}  & {\dntr pa}  \cr
+a  & {\dn a}  & {\dntr a}   &
+kha, .kha & {\dn Ka, .Ka} & {\dntr kha, {\kh}a}  &
+pha, fa  & {\dn Pa, fa}  & {\dntr pha, fa}  \cr
+*  & {\dn a}  & {\dntr }   &
+ga, .ga  & {\dn ga, .ga} & {\dntr ga, {\g}a}  &
+ba  & {\dn ba}  & {\dntr ba}  \cr
+aa  & {\dn A}  & {\dntr \=a}  &
+gha  & {\dn Ga}  & {\dntr gha}  &
+bha  & {\dn Ba}  & {\dntr bha}  \cr
+i  & {\dn i}  & {\dntr i}   &
+n"a  & {\dn "na}  & {\dntr \.na}  &
+ma  & {\dn ma}  & {\dntr ma}  \cr
+ii  & {\dn I}  & {\dntr {\=\i}}  &
+ca  & {\dn ca}  & {\dntr ca}  &
+ya  & {\dn ya}  & {\dntr ya}  \cr
+u  & {\dn u}  & {\dntr u}   &
+cha  & {\dn Ca}  & {\dntr cha}  &
+ra  & {\dn ra}  & {\dntr ra}  \cr
+uu  & {\dn U}  & {\dntr \=u}  &
+ja, za  & {\dn ja, za} & {\dntr ja, za}  &
+la  & {\dn la}  & {\dntr la}  \cr
+R  & {\dn .r}  & {\dntr \d r}          &
+jha  & {\dn Ja}  & {\dntr jha}  &
+va  & {\dn va}  & {\dntr va}  \cr
+RR  & {\dn .R}  & {\dntr {\rii}}  &
+n\~{}a  & {\dn ~na}  & {\dntr \~na}  &
+sha  & {\dn "sa}  & {\dntr \'sa}  \cr
+L  & {\dn .l}  & {\dntr \d l}          &
+.ta  & {\dn .ta}  & {\dntr \d ta}  &
+.sa  & {\dn .sa}  & {\dntr \d sa}  \cr
+LL  & {\dn .L}  & {\dntr {\lii}}  &
+.tha  & {\dn .Ta} & {\dntr \d tha}  &
+sa  & {\dn sa}  & {\dntr sa}  \cr
+e  & {\dn e}  & {\dntr e}   &
+.da, .ra & {\dn .da, Ra} & {\dntr \d da, \d ra}  &
+ha  & {\dn ha}  & {\dntr ha}  \cr
+ai  & {\dn E}  & {\dntr ai}  &
+.dha, .rha & {\dn .Da, Rha} & {\dntr \d dha, \d rha} &
+.la  & {\dn La}  & {\dntr \d la}  \cr
+o  & {\dn o}  & {\dntr o}   &
+.na  & {\dn .na}  & {\dntr \d na}  &
+r"  & {\dn ~r}  & {\dntr r}  \cr
+au  & {\dn O}  & {\dntr au}  &
+ta  & {\dn ta}  & {\dntr ta}  &
+k+  & {\dn k&}  & {\dntr k}  \cr
+a.m  & {\dn aM}  & {\dntr a\d m}  &
+tha  & {\dn Ta}  & {\dntr tha}  &
+|  & {\dn |}  & {\dntr .}   \cr
+a\~  & {\dn a/}  & {\dntr \~a}  &
+da  & {\dn da}  & {\dntr da}  &
+\#  & {\dn #}  & {\dntr .}   \cr
+a.h  & {\dn a.h}  & {\dntr a\d h}  &
+dha  & {\dn Da}  & {\dntr dha}  &
+\#\#\#   & {\dn ###}  & {\dntr {\dots}}  \cr
+.e  & {\dn ~a}  & {\dntr \^e}  &
+na  & {\dn na}  & {\dntr na}  &
+@  & {\dn @}  & {\dntr .}   \cr
+.o  & {\dn ~o}  & {\dntr \^o}  &
+  &  &    &
+.a  & {\dn .a}  & {\dntr a}  \cr
+\noalign{\hrule height.8pt}
+}\egroup
+
+\endinput

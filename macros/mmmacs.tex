@@ -1,0 +1,139 @@
+% mmmacs -- macros for Malayalam TeX
+% (c) 1993 Jeroen Hellingman
+% last edit: 02-APR-1993
+%
+% History:
+%   02-APR-1993 made virama stick out halfway. (JH)
+%   12-JAN-1993 version 1.0 (Jeroen Hellingman)
+
+\ifx\mmmacsloaded\relax\endinput\else\let\mmmacsloaded=\relax\fi
+
+%%%%%% fonts
+
+\input mmfont.tex               % load fonts
+
+%%%%%% font selection
+
+\newdimen\mmcbls        % Malayalam Current BaseLineSkip
+\def\mmslant{0}         % slant factor of current Malayalam font
+\newif\ifmmmode\mmmodefalse
+
+% trick from the TeXbook, p. 375
+{\catcode`p=12 \catcode`t=12 \gdef\xxx#1pt{#1}}
+\let\getfactor=\xxx
+\def\getslant#1{\expandafter\getfactor\the\fontdimen1#1}
+
+\def\Z{\mmcursf}
+\def\RMF{\mmcurrm}
+
+\def\mm{\setmm\noexpand\mmmodetrue}
+\def\setmm{\pretolerance=9999\tolerance=5000\hyphenpenalty=10000%
+  \language=13\mmcurf\gdef\mmslant{\getslant\mmcurf}%
+  \baselineskip=\mmcbls\emergencystretch=30pt}
+
+\mmr                    % select Malayalam Regular 10pt
+
+%%%%%% glyph composing macros
+
+% put #1 centered on top of #2, taking into account \mmslant
+\def\puton#1#2{\hskip0pt{\setbox0=\hbox{#2}\setbox1=\hbox{#1}%
+    \dimen0=.5\wd0\advance\dimen0by.5\wd1%
+    \dimen1=\ht0\advance\dimen1by\dp1%
+    \dimen3=.5\wd0\advance\dimen3by-.5\wd1%
+    \dimen5=\mmslant\dimen1 % calculate correction needed for slanted fonts
+    \advance\dimen0by-\dimen5
+    \advance\dimen3by-\dimen5
+    \box0\kern-\dimen0\raise\dimen1\box1\kern\dimen3}}
+
+% put #1 to the right on top of #2, taking into account \mmslant
+\def\putrighton#1#2{\hskip0pt{\setbox0=\hbox{#2}\setbox1=\hbox{#1}%
+    \dimen0=\wd1%
+    \dimen1=\ht0\advance\dimen1by\dp1%
+    \dimen3=0pt%
+    \dimen5=\mmslant\dimen1 % calculate correction needed for slanted fonts
+    \advance\dimen0by-\dimen5
+    \advance\dimen3by-\dimen5
+    \box0\kern-\dimen0\raise\dimen1\box1\kern\dimen3}}
+
+% put #1 to the far right on top of #2, taking into account \mmslant
+% #1 will stick partly out #2, for placing virama
+\def\putfarrighton#1#2{\hskip0pt{\setbox0=\hbox{#2}\setbox1=\hbox{#1}%
+    \dimen0=0.667\wd1%
+    \dimen1=\ht0\advance\dimen1by\dp1%
+    \dimen3=-0.333\wd1%
+    \dimen5=\mmslant\dimen1 % calculate correction needed for slanted fonts
+    \advance\dimen0by-\dimen5
+    \advance\dimen3by-\dimen5
+    \box0\kern-\dimen0\raise\dimen1\box1\kern\dimen3}}
+
+\def\mmV#1{\putfarrighton{\N{.8}{\<77>}}{#1}}           % place virama
+
+% put #1 centered underneath #2, taking into account \mmslant
+\def\putbelow#1#2{\hskip0pt{\setbox1=\hbox{#1}\setbox0=\hbox{#2}%
+    \dimen0=.5\wd0\advance\dimen0by.5\wd1%
+    \dimen1=\dp0\advance\dimen1by\ht1%
+    \dimen3=.5\wd0\advance\dimen3by-.5\wd1%
+    % test: if #1 wider than #2, kern 0.5(wd1-wd0) before, and idem after extra.
+    \ifdim\wd1>\wd0\dimen7=\wd1\advance\dimen7by-\wd0%
+        \hbox{}\kern0.5\dimen7%
+        \advance\dimen3by0.5\dimen7%
+    \fi
+    \dimen5=-\mmslant\dimen1 % calculate correction needed for slanted fonts
+    \advance\dimen0by-\dimen5
+    \advance\dimen3by-\dimen5
+    \box0\kern-\dimen0\lower\dimen1\box1\kern\dimen3}}
+\def\B#1#2{\putbelow{#2}{#1}}
+
+% put #1 right aligned underneath #2, taking into account \mmslant
+\def\putrightbelow#1#2{\hskip0pt{\setbox1=\hbox{#1}\setbox0=\hbox{#2}%
+    \dimen1=\dp0\advance\dimen1by\ht1%
+    % test: if #1 wider than #2, kern wd1-wd0 extra.
+    \ifdim\wd1>\wd0\dimen0=\wd1\advance\dimen0by-\wd0\kern\dimen0\fi
+    \dimen5=-\mmslant\dimen1 % calculate correction needed for slanted fonts
+    \box0\kern-\wd1%
+      \ifdim\dimen5=0pt\else\kern\dimen5\fi % avoid unneccessary kerns
+      \lower\dimen1\box1
+      \ifdim\dimen5=0pt\else\kern-\dimen5\fi}}
+
+% lower height of box #2 with #1
+% to be used in conjunction with \M to construct consonant clusters
+\def\R#1#2{\setbox0=\hbox{#2}%
+  \dimen0=\ht0\advance\dimen0by-#1%
+  \ht0=\dimen0\box0}
+
+% lower glyph #2 with #1 ex
+% to be used to lower the virama sign when it is placed on top of a glyph
+\def\N#1#2{\setbox0=\hbox{\lower#1ex\hbox{#2}}\dp0=0pt\box0}
+
+%%%%%% single letter commands
+
+\def\D#1{{\mm\char#1}}          % show single Malayalam characters
+\def\C{\char}
+\def\K#1{\kern#1em}
+\def\T{\puton}
+\def\Q#1#2{\putrighton{#2}{#1}}
+\def\M#1#2{\putrightbelow{#2}{#1}}
+\def\X{\leavevmode\hbox}
+\def\<#1>{\leavevmode{\char#1}}
+
+%%%%%% digit usage
+
+\newif\ifmmfigs\mmfigsfalse
+
+\def\mmfigures{\mmfigstrue}
+\def\rmfigures{\mmfigsfalse}
+
+\def\mmzero{\ifmmfigs\<102>\else{\RMF 0}\fi}
+\def\mmone{\ifmmfigs\<103>\else{\RMF 1}\fi}
+\def\mmtwo{\ifmmfigs\<104>\else{\RMF 2}\fi}
+\def\mmthree{\ifmmfigs\<105>\else{\RMF 3}\fi}
+\def\mmfour{\ifmmfigs\<106>\else{\RMF 4}\fi}
+\def\mmfive{\ifmmfigs\<107>\else{\RMF 5}\fi}
+\def\mmsix{\ifmmfigs\<108>\else{\RMF 6}\fi}
+\def\mmseven{\ifmmfigs\<109>\else{\RMF 7}\fi}
+\def\mmeight{\ifmmfigs\<110>\else{\RMF 8}\fi}
+\def\mmnine{\ifmmfigs\<111>\else{\RMF 9}\fi}
+
+\endinput
+
+%%%%%% end of mmmacs

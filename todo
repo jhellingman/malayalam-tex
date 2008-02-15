@@ -1,0 +1,86 @@
+
+Still to do as of 26-APR-1997:
+
+BUGS: (will be repaired as soon as possible)
+
+Preprocessor
+
+*   Latest version of mm still gives compilation problems on MS-DOS machines
+
+*   Patc has some memory leaks
+
+
+Tex Macros:
+
+*   TeX sometimes seems to break in between \hboxes, which are used to build
+    characters. This causes unwanted word breaks, no satisfying
+    solution found yet. (I think about letting the pre-processor place
+    discretionary hyphens between syllables)
+
+*   When building up characters from parts, rounding errors in the DVI
+    driver cause parts to be shifted one pixel to the left or right
+    occasionally, this looks ugly with $ppa$, $yya$, $cca$ etc. The only
+    remedy I can think of now is to build those conjuncts in Metafont
+    as one glyph. (solved by creating prebuild conjuncts in Metafont for
+    all conjuncts in the reformed script) [DONE]
+
+Font:
+
+*   Spacing is not optimal, need to change MF-code to have space before
+    as well as after each character, which depends on the shape of the
+    character (standing bar, bowl, or cusp sides)
+
+    in every character:
+    make width in beginchar equal to actual width,
+    add a macro call: spacing(before#,after#), which sets the interletter
+    space, and add in extra_endchar:
+
+    currenttransform := currenttransform shifted before;
+    w# := w# + before# + after#;
+
+FEATURES (if I get a sudden insight on how to remove them, I will)
+
+*   Pre-processed files are completely unreadable, and should not be edited.
+
+*   When you use Malayalam with macro's that issue a \message, for example,
+    \beginsection, only fully unreadable nonsense will appear on the
+    screen, but the results will be correct.
+
+*   Overful messages in Malayalam sentences are not very informative.
+
+ENHANCEMENTS (when I find the time and get encouraged to impl. them, I may)
+
+Font:
+
+*   Convert the font to TrueType and PostScript type 1 [DONE!]
+
+*   Lower the subscribed u tails, to give better appearance, parametrize
+    their height; make first bow of va, etc. look more like circle; improve
+    ya.
+
+*   Older versions of some letters.
+
+*   Design a version with thin-thick transitions as in traditional
+    type (major project, I have coded some glyphs in directory MT, to
+    give an idea)
+
+Macros:
+
+*   Create a LaTeX style definition for Malayalam
+
+Pre-processor:
+
+*   Although the font now contains all the needed punctuation marks, they
+    are still borrowed from Computer Modern, this needs to be changed. [DONE]
+
+*   Include full capabilities of patc. (8 hours)
+
+*   Better (simpler) syllable composing algorithm
+
+*   make an option to input/output Unicode, or let it work with
+    Unicode internally or as intermediate format.
+
+*   make an option to input/output ISCII text, so that text can be entered
+    in the script itself. [DONE!]
+
+<eof>

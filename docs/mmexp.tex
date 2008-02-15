@@ -1,0 +1,53 @@
+
+\input mmqmacs
+\input mmtrmacs
+\input mmxfont
+
+\font\logo=logo10
+\def\MF{{\logo METAFONT}}
+\parindent=0pt
+
+This file shows some more `experimental' settings of the parameters for
+\MF. You can define your own experimental fonts by copying one of the
+parameter files to your own file, and change the following parameters
+--~the values below come from {\tt mmc10.mf}:
+
+\bigskip
+
+{\tt\settabs\+font\_identifier := & 0.8333mm\#;andmore & \cr
+
+\+ht\# :=       & 1.667mm\#;    & {\rm height of normal characters.}\cr
+\+u\#  :=       & 0.8333mm\#;   & {\rm unit width (0.5 ht).}\cr
+\+rm\# :=       & 0.5mm\#;      & {\rm space in between characters.}\cr
+\+slant :=      & 0;            & {\rm slant of characters.}\cr
+
+\medskip
+
+\+rot :=        & 45;           & {\rm angle of pen.}\cr
+\+thick\# :=    & 0.75pt\#;     & {\rm thickness of thickest lines.}\cr
+\+thin\# :=     & 0.333pt\#;    & {\rm thickness of thinnest lines.}\cr
+\+subthick\# := & 0.550pt\#;    & {\rm thickness of thickest lines in subscribed characters.}\cr
+
+\medskip
+
+\+font\_size := & 10pt\#;       & {\rm font size as seen by \TeX.}\cr
+\+font\_identifier := & "MMC10"; & {\rm font identifier.}\cr
+}
+
+\bigskip
+
+{\parindent=-25pt\leftskip=25pt\overfullrule=0pt\raggedright
+{\xamm\mmcurrm Malayalam Experimental A 12pt: {\mm \X{\<46>\<73>}\X{\<167>\<72>} \X{\<56>}\<2>\X{\<53>}\X{\<221>}\X{\<48>}\X{\<161>}\X{\<82>}\hbox{}\X{\<160>}\X{\<21>}\<2> \X{\<18>}\X{\<48>\<72>} \X{\<46>}\X{\<80>\<249>\<62>}\X{\<38>}\X{\<56>\K{-.5}\<86>}\X{\<79>}
+\X{\<18>}\X{\<48>\<72>} \X{\<56>\<62>}\X{\<251>\<62>}\X{\<81>} \X{\<71>\<42>\<62>}\X{\<160>\<63>}\X{\<48>\<63>} \X{\<6>}\X{\<47>\<63>}\X{\<45>}\X{\<53>\<63>}\X{\<247>}\X{\<36>\<72>} \X{\<14>}\X{\<40>\<63>}\X{\<160>\<72>} \X{\<71>\<44>\<62>}\X{\<39>\<63>}\X{\<242>\<62>}\X{\<79>} \X{\<53>}\X{\<57>\<63>}\X{\<47>\<62>}{\RMF.}\smallskip}}
+{\xbmm\mmcurrm Malayalam Experimental B 12pt: {\mm \X{\<46>\<73>}\X{\<167>\<72>} \X{\<56>}\<2>\X{\<53>}\X{\<221>}\X{\<48>}\X{\<161>}\X{\<82>}\hbox{}\X{\<160>}\X{\<21>}\<2> \X{\<18>}\X{\<48>\<72>} \X{\<46>}\X{\<80>\<249>\<62>}\X{\<38>}\X{\<56>\K{-.5}\<86>}\X{\<79>}
+\X{\<18>}\X{\<48>\<72>} \X{\<56>\<62>}\X{\<251>\<62>}\X{\<81>} \X{\<71>\<42>\<62>}\X{\<160>\<63>}\X{\<48>\<63>} \X{\<6>}\X{\<47>\<63>}\X{\<45>}\X{\<53>\<63>}\X{\<247>}\X{\<36>\<72>} \X{\<14>}\X{\<40>\<63>}\X{\<160>\<72>} \X{\<71>\<44>\<62>}\X{\<39>\<63>}\X{\<242>\<62>}\X{\<79>} \X{\<53>}\X{\<57>\<63>}\X{\<47>\<62>}{\RMF.}\smallskip}}
+{\xcmm\mmcurrm Malayalam Experimental C 12pt: {\mm \X{\<46>\<73>}\X{\<167>\<72>} \X{\<56>}\<2>\X{\<53>}\X{\<221>}\X{\<48>}\X{\<161>}\X{\<82>}\hbox{}\X{\<160>}\X{\<21>}\<2> \X{\<18>}\X{\<48>\<72>} \X{\<46>}\X{\<80>\<249>\<62>}\X{\<38>}\X{\<56>\K{-.5}\<86>}\X{\<79>}
+\X{\<18>}\X{\<48>\<72>} \X{\<56>\<62>}\X{\<251>\<62>}\X{\<81>} \X{\<71>\<42>\<62>}\X{\<160>\<63>}\X{\<48>\<63>} \X{\<6>}\X{\<47>\<63>}\X{\<45>}\X{\<53>\<63>}\X{\<247>}\X{\<36>\<72>} \X{\<14>}\X{\<40>\<63>}\X{\<160>\<72>} \X{\<71>\<44>\<62>}\X{\<39>\<63>}\X{\<242>\<62>}\X{\<79>} \X{\<53>}\X{\<57>\<63>}\X{\<47>\<62>}{\RMF.}\smallskip}}
+
+{\bigmmr\mmcurrm Malayalam Big 21pt:  {\mm \X{\<46>\<73>}\X{\<167>\<72>} \X{\<56>}\<2>\X{\<53>}\X{\<221>}\X{\<48>}\X{\<161>}\X{\<82>}\hbox{}\X{\<160>}\X{\<21>}\<2> \X{\<18>}\X{\<48>\<72>} \X{\<46>}\X{\<80>\<249>\<62>}\X{\<38>}\X{\<56>\K{-.5}\<86>}\X{\<79>}
+\X{\<18>}\X{\<48>\<72>} \X{\<56>\<62>}\X{\<251>\<62>}\X{\<81>} \X{\<71>\<42>\<62>}\X{\<160>\<63>}\X{\<48>\<63>} \X{\<6>}\X{\<47>\<63>}\X{\<45>}\X{\<53>\<63>}\X{\<247>}\X{\<36>\<72>} \X{\<14>}\X{\<40>\<63>}\X{\<160>\<72>} \X{\<71>\<44>\<62>}\X{\<39>\<63>}\X{\<242>\<62>}\X{\<79>} \X{\<53>}\X{\<57>\<63>}\X{\<47>\<62>}{\RMF.}\smallskip}}
+{\bigmmo\mmcurrm Malayalam Big Outline Shadow 21pt: {\mm \X{\<46>\<73>}\X{\<167>\<72>} \X{\<56>}\<2>\X{\<53>}\X{\<221>}\X{\<48>}\X{\<161>}\X{\<82>}\hbox{}\X{\<160>}\X{\<21>}\<2> \X{\<18>}\X{\<48>\<72>} \X{\<46>}\X{\<80>\<249>\<62>}\X{\<38>}\X{\<56>\K{-.5}\<86>}\X{\<79>}
+\X{\<18>}\X{\<48>\<72>} \X{\<56>\<62>}\X{\<251>\<62>}\X{\<81>} \X{\<71>\<42>\<62>}\X{\<160>\<63>}\X{\<48>\<63>} \X{\<6>}\X{\<47>\<63>}\X{\<45>}\X{\<53>\<63>}\X{\<247>}\X{\<36>\<72>} \X{\<14>}\X{\<40>\<63>}\X{\<160>\<72>} \X{\<71>\<44>\<62>}\X{\<39>\<63>}\X{\<242>\<62>}\X{\<79>}\smallskip}}
+{\hugemmr\mmcurrm Malayalam Huge 36pt:  {\mm \X{\<46>\<73>}\X{\<167>\<72>} \X{\<56>}\<2>\X{\<53>}\X{\<221>}\X{\<48>}\X{\<161>}\X{\<82>}\hbox{}\X{\<160>}\X{\<21>}\<2>\smallskip}}
+}
+

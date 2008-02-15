@@ -1,0 +1,132 @@
+%    DNMACS.TEX
+%    TeX macros for the use of Devanagari fonts
+%
+%    Copyright (C) 1991  University of Groningen, The Netherlands
+%
+%    Author:   Frans J. Velthuis
+%    Internet: velthuis@rc.rug.nl
+%    Bitnet:   velthuis@hgrrug5
+%
+%    This program is free software; you can redistribute it and/or modify
+%    it under the terms of the GNU General Public License as published by
+%    the Free Software Foundation; either version 1, or (at your option)
+%    any later version.
+%
+%    This program is distributed in the hope that it will be useful,
+%    but WITHOUT ANY WARRANTY; without even the implied warranty of
+%    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%    GNU General Public License for more details.
+%
+%    You should have received a copy of the GNU General Public License
+%    along with this program; if not, write to the Free Software
+%    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+%
+%
+% modified by Jeroen Hellingman
+%
+% font-loading
+%
+\font\smalldn=dvng8%
+\font\ninedn=dvng9%
+\font\dvng=dvng10%
+\font\halfdn=dvng10 scaled\magstephalf
+\font\bigdn=dvng10 scaled\magstep1
+\font\largedn=dvng10 scaled\magstep2
+\font\hugedn=dvng10 scaled\magstep3
+\hyphenchar\smalldn=-1%
+\hyphenchar\ninedn=-1%
+\hyphenchar\dvng=-1%
+\hyphenchar\halfdn=-1%
+\hyphenchar\bigdn=-1%
+\hyphenchar\largedn=-1%
+\hyphenchar\hugedn=-1%
+\font\smallcr=cmr8%
+\font\ninecr=cmr9%
+\font\halfcr=cmr10 scaled\magstephalf
+\font\bigcr=cmr10 scaled\magstep1
+\font\largecr=cmr10 scaled\magstep2
+\font\hugecr=cmr10 scaled\magstep3
+%
+%
+%
+\let\rsize=\rm
+\newcount\chnum
+\newdimen\itdim
+\newdimen\dnblskip
+\newif\ifdnmode
+%
+% change some catcodes
+%
+\chnum=0%
+\loop\catcode\chnum=11%
+\ifnum\chnum<12\advance\chnum by1%
+\repeat%
+\chnum=14%
+\loop\catcode\chnum=11%
+\ifnum\chnum<31\advance\chnum by1%
+\repeat%
+\catcode127=11%}%
+%
+\def\subscr#1{\/\itdim=\lastkern
+\unkern\kern-\itdim \lower\dp0 \hbox to\itdim{#1\hfil}}
+%
+% font selecting
+%
+\def\dnsmall{\let\pdn=\smalldn\let\rsize=\smallcr%
+\dnblskip=12pt\ifdnmode\dn\fi}
+\def\dnnine{\let\pdn=\ninedn\let\rsize=\ninecr%
+\dnblskip=13pt\ifdnmode\dn\fi}
+\def\dnnormal{\let\pdn=\dvng\let\rsize=\rm%
+\dnblskip=15pt\ifdnmode\dn\fi}
+\def\dnhalf{\let\pdn=\halfdn\let\rsize=\halfcr%
+\dnblskip=16pt\ifdnmode\dn\fi}
+\def\dnbig{\let\pdn=\bigdn\let\rsize=\bigcr%
+\dnblskip=18pt\ifdnmode\dn\fi}
+\def\dnlarge{\let\pdn=\largedn\let\rsize=\largecr%
+\dnblskip=22pt\ifdnmode\dn\fi}
+\def\dnhuge{\let\pdn=\hugedn\let\rsize=\hugecr%
+\dnblskip=26pt\ifdnmode\dn\fi}
+%
+\def\dn{\dnmodetrue\pdn\baselineskip=\dnblskip%
+\def\<{\llap{\char4}}% locally redefine one macro that conflicts
+\tolerance=10000\pretolerance=10000}
+%
+% composing macro's
+%
+\def\0{\llap{\char13}}%
+\def\1{\llap{\char32}}%
+\def\2{\llap{\char92}}%
+\def\3#1w{{\char"#1}}%
+\def\4{\llap{\char123}}%
+\def\5{\llap{\char125}}%
+\def\6#1{\setbox0=\hbox{#1}#1\subscr{\char126}}%
+\def\7#1{\setbox0=\hbox{#1}#1\subscr{\char0}}%
+\def\8#1{\setbox0=\hbox{#1}#1\subscr{\char1}}%
+\def\9#1{\setbox0=\hbox{#1}#1\subscr{\char2}}%
+\def\qa#1#2{\setbox0=\hbox{#1}#1\subscr{\char253\kern1.5ex\lower1.25ex%
+\hbox{\char#2}\kern-1.5ex}}%
+\def\qb#1{\setbox0=\hbox{#1}#1\subscr{\char253}}%
+\def\qq#1{\setbox0=\hbox{#1}#1\subscr{\char94}}%
+\def\qx#1{\setbox0=\hbox{#1}#1\subscr{\char14}}%
+\def\qy#1{\setbox0=\hbox{#1}#1\subscr{\char31}}%
+\def\qz#1{\setbox0=\hbox{#1}#1\subscr{\char124}}%
+\def\qva{\kern0.5ex\2\kern-0.5ex}%
+\def\qvb{\kern1ex\0\kern-1ex}%
+\def\qvc{\kern1ex\rdt\kern-1ex}%
+\def\?{\llap{\char3}}%
+% \def\<{\llap{\char4}}% % CONFLICT !!!
+\def\rs{\rsize\thinspace}%
+\let\re=\thinspace%
+\def\rdt{\llap{\char19}}%
+%
+\def\dnnum{\let\nstyle=d}%
+\def\cmnum{\let\nstyle=r}%
+%
+% some parameters
+%
+\cmnum%
+\def\rn#1{\if\nstyle r{\rsize #1}\else#1\fi}%
+\let\pdn=\dvng%
+\dnblskip=15pt%
+%
+% end of dngmacs.tex

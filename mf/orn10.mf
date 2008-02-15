@@ -1,0 +1,146 @@
+% orn10.mf -- 10pt Ornaments
+% copyright 1993 Jeroen Hellingman
+% last edit: 16-MAR-1993
+
+mode_setup;
+
+%%%%% parameters
+
+ht# :=          1.667mm#;       % height of characters
+u#  :=          0.8333mm#;      % unit width (.5ht)
+rm# :=          0.6mm#;         % space inbetween characters
+slant :=        0;              % slant of characters
+
+rot =           45;             % angle of pen
+thick# :=       0.75pt#;        % thickness of thickest lines
+thin# :=        0.333pt#;       % thickness of thinnest lines
+subthick# :=    0.550pt#;       % thickness of thickest lines in subscribed characters
+
+hair# :=        0.2pt#;         % very thin pen for filling
+
+font_size               10pt#;
+font_identifier :=      "ORN10";
+
+%%%%%% dimensions
+
+uw# :=  0.1u#;      % unit of width
+uh# :=  0.05ht#;    % unit of height
+
+define_pixels(rm,u,uw,uh);
+define_whole_pixels(ht);
+
+%currenttransform := currenttransform shifted (.5rm, 0);
+
+%%%%%% set the remaining font parameters
+
+font_slant          := slant;
+font_quad           := 20uw#;
+font_x_height       := 20uh#;
+font_normal_space   := 14uw#;
+font_normal_stretch := 8uw#;
+font_normal_shrink  := 2uw#;
+
+%currenttransform := currenttransform slanted slant;
+
+%%%%%% pen definitions
+
+penwd# :=thick# * cosd(rot-90);
+usthick# := thick#;
+mb# := .2ht#;
+define_pixels(penwd,usthick,mb);
+define_blacker_pixels(thin,thick,subthick,hair);
+thin := max(thin,1); subthick := max(subthick,1);
+smoothing := 0;
+pickup pencircle xscaled thick yscaled thin rotated rot;
+scpenwd := pen_rt - pen_lft;
+frame_pen := savepen;
+pickup pencircle xscaled subthick yscaled thin rotated rot;
+sub_pen := savepen;
+
+%%%%%% character definitions
+
+def ornament(expr width, height) =
+    pickup pencircle scaled hair;
+    % left `wing'
+    numeric ww;        % wing-width
+    ww = .5width - 3height;
+    z1=(0,0);
+    z2=(27/88ww, 0);
+    z3'=(.5[x2,x3], .33[y2,y3]);
+    z3=(76/88ww, height);
+    z4=(88/88ww, 0);
+    z5=(x3, -y3);
+    z5'=(x3', -y3');
+    filldraw z2{right}...z3'...z3{right}...z4{down}
+                                  ...z5{left}...z5'...{left}z2 & cycle;
+    % mid ball
+    z6=(x7-15/16height, 0);
+    z7=(1/2width, 15/16height);
+    z8=(x7+15/16height, 0);
+    z9=(x7, -y7);
+    filldraw z6{up}..z7{right}..z8{down}..z9{left}..cycle;
+    % right `wing'
+    z10 = (width, 0);
+    z11 = z10 - z2;
+    z12'= z10 - z3';
+    z12 = z10 - z3;
+    z13 = z10 - z4;
+    z14 = z10 - z5;
+    z14'= z10 - z5';
+    filldraw z11{left}...z12'...z12{left}...z13{up}
+                          ...z14{right}...z14'...{right}z11 & cycle;
+    % connecting bar
+    draw z1--z10;
+    penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14);
+enddef;
+
+def sinusoide(expr width, height) =
+    pickup frame_pen;
+    numeric wn; wn = width/12;       % width of one curl
+    numeric ratio; ratio = 2*(height/width);
+    numeric curx; curx := wn;        % current position in loop
+
+    z0 = (0,0);
+    z1 = (wn, 0);
+    forsuffixes i = 2,3,4,5 :
+       curx := curx + wn;
+       z.i.a = (curx+0.25wn, (curx+.25)*ratio);
+       z.i.b = (curx+0.5wn, 0);
+       z.i.c = (curx+0.75wn, -(curx+.75)*ratio);
+       z.i.d = (curx+wn, 0);
+    endfor;
+    z99 = (width, 0);
+    z98 = (width - wn, 0);
+    draw z0---z1
+      forsuffixes i = 2,3,4 : ...z.i.a...z.i.b...z.i.c...z.i.d endfor
+      ...z5a..z5b..z5c...
+      forsuffixes i = 5,4,3,2 : (z99-z.i.d)...(z99-z.i.c)...
+                                        (z99-z.i.b)...(z99-z.i.a)... endfor
+      z98---z99;
+enddef;
+
+beginchar(0,100uw#,3uh#,3uh#) "ornament 1";
+    ornament(100uw, 3uh);
+endchar;
+
+beginchar(1,200uw#,4.5uh#,4.5uh#) "ornament 2";
+    ornament(200uw, 4.5uh);
+endchar;
+
+beginchar(2,300uw#,6uh#,6uh#) "ornament 3";
+    ornament(300uw, 6uh);
+endchar;
+
+beginchar(3,100uw#,4uh#,4uh#) "sinusoide 1";
+    sinusoide(100uw, 4uh);
+endchar;
+
+beginchar(4,200uw#,8uh#,8uh#) "sinusoide 2";
+    sinusoide(200uw, 8uh);
+endchar;
+
+beginchar(5,300uw#,10uh#,10uh#) "sinusoide 3";
+    sinusoide(300uw, 10uh);
+endchar;
+
+end.

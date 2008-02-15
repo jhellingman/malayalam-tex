@@ -1,0 +1,32 @@
+% MM2kottayam.fd
+% subcribed font definition for the Kottayam family in MM2 encoding.
+% Copyright 1997 Jeroen Hellingman
+
+\ProvidesFile{MM2kotta}[1997/04/26 Malayalam subscribed font definition]
+
+\DeclareFontFamily{MM2}{kottaz}{}
+
+\DeclareFontShape{MM2}{kottaz}{m}{n}{
+	<5> <6> <7> <8> <9> <10> <10.95>		mmcz10
+	<12> <14.4>								mmcz12
+	<17.28> <20.74> <24.88-> 				mmcz17
+}{}
+\DeclareFontShape{MM2}{kottaz}{bx}{n}{
+	<5> <6> <7> <8> <9> <10> <10.95>		mmcbz10
+	<12> <14.4>								mmcbz12
+	<17.28> <20.74> <24.88-> 				mmcbz17
+}{}
+\DeclareFontShape{MM2}{kottaz}{m}{sl}{
+	<5> <6> <7> <8> <9> <10> <10.95>		mmcslz10
+	<12> <14.4>								mmcslz12
+	<17.28> <20.74> <24.88-> 				mmcslz17
+}{}
+\DeclareFontShape{MM2}{kottaz}{bx}{sl}{   <-> ssub * kottaz/m/sl}{}
+\DeclareFontShape{MM2}{kottaz}{m}{sc}{    <-> ssub * kottaz/m/n}{}
+\DeclareFontShape{MM2}{kottaz}{m}{it}{    <-> ssub * kottaz/m/sl}{}
+\DeclareFontShape{MM2}{kottaz}{m}{itsc}{  <-> ssub * kottaz/m/sl}{}
+\DeclareFontShape{MM2}{kottaz}{m}{slsc}{  <-> ssub * kottaz/m/sl}{}
+\DeclareFontShape{MM2}{kottaz}{bx}{sc}{   <-> ssub * kottaz/bx/n}{}
+\DeclareFontShape{MM2}{kottaz}{bx}{it}{   <-> ssub * kottaz/m/sl}{}
+\DeclareFontShape{MM2}{kottaz}{bx}{itsc}{ <-> ssub * kottaz/m/sl}{}
+\DeclareFontShape{MM2}{kottaz}{bx}{slsc}{ <-> ssub * kottaz/m/sl}{}

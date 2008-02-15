@@ -1,0 +1,42 @@
+% test.adami -- test for tamil patterns
+% Jeroen Hellingman
+% edit: 22-DEC-1992, 28-OCT-1997
+
+\input tmlmacs
+
+\parindent=0pt
+
+<adami>
+a aa i ee u oo e E o O ai au q
+
+ka NGa cha NYa ta Na tha nNa pa ma ya ra la va zha La Ra na
+
+ja sha sa ha ksha
+</adami>
+
+\bigskip
+
+The following is a typical poem by Mahakavi:
+
+\medskip
+{\obeylines
+<adami>
+    `chiRu naNdu maNal meethu padam onRu keeRum
+    chilavELai athai vanthu kadal koNdu pOkum
+    kaRi choRu pothiyOdu tharukinRa pOthum
+    kadal meethu ivaL koNda payam onRu kaaNum
+
+\medskip
+
+    veRu vaana veLi meethu mazhai vanthu cheeRum
+    veRi koNda puyal ninRu karakangaL aadum
+    eRikinRa kadal enRu manitharkaL anjaar
+    ethuvanthatheninenna athai venRu chelvaar\dots'
+</adami>
+}
+\medskip
+
+    [from <adami>`puthiyathoru veedu'</adami>, published in 1989]
+
+
+\bye

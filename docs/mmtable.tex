@@ -1,0 +1,106 @@
+
+\input mmmacs
+\input mmtrmacs
+\input mmphmacs
+
+\parindent=0pt
+
+\centerline{\twelvebf Table of Malayalam letters with transcription}
+
+\bigskip
+
+\def\q{\quad\hfill}
+\def\col#1#2{\hbox{\vtop{\hsize=#1\raggedright\tolerance=10000#2}}}
+\def\malstrut{\vtop to4pt{}\vbox to10pt{}}
+\halign{\malstrut\twelvemmr#\q&\twelvemmr#\q&\tt#\q&#\q&#\q&\col{4cm}{#}\q\cr
+\col{1.75cm}{normal character shape}        &
+\col{1.75cm}{secondary form}                &
+\col{1.75cm}{\rm ASCII transcription}       &
+\col{1.75cm}{scientific transcription}      &
+\col{4cm}{remark}                       \cr
+\noalign{\hrule}
+{\mm \X{\<5>}}         &           & a         & {\mmtr a}             & {\mmtr a} is inherent in consonants. \cr
+{\mm \X{\<6>}}        & {\mm \<00>\<62>}  & aa        & {\mmtr \=a}        \cr
+{\mm \X{\<7>}}         & {\mm \<00>\<63>}   & i         & {\mmtr i}             \cr
+{\mm \X{\<7>\<87>}}        & {\mm \<00>\<64>}  & ii        & {\mmtr {\=\i}}        & older form: {\mm \<2>\X{\<48>}\<2>}, {\mm \<2>\<00>\<2>}.   \cr
+{\mm \X{\<9>}}         & {\mm \<00>\<72>}   & u         & {\mmtr u}             & irregular secundary shape.    \cr
+{\mm \X{\<9>\<87>}}        & {\mm \<00>\<73>}  & uu        & {\mmtr \=u}        & idem.                         \cr
+{\mm \X{\<11>}}         & {\mm \<00>\<75>}   & R         & {\mmtr \d r} (\r{r})     & used in Sanskrit loan words.  \cr
+{\mm \X{\<96>}}        & {\mm \M{\<00>}{\<68>}}  & RR        & {\mmtr {\rii}} (\r{\=r})  & only used in a few Sanskrit words. \cr
+{\mm \X{\<12>}}         & {\mm \<00>\X{\<12>}}     & L         & {\mmtr \d l} (\r{l})     & idem.                         \cr
+{\mm \X{\<97>}}        & {\mm \<00>\X{\<97>}}    & LL        & {\mmtr {\lii}} (\r{\=l})  & not used in any word at all. \cr
+{\mm \X{\<14>}}         & {\mm \<70>\<00>}   & e         & {\mmtr e}             \cr
+{\mm \X{\<15>}}        & {\mm \<71>\<00>}  & ee        & {\mmtr \=e}        \cr
+{\mm \X{\<70>\<14>}}        & {\mm \<70>\<70>\<00>}  & ai        & {\mmtr ai}            \cr
+{\mm \X{\<18>}}         & {\mm \<70>\<00>\<62>}   & o         & {\mmtr o}             \cr
+{\mm \X{\<18>\<62>}}        & {\mm \<71>\<00>\<62>}  & oo        & {\mmtr \=o}        \cr
+{\mm \X{\<18>\<87>}}        & {\mm \<00>\<87>}  & au        & {\mmtr au}            & now normally written {\mm \<00>\<87>}, ({\tt au"}). \cr
+\noalign{\hrule}
+{\mm \X{\<5>}\<2>}       & {\mm \<00>\<2>}    & a.m       & {\mmtr a\d m} ({\mmph a\m})  & anusvara, or {\mm \X{\<46>\<72>}\X{\<49>}\X{\<160>}\<2>}.      \cr
+{\mm \X{\<5>}\<3>}       & {\mm \<00>\<3>}    & a.h       & {\mmtr a\d h}           & visarga, or {\mm \X{\<53>\<63>}\X{\<56>}\X{\<80>\<240>}\<2>}.      \cr
+\noalign{\hrule}
+{\mm \X{\<21>}}        & {\mm \mmV{\<00>}\<21>}  & ka        & {\mmtr ka}            \cr
+{\mm \X{\<22>}}       &           & kha       & {\mmtr kha}           \cr
+{\mm \X{\<23>}}        &           & ga        & {\mmtr ga}            \cr
+{\mm \X{\<24>}}       &           & gha       & {\mmtr gha}           \cr
+{\mm \X{\<25>}}       &           & "na       & {\mmtr \.na} ({\mmph \ng a}) \cr
+\noalign{\hrule}
+{\mm \X{\<26>}}        &           & ca        & {\mmtr ca} (\v ca)    \cr
+{\mm \X{\<27>}}       &           & cha       & {\mmtr cha} (\v cha)  \cr
+{\mm \X{\<28>}}        &           & ja        & {\mmtr ja} (\v\j a)   \cr
+{\mm \X{\<29>}}       &           & jha       & {\mmtr jha} (\v\j ha) \cr
+{\mm \X{\<30>}}       &           & \~{}na    & {\mmtr \~na} ({\mmph\ny a})    \cr
+\noalign{\hrule}
+{\mm \X{\<31>}}       &           & .ta       & {\mmtr \d ta} ({\mmph\tt a})     \cr
+{\mm \X{\<32>}}      &           & .tha      & {\mmtr \d tha} ({\mmph\tt ha})   \cr
+{\mm \X{\<33>}}       &           & .da       & {\mmtr \d da} ({\mmph\dd a})     \cr
+{\mm \X{\<34>}}      &           & .dha      & {\mmtr \d dha} ({\mmph\dd ha})   \cr
+{\mm \X{\<35>}}       &           & .na       & {\mmtr \d na} ({\mmph\nn a})     \cr
+\noalign{\hrule}
+{\mm \X{\<36>}}        &           & ta        & {\mmtr ta}        \cr
+{\mm \X{\<37>}}       &           & tha       & {\mmtr tha}           \cr
+{\mm \X{\<38>}}        &           & da        & {\mmtr da}            \cr
+{\mm \X{\<39>}}       &           & dha       & {\mmtr dha}           \cr
+{\mm \X{\<40>}}        &           & na, ..na  & {\mmtr na, \b na} (\v na) \cr
+\noalign{\hrule}
+{\mm \X{\<42>}}        &           & pa        & {\mmtr pa}        \cr
+{\mm \X{\<43>}}       &           & pha, fa   & {\mmtr pha}, {\mmtr fa} \cr
+{\mm \X{\<44>}}        &           & ba        & {\mmtr ba}        \cr
+{\mm \X{\<45>}}       &           & bha       & {\mmtr bha}       \cr
+{\mm \X{\<46>}}        &           & ma        & {\mmtr ma}        \cr
+\noalign{\hrule}
+{\mm \X{\<47>}}        & {\mm \<00>\<83>}  & ya        & {\mmtr ya}        \cr
+{\mm \X{\<48>}}        & {\mm \<74>\<00>}  & ra        & {\mmtr ra}        & primary shape: {\mm \X{\<80>\hbox{}}}            \cr
+{\mm \X{\<49>}}       & {\mm \mmV{\<00>}\<49>} & .ra, ..ta  & {\mmtr \b ra} (\v ra, \dd ra), {\mmtr \b ta} & {\mm \X{\<53>}\X{\<50>\<63>}\X{\<47>} \X{\<49>}}, `large {\mmtr \b ra}'.     \cr
+{\mm \X{\<243>}}     &           & .r.ra, ..t..ta & {\mmtr \b ta}    \cr
+{\mm \X{\<50>}}        & {\mm \M{\<00>}{\<85>}}  & la        & {\mmtr la}        \cr
+{\mm \X{\<53>}}        & {\mm \<00>\K{-.5}\<86>}  & va        & {\mmtr va}        \cr
+{\mm \X{\<54>}}       &           & sha       & {\mmtr \'sa} (sha, {\mmph\sh a})   & {\mm \X{\<26>\<63>}\X{\<49>\<63>}\X{\<47>} \X{\<54>}}, `small {\mmtr \'sa}'.    \cr
+{\mm \X{\<55>}}       &           & .sa       & {\mmtr \d sa} ({\mmph\ss a})     & {\mm \X{\<53>}\X{\<50>\<63>}\X{\<47>} \X{\<55>}}, `large {\mmtr \d sa}'.      \cr
+{\mm \X{\<56>}}        &           & sa        & {\mmtr sa}        \cr
+{\mm \X{\<57>}}        &           & ha        & {\mmtr ha}        \cr
+{\mm \X{\<51>}}       &           & .la        & {\mmtr \d la} ({\mmph\ll a})     & {\mm \X{\<53>}\X{\<50>\<63>}\X{\<47>} \X{\<51>}}, `large {\mmtr \d la}'.      \cr
+{\mm \X{\<52>}}       &           & zha       & {\mmtr \b za} (\dd la, {\mmph\rr a}) \cr
+\noalign{\hrule}
+            & {\mm \mmV{\<00>}}   & +         &               & virama, or {\mm \X{\<26>}\X{\<74>\<195>}\X{\<21>}\X{\<50>}}, `cresent'. \cr
+            & {\mm \mmV{\<00>}}   & =         &               & virama (creates cillu letters)      \cr
+            & {\mm \mmV{\<00>}}  & u+        & {\mmtr \u u} (\.u, {\mmph\u})       & half {\mmtr \u u}, or {\mm \X{\<5>}\X{\<48>}\X{\<47>\<72>}\X{\<21>}\X{\<48>}\X{\<2>}}. \cr
+\noalign{\hrule}
+{\mm {\mmzero}}         &           & 0         & 0             \cr
+{\mm {\mmone}}         &           & 1         & 1             \cr
+{\mm {\mmtwo}}         &           & 2         & 2             \cr
+{\mm {\mmthree}}         &           & 3         & 3             \cr
+{\mm {\mmfour}}         &           & 4         & 4             \cr
+{\mm {\mmfive}}         &           & 5         & 5             \cr
+{\mm {\mmsix}}         &           & 6         & 6             \cr
+{\mm {\mmseven}}         &           & 7         & 7             \cr
+{\mm {\mmeight}}         &           & 8         & 8             \cr
+{\mm {\mmnine}}         &           & 9         & 9             \cr
+\noalign{\hrule}
+            &           & <<        &               & join. \cr
+            &           & >>        &               & non-join. \cr
+{\mm \<00>}        &           & []        & {\mmtr \dotcircle}        & dotted circle. \cr
+            &           & >         &               & disambiguating character.     \cr
+}
+
+\bye

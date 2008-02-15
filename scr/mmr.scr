@@ -1,0 +1,266 @@
+% mmr.scr --- Malayalam reformed script file for TeX pre-processor
+% Copyright 1993, 1998 Jeroen Hellingman
+%
+% History:
+%   03-MAY-1998 changed macros for vowel sign L and LL (JH)
+%   21-NOV-1995 removed cillu ka (JH)
+%   29-MAR-1994 changed compound nRa (JH)
+%   22-JAN-1994 changes for virama (JH)
+%   02-APR-1993 changed macro for virama (JH)
+%   28-JAN-1993 version 1.0 (Jeroen Hellingman)
+%
+% summary of used TeX commands
+%   \<#1>       typeset glyph #1
+%   \B#1#2      put #2 centered below #1
+%   \M#1#2      put #2 right below of #1
+%   \T#1#2      put #1 centered on top of #2
+%   \Z          switch to sub-font (not used for reformed script)
+%   \K          kern in em's            ( \def\K#1{\kern#1em} )
+%   \X          \def\X{\hbox}
+
+@malayalam
+% script type
+
+@atbegin    "{\\mm "
+@atend      "}"
+% to be placed at the begin respectively end of malayalam text
+
+@atbeginsyllabe "\\X{"
+@atendsyllabe   "}"
+% to be placed at the begin repectively end of every syllabe
+
+@prebuild
+% prebuild characters: <codes, glyphs>.
+% We start with a list mapping all single characters to glyphs (i.e. TeX
+% codes to typeset them), they need to be here!
+
+"\d02"      "\\<2>"             % anusvara
+"\d03"      "\\<3>"             % visarga
+
+% vowels
+
+"\d05"      "\\<5>"             % a
+"\d06"      "\\<6>"             % aa
+"\d07"      "\\<7>"             % i
+"\d08"      "\\<7>\\<87>"       % ii
+"\d09"      "\\<9>"             % u
+"\d10"      "\\<9>\\<87>"       % uu
+"\d11"      "\\<11>"            % vocalic r
+"\d96"      "\\<96>"            % vocalic rr
+"\d12"      "\\<12>"            % vocalic l
+"\d97"      "\\<97>"            % vocalic ll
+"\d14"      "\\<14>"            % e
+"\d15"      "\\<15>"            % ee
+"\d16"      "\\<70>\\<14>"      % ai
+"\d18"      "\\<18>"            % o
+"\d19"      "\\<18>\\<62>"      % oo
+"\d20"      "\\<18>\\<87>"      % au
+"\d87"      "\\<87>"            % au length mark
+
+% consonants
+
+"\d21"      "\\<21>"            % ka
+"\d22"      "\\<22>"            % kha
+"\d23"      "\\<23>"            % ga
+"\d24"      "\\<24>"            % gha
+"\d25"      "\\<25>"            % nga
+
+"\d26"      "\\<26>"            % ca
+"\d27"      "\\<27>"            % cha
+"\d28"      "\\<28>"            % ja
+"\d29"      "\\<29>"            % jha
+"\d30"      "\\<30>"            % nya
+
+"\d31"      "\\<31>"            % Ta
+"\d32"      "\\<32>"            % Tha
+"\d33"      "\\<33>"            % Da
+"\d34"      "\\<34>"            % Dha
+"\d35"      "\\<35>"            % Na
+
+"\d36"      "\\<36>"            % ta
+"\d37"      "\\<37>"            % tha
+"\d38"      "\\<38>"            % da
+"\d39"      "\\<39>"            % dha
+"\d40"      "\\<40>"            % na
+
+"\d42"      "\\<42>"            % pa
+"\d43"      "\\<43>"            % pha, fa
+"\d44"      "\\<44>"            % ba
+"\d45"      "\\<45>"            % bha
+"\d46"      "\\<46>"            % ma
+
+"\d47"      "\\<47>"            % ya
+"\d48"      "\\<48>"            % ra
+"\d49"      "\\<49>"            % Ra
+"\d50"      "\\<50>"            % la
+"\d51"      "\\<51>"            % La
+"\d52"      "\\<52>"            % zha
+"\d53"      "\\<53>"            % va
+"\d54"      "\\<54>"            % sha
+"\d55"      "\\<55>"            % Sa
+"\d56"      "\\<56>"            % sa
+"\d57"      "\\<57>"            % ha
+
+% digits
+
+"\d102"     "{\\mmzero}"        % 0
+"\d103"     "{\\mmone}"         % 1
+"\d104"     "{\\mmtwo}"         % 2
+"\d105"     "{\\mmthree}"       % 3
+"\d106"     "{\\mmfour}"        % 4
+"\d107"     "{\\mmfive}"        % 5
+"\d108"     "{\\mmsix}"         % 6
+"\d109"     "{\\mmseven}"       % 7
+"\d110"     "{\\mmeight}"       % 8
+"\d111"     "{\\mmnine}"        % 9
+
+% specials
+
+"\d77"      "\\<77>"                % virama
+
+"\d127"         "\\hbox{}"          % join (dissapears)
+"\d126"         "\\hbox{}"          % non-join (dissapears)
+"\d125"         "\\<00>"            % dotted circle
+"\d125\d127"    "\\<00>"            % dotted circle + join
+"\d124"         " "                 % space
+"\d124\d127"    "\\hbox{}"          % space + join (dissapears)
+
+% then we have a list of all conjuncts and consonant vowel combinations
+% that cannot be build by the standard algorithm, i.e. we need a ligature.
+
+"\d21\d21"      "\\<160>"                   % k+ka
+"\d21\d55"      "\\<251>"                   % k+Sa
+% "\d21\d77"      "\\<94>"                    % k+virama
+
+"\d23\d23"      "\\<240>"                   % g+ga
+"\d23\d24"      "\\<218>"                   % g+gha
+"\d23\d38"      "\\<177>"                   % g+da
+"\d23\d38\d39"  "\\<178>"                   % g+d+dha
+"\d23\d40"      "\\<179>"                   % g+na
+"\d23\d46"      "\\<180>"                   % g+ma
+
+"\d25\d25"      "\\<161>"                   % ng+nga
+"\d25\d21"      "\\<181>"                   % ng+ka
+
+"\d26\d26"      "\\<247>"                   % c+ca
+
+"\d28\d28"      "\\<162>"                   % j+ja
+"\d28\d30"      "\\<184>"                   % j+nya
+
+"\d30\d26"      "\\<185>"                   % ny+ca
+"\d30\d28"      "\\<186>"                   % ny+ja
+"\d30\d30"      "\\<163>"                   % ny+nya
+
+"\d31\d31"      "\\<164>"                   % T+Ta
+
+"\d33\d33"      "\\M{\\<33>}{\\<89>}"       % D+Da
+
+"\d34\d34"      "\\M{\\<34>}{\\<89>}"       % Dh+Dha
+
+"\d35\d31"      "\\<187>"                   % N+Ta
+"\d35\d33"      "\\<188>"                   % N+Da
+"\d35\d35"      "\\<241>"                   % N+Na
+"\d35\d77"      "\\<78>"                    % N+virama
+
+"\d36\d36"      "\\<165>"                   % t+ta
+"\d36\d37"      "\\<36>\\K{-.5}\\<88>"      % t+tha
+"\d36\d40"      "\\<191>"                   % t+na
+"\d36\d46"      "\\<190>"                   % t+ma
+"\d36\d56"      "\\<221>"                   % t+sa
+"\d36\d77"      "\\<81>"                    % t+virama
+
+"\d38\d38"      "\\<166>"                   % d+da
+"\d38\d39"      "\\<192>"                   % d+dha
+
+"\d40\d36"      "\\<194>"                   % n+ta
+"\d40\d38"      "\\<195>"                   % n+da
+"\d40\d40"      "\\<167>"                   % n+na
+"\d40\d46"      "\\<193>"                   % n+ma
+"\d40\d49"      "\\<79>\\<49>"              % n+Ra
+%"\d40\d49\d14"  "\\<70>\\<79>\\<49>"        % n+Re
+"\d40\d77"      "\\<79>"                    % n+virama
+
+"\d42\d42"      "\\<242>"                   % p+pa
+
+"\d44\d44"      "\\<248>"                   % b+ba
+
+"\d46\d46"      "\\<46>\\K{-.32}\\<46>"     % m+ma
+"\d46\d77"      "\\<2>"                     % m+virama (=anusvara)
+
+"\d47\d47"      "\\<249>"                   % y+ya
+
+"\d48\d77"      "\\<80>"                    % r+virama
+
+"\d49\d49"      "\\<243>"                   % R+Ra
+"\d49\d77"      "\\<80>"                    % R+virama
+
+"\d50\d77"      "\\<81>"                    % l+virama
+
+"\d51\d51"      "\\<51>\\K{-.2}\\<51>"      % L+La
+"\d51\d77"      "\\<82>"                    % L+virama
+
+"\d53\d53"      "\\<250>"                   % v+va
+
+"\d54\d54"      "\\<244>"                   % sh+sha
+
+"\d56\d56"      "\\<245>"                   % s+sa
+
+% cillu/non-cillu variants of $k$ $y$ $n$, $N$, $m$, $t$ $l$ $L$
+
+"\d21\d127\d77"     "\\mmV{\\<21>}" % $k<<+$ cillu-form of ka
+"\d47\d127\d77"     "\\<95>"        % $k<<+$ cillu-form of ya
+
+"\d35\d127\d77"     "\\mmV{\\<35>}"  % Na
+"\d36\d127\d77"     "\\mmV{\\<36>}"  % ta
+"\d40\d127\d77"     "\\mmV{\\<40>}"  % na
+"\d46\d127\d77"     "\\mmV{\\<46>}"  % ma
+"\d48\d127\d77"     "\\mmV{\\<48>}"  % ra
+"\d49\d127\d77"     "\\mmV{\\<49>}"  % Ra
+"\d50\d127\d77"     "\\mmV{\\<50>}"  % la
+"\d51\d127\d77"     "\\mmV{\\<51>}"  % La
+
+@secondary
+% secondary shapes of characters: <codes, glyphs, glyphs> the first set of
+% glyphs (TeX commands) comes in front of the cluster that is being build,
+% the second set comes after it.
+
+% vowels
+
+"\d05"      ""              ""                  % a
+"\d06"      ""              "\\<62>"            % aa
+"\d07"      ""              "\\<63>"            % i
+"\d08"      ""              "\\<64>"            % ii
+"\d09"      ""              "\\<72>"            % u
+"\d10"      ""              "\\<73>"            % uu
+"\d11"      ""              "\\<75>"            % vocalic r
+"\d96"      "\\M{"          "}{\\<68>}"         % vocalic rr
+"\d12"      "\\M{"          "}{\\Z\\<12>}"      % vocalic l
+"\d97"      "\\M{"          "}{\\Z\\<97>}"      % vocalic ll
+"\d14"      "\\<70>"        ""                  % e
+"\d15"      "\\<71>"        ""                  % ee
+"\d16"      "\\<70>\\<70>"  ""                  % ai
+"\d18"      "\\<70>"        "\\<62>"            % o
+"\d19"      "\\<71>"        "\\<62>"            % oo
+"\d20"      ""              "\\<87>"            % au
+"\d87"      "\\<70>"        "\\<87>"            % au length mark
+"\d77"      "\\mmV{"        "}"                 % virama
+
+
+% secondary shapes of the consonants
+
+"\d47"      ""              "\\<83>"            % secondary ya
+"\d48"      "\\<74>"        ""                  % secondary ra
+"\d50"      "\\M{"          "}{\\<85>}"         % secondary la
+"\d53"      ""              "\\K{-.5}\\<86>"    % secondary va
+
+@primary
+% primary shapes of characters, occurs only with "ra"
+%
+% @reepham  "\\T{\\<76>}{"   "}"
+%
+% "\d48"      "\\T{\\<76>}{"     "}"                  % ra
+
+"\d48"      "\\<80>"            ""                  % ra
+
+@end
+% end of file

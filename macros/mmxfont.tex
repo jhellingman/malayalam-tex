@@ -1,0 +1,36 @@
+% mmxfont.tex -- load extra fonts for Malayalam TeX
+% Copyright 1993 Jeroen Hellingman
+% last edit: 22-JAN-1992
+
+% The following fonts are only available for reformed script,
+% when used with traditional script, various glyphs will be missing.
+
+%%%%% some fonts for headlines
+
+\font\bigmmf=mmbig                              % Malayalam Big 21pt
+\font\bigmmof=mmbigo                                    % Malayalam Big Outline 21pt
+\font\bigrm=cmbx12 scaled \magstep3
+\font\hugemmf=mmbig scaled \magstep3    % Malayalam Big 36pt
+\font\hugerm=cmbx12 scaled 2986 % \magstep6 not available
+
+\def\bigmmr{\let\mmcurf=\bigmmf\let\mmcursf=\mmsf\let\mmcurrm=\bigrm
+  \mmcbls=28pt\ifmmmode\setmm\fi}
+\def\bigmmo{\let\mmcurf=\bigmmof\let\mmcursf=\mmsf\let\mmcurrm=\bigrm
+  \mmcbls=28pt\ifmmmode\setmm\fi}
+\def\hugemmr{\let\mmcurf=\hugemmf\let\mmcursf=\mmsf\let\mmcurrm=\hugerm
+  \mmcbls=48pt\ifmmmode\setmm\fi}
+
+%%%%% some experimental fonts
+
+\font\mmxa=mmexpa12                             % Malayalam Experimental A 12pt
+\font\mmxb=mmexpb12                             % Malayalam Experimental B 12pt
+\font\mmxc=mmexpc12                             % Malayalam Experimental C 12pt
+
+\def\xamm{\let\mmcurf=\mmxa\let\mmcursf=\mmsf\let\mmcurrm=\twelverm
+  \mmcbls=15.6pt\ifmmmode\setmm\fi}
+\def\xbmm{\let\mmcurf=\mmxb\let\mmcursf=\mmsf\let\mmcurrm=\twelverm
+  \mmcbls=15.6pt\ifmmmode\setmm\fi}
+\def\xcmm{\let\mmcurf=\mmxc\let\mmcursf=\mmsf\let\mmcurrm=\twelverm
+  \mmcbls=15.6pt\ifmmmode\setmm\fi}
+
+%%%%% end of mmexfont.tex

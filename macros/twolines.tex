@@ -1,0 +1,129 @@
+% twolines.tex -- macros to create double lines, one with the
+%                 translation in parallel below the other.
+% Copyright Jeroen Hellingman 1993
+% last edit: 04-JAN-1993
+
+{\catcode`\[=\active
+\gdef[{\stacktwo}
+
+\gdef\begintwolines{\bgroup\catcode`\[=\active
+    \def[{\stacktwo}
+    \def\firstonly{\def\stacktwo{\stacktwofirstonly}}
+    \def\secondonly{\def\stacktwo{\stacktwosecondonly}}}
+\gdef\endtwolines{\egroup}
+
+\gdef\beginthreelines{\bgroup\catcode`\[=\active
+    \def[{\stackthree}
+    \def\firstonly{\def\stackthree{\stackthreefirstonly}}
+    \def\secondonly{\def\stackthree{\stackthreesecondonly}}
+    \def\thirdonly{\def\stackthree{\stackthreethirdonly}}}
+\gdef\endthreelines{\egroup}
+}
+
+%%%%%% commands to be placed before material in lines
+
+\def\firststyle{\rm}
+\def\secondstyle{\it}
+\def\thirdstyle{\bf}
+
+%%%%%%
+
+\def\stacktwo#1|#2]{\putunder{{\secondstyle#2}}{\firststyle#1}}
+\def\stacktwofirstonly#1|#2]{{\firststyle#1}}
+\def\stacktwosecondonly#1|#2]{{\secondstyle#2}}
+
+\def\stackthree#1|#2|#3]{\putunder{{\putunder{{\thirdstyle#3}}{\secondstyle#2}}}{\firststyle#1}}
+\def\stackthreefirstonly#1|#2|#3]{{\firststyle#1}}
+\def\stackthreesecondonly#1|#2|#3]{{\secondstyle#2}}
+\def\stackthreethirdonly#1|#2|#3]{{\thirdstyle#3}}
+
+%%%%%% actual stacking macro
+
+% put #1 centered underneath #2
+\def\putunder#1#2{\hskip0pt{\setbox1=\hbox{\strut#1}\setbox0=\hbox{\strut#2}%
+    \dimen0=.5\wd0\advance\dimen0by.5\wd1%
+    \dimen1=\dp0\advance\dimen1by\ht1%
+    \dimen3=.5\wd0\advance\dimen3by-.5\wd1%
+    % test: if #1 wider than #2, kern 0.5(wd1-wd0) before, and idem after extra.
+    \ifdim\wd1>\wd0\dimen7=\wd1\advance\dimen7by-\wd0%
+        \hbox{}\kern0.5\dimen7%
+        \advance\dimen3by0.5\dimen7%
+    \fi
+    \box0\kern-\dimen0\lower\dimen1\box1\kern\dimen3}}
+
+%%%%%% end of twolines.tex
+
+\message{This file contains a demo, edit it to see it.}
+\endinput % Remove this line to see the demo.
+
+\parindent=0pt
+
+\begintwolines
+\beginsection [A|Een] [Demo|demonstratie] [of|van] [Twolines|Twolines]
+
+[This|dit] [is|is] [a|een] [little|kleine] [demo|demonstratie]
+[to|om] [show|] [the|het] [effect|effekt] [of|van]
+[twolines.|twolines] [|te laten zien.] [As|Zoals] [you|je] [can|kunt] [see,|zien,]
+[|zijn] [the|de] [Dutch|Engelse]
+[equivalents|equivalenten] [of|van] [these|deze] [words|woorden]
+[are|] [placed|] [centered|gecentreerd] [below|boven]
+[the|de] [English|Nederlandse] [words,|woorden] [|geplaatst,]
+[as far as|voor zover] [the|de] [difference|verschillen] [in|in]
+[|de] [grammar|grammatica] [|het] [allow|toestaan.] [it.|]
+\endtwolines
+
+\bigskip
+
+\beginthreelines
+[Three|Drie|Drei] [lines|regels|Regel] [can|kunnen|k\"onnen]
+[also|ook|auch] [be||] [produced.|geproduceerd|produciert]
+[|worden.|worden.]
+\endthreelines
+
+\bigskip
+
+\beginthreelines\firstonly
+[Three|Drie|Drei] [lines|regels|Regel] [can|kunnen|k\"onnen]
+[also|ook|auch] [be||] [produced.|geproduceerd|produciert]
+[|worden.|worden.]
+\endthreelines
+
+\bigskip
+
+\beginthreelines\secondonly
+[Three|Drie|Drei] [lines|regels|Regel] [can|kunnen|k\"onnen]
+[also|ook|auch] [be||] [produced.|geproduceerd|produciert]
+[|worden.|worden.]
+\endthreelines
+
+\bigskip
+
+\beginthreelines\thirdonly
+[Three|Drie|Drei] [lines|regels|Regel] [can|kunnen|k\"onnen]
+[also|ook|auch] [be||] [produced.|geproduceerd|produciert]
+[|worden.|worden.]
+\endthreelines
+
+\bigskip
+
+\beginthreelines
+[Three|Drie|Drei] [lines|regels|Regel] [can|kunnen|k\"onnen]
+[also|ook|auch] [be||] [produced.|geproduceerd|produciert]
+[|worden.|worden.]
+\endthreelines
+
+\bigskip
+
+\begintwolines\secondonly
+[This|dit] [is|is] [a|een] [little|kleine] [demo|demonstratie]
+[to|om] [show|] [the|het] [effect|effekt] [of|van]
+[twolines.|twolines] [|te laten zien.] [As|Zoals] [you|je] [can|kunt] [see,|zien,]
+[|zijn] [the|de] [Dutch|Engelse]
+[equivalents|equivalenten] [of|van] [these|deze] [words|woorden]
+[are|] [placed|] [centered|gecentreerd] [below|boven]
+[the|de] [English|Nederlandse] [words,|woorden] [|geplaatst,]
+[as far as|voor zover] [the|de] [difference|verschillen] [in|in]
+[|de] [grammar|grammatica] [|het] [allow|toestaan.] [it.|]
+\endtwolines
+
+\bye
