@@ -1,0 +1,28 @@
+% mmtest.mf -- Malayalam characters under design
+% Copyright 1993, 1995, 1996 Jeroen Hellingman
+%
+% History:
+%   04-FEB-1996 added mmnew.mf file (JH)
+%   24-DEC-1995 made changes definitive, increased spacing,
+%               but slightly reduced width (JH)
+%   07-OCT-1995 last edit (JH)
+%   17-SEP-1995 changed design of i and u. (JH)
+%   22-SEP-1993 added variant p+pa (JH)
+%   22-JAN-1993 added k+Sa (JH)
+%   14-JAN-1993 modified virama to look nicer on top,
+%               added square brackets, slash (JH)
+%   10-JAN-1993 added ny+cha, t+bha, ornamental star (JH)
+%   30-DEC-1992 added Latin digits (JH)
+%   27-DEC-1992 added c+ca, b+ba, y+ya, v+va in mmsconj.mf (JH)
+%   26-DEC-1992 move to version 1.0 (Jeroen Hellingman)
+
+"Malayalam metafont, version 1.1";
+"copyright 1993, 1995, 1996 Jeroen Hellingman";
+"last edit: 30-NOV-1996";
+
+endinput; % uncomment if no characters under design.
+% imagerules;
+
+input mmnew;
+
+end.

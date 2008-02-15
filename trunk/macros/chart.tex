@@ -1,0 +1,65 @@
+% chart.tex -- font chart macro's
+% Copyright 1992 Jeroen Hellingman
+%
+% History:
+%   15-NOV-1996 Renamed chart.tex (JH)
+%   21-NOV-1995 Last Edit (JH)
+%   06-DEC-1992 Created (Jeroen Hellingman)
+%
+%%%%%%%
+
+\font\cmss=cmss10
+\newcount\counter\counter=0
+
+\def\chartstrut{\lower4.5pt\vbox to14pt{}}
+\def\cell#1{\hfil#1\hfil}
+\def\>{\global\advance\counter by-255}
+\def\:{{\setbox0\hbox{\sfont\char\counter}%
+  \dimen0=\ht0\advance\dimen0by1pt\ht0=\dimen0%
+  \dimen0=\dp0\advance\dimen0by1pt\dp0=\dimen0%
+  \kern1pt\box0\kern1pt}%
+  \global\advance\counter by16}
+\def\tablerule{\noalign{\hrule}}
+
+\def\chart{{\cmss\vbox{\tabskip=0pt\offinterlineskip\global\counter=0
+\halign to \hsize{\vrule width.8pt\chartstrut##\tabskip0pt plus10pt%
+    &\cell{##}&\vrule width.8pt##%
+    &\cell{##}&\vrule##&\cell{##}&\vrule##&\cell{##}&\vrule##&\cell{##}&\vrule##%
+    &\cell{##}&\vrule##&\cell{##}&\vrule##&\cell{##}&\vrule##&\cell{##}&\vrule##%
+    &\cell{##}&\vrule##&\cell{##}&\vrule##&\cell{##}&\vrule##&\cell{##}&\vrule##%
+    &\cell{##}&\vrule##&\cell{##}&\vrule##&\cell{##}&\vrule##&\cell{##}%
+    &\vrule width.8pt##\tabskip=0pt\cr
+  \noalign{\hrule height.8pt}
+  &\multispan{33}\fontname\hfill&\cr
+  \noalign{\hrule height.8pt}
+  & &&0&&1&&2&&3&&4&&5&&6&&7&&8&&9&&A&&B&&C&&D&&E&&F&\cr\noalign{\hrule height.8pt}
+  &0&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&\cr\tablerule
+\>&1&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&\cr\tablerule
+\>&2&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&\cr\tablerule
+\>&3&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&\cr\tablerule
+\>&4&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&\cr\tablerule
+\>&5&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&\cr\tablerule
+\>&6&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&\cr\tablerule
+\>&7&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&\cr\tablerule
+\>&8&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&\cr\tablerule
+\>&9&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&\cr\tablerule
+\>&A&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&\cr\tablerule
+\>&B&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&\cr\tablerule
+\>&C&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&\cr\tablerule
+\>&D&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&\cr\tablerule
+\>&E&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&\cr\tablerule
+\>&F&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&&\:&\cr\noalign{\hrule height.8pt}
+}}}}
+
+\def\table #1 {
+  \font\sfont=#1%
+  \edef\fontname{#1}
+  \chart\bigskip
+}
+
+%%%%%%
+
+\endinput
+
+
+

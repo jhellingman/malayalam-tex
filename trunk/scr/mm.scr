@@ -1,0 +1,412 @@
+% mm.scr --- Malayalam script file for TeX pre-processor
+% Copyright 1993, 1998 Jeroen Hellingman
+%
+% History:
+%   04-MAY-1998 changed macros for vowel signs L and LL (JH)
+%   22-JAN-1994 changes in macro for virama (JH)
+%   02-APR-1993 changed macro for virama (JH)
+%   28-JAN-1993 version 1.0 (Jeroen Hellingman)
+%
+% summary of used TeX commands
+%   \<#1>       typeset glyph #1
+%   \B#1#2      put #2 centered below #1
+%   \M#1#2      put #2 right below of #1
+%   \T#1#2      put #1 centered on top of #2
+%   \Z          switch to sub-font
+%   \K#1        kern in #1 em's         ( \def\K#1{\kern#1em} )
+%   \X          \def\X{\hbox}
+%   \mmV#1      place virama over #1
+
+@malayalam
+% script type
+
+@atbegin    "{\\mm "
+@atend      "}"
+% to be placed at the begin respectively end of malayalam text
+
+@atbeginsyllabe "\\X{"
+@atendsyllabe   "}"
+% to be placed at the begin repectively end of every syllabe
+
+@prebuild
+% prebuild characters: <codes, glyphs>.
+% We start with a list mapping all single characters to glyphs (i.e. TeX
+% codes to typeset them), they need to be here!
+
+"\d02"      "\\<2>"         % anusvara
+"\d03"      "\\<3>"         % visarga
+
+% vowels
+
+"\d05"      "\\<5>"         % a
+"\d06"      "\\<6>"         % aa
+"\d07"      "\\<7>"         % i
+"\d08"      "\\<7>\\<87>"   % ii
+"\d09"      "\\<9>"         % u
+"\d10"      "\\<9>\\<87>"   % uu
+"\d11"      "\\<11>"        % vocalic r
+"\d96"      "\\<96>"        % vocalic rr
+"\d12"      "\\<12>"        % vocalic l
+"\d97"      "\\<97>"        % vocalic ll
+"\d14"      "\\<14>"        % e
+"\d15"      "\\<15>"        % ee
+"\d16"      "\\<70>\\<14>"  % ai
+"\d18"      "\\<18>"        % o
+"\d19"      "\\<18>\\<62>"  % oo
+"\d20"      "\\<18>\\<87>"  % au
+"\d87"      "\\<87>"        % au length mark
+
+% consonants
+
+"\d21"      "\\<21>"        % ka
+"\d22"      "\\<22>"        % kha
+"\d23"      "\\<23>"        % ga
+"\d24"      "\\<24>"        % gha
+"\d25"      "\\<25>"        % nga
+
+"\d26"      "\\<26>"        % ca
+"\d27"      "\\<27>"        % cha
+"\d28"      "\\<28>"        % ja
+"\d29"      "\\<29>"        % jha
+"\d30"      "\\<30>"        % nya
+
+"\d31"      "\\<31>"        % Ta
+"\d32"      "\\<32>"        % Tha
+"\d33"      "\\<33>"        % Da
+"\d34"      "\\<34>"        % Dha
+"\d35"      "\\<35>"        % Na
+
+"\d36"      "\\<36>"        % ta
+"\d37"      "\\<37>"        % tha
+"\d38"      "\\<38>"        % da
+"\d39"      "\\<39>"        % dha
+"\d40"      "\\<40>"        % na
+
+"\d42"      "\\<42>"        % pa
+"\d43"      "\\<43>"        % pha, fa
+"\d44"      "\\<44>"        % ba
+"\d45"      "\\<45>"        % bha
+"\d46"      "\\<46>"        % ma
+
+"\d47"      "\\<47>"        % ya
+"\d48"      "\\<48>"        % ra
+"\d49"      "\\<49>"        % Ra
+"\d50"      "\\<50>"        % la
+"\d51"      "\\<51>"        % La
+"\d52"      "\\<52>"        % zha
+"\d53"      "\\<53>"        % va
+"\d54"      "\\<54>"        % sha
+"\d55"      "\\<55>"        % Sa
+"\d56"      "\\<56>"        % sa
+"\d57"      "\\<57>"        % ha
+
+% digits
+
+"\d102"     "{\\mmzero}"        % 0
+"\d103"     "{\\mmone}"         % 1
+"\d104"     "{\\mmtwo}"         % 2
+"\d105"     "{\\mmthree}"       % 3
+"\d106"     "{\\mmfour}"        % 4
+"\d107"     "{\\mmfive}"        % 5
+"\d108"     "{\\mmsix}"         % 6
+"\d109"     "{\\mmseven}"       % 7
+"\d110"     "{\\mmeight}"       % 8
+"\d111"     "{\\mmnine}"        % 9
+
+% specials
+
+"\d77"          "\\<77>"            % virama
+
+"\d127"         "\\hbox{}"          % join (dissapears)
+"\d126"         "\\hbox{}"          % non-join (dissapears)
+"\d125"         "\\<00>"            % dotted circle
+"\d125\d127"    "\\<00>"            % dotted circle + join
+"\d124"         " "                 % space
+"\d124\d127"    "\\hbox{}"          % space + join (dissapears)
+
+"\d48\d127\d125" "\\T{\\<76>}{\\R{3.5ex}{\\<00>}}" % reepham on dotted circle
+
+% then we have a list of all conjuncts and consonant vowel combinations
+% that cannot be build by the standard algorithm, i.e. we need a ligature.
+
+"\d21\d09"      "\\<128>"                   % ku
+"\d21\d10"      "\\<139>"                   % kuu
+"\d21\d11"      "\\<150>"                   % kr
+"\d21\d21"      "\\<160>"                   % k+ka
+"\d21\d21\d09"  "\\<168>"                   % k+ku
+"\d21\d21\d10"  "\\<169>"                   % k+kuu
+"\d21\d21\d48"  "\\<213>"                   % k+k+ra
+"\d21\d21\d49"  "\\<213>"                   % k+k+Ra
+"\d21\d22"      "\\M{\\<21>}{\\Z\\<22>}"    % k+kha
+"\d21\d26"      "\\M{\\<21>}{\\Z\\<26>}"    % k+ca
+"\d21\d36"      "\\<176>"                   % k+ta
+"\d21\d48"      "\\<200>"                   % k+ra
+"\d21\d55"      "\\<251>"                   % k+Sa
+"\d21\d55\d46"  "\\M{\\<251>}{\\Z\\<46>}"   % k+S+ma
+"\d21\d55\d35"  "\\M{\\<251>}{\\Z\\<35>}"   % k+S+Na
+
+"\d23\d09"      "\\<129>"                   % gu
+"\d23\d10"      "\\<140>"                   % guu
+"\d23\d11"      "\\<151>"                   % gr
+"\d23\d23"      "\\<240>"                   % g+ga
+% "\d23\d23\d47"  "\\<240>\\<122>"            % g+g+ya
+"\d23\d24"      "\\<218>"                   % g+gha
+"\d23\d28"      "\\M{\\<23>}{\\Z\\<28>}"    % g+ja
+"\d23\d38"      "\\<177>"                   % g+da
+"\d23\d38\d39"  "\\<178>"                   % g+d+dha
+"\d23\d40"      "\\<179>"                   % g+na
+"\d23\d46"      "\\<180>"                   % g+ma
+"\d23\d48"      "\\<201>"                   % g+ra
+
+"\d24\d48"      "\\M{\\<24>}{\\<127>}"       % gh+ra
+
+"\d25\d25"      "\\<161>"                   % ng+nga
+"\d25\d21"      "\\<181>"                   % ng+ka
+"\d25\d21\d09"  "\\<182>"                   % ng+ku
+"\d25\d21\d10"  "\\<183>"                   % ng+kuu
+
+"\d26\d26"      "\\<247>"                   % c+ca
+% "\d26\d26\d47"  "\\<247>\\<121>"            % c+c+ya
+"\d26\d27"      "\\M{\\<26>}{\\Z\\<27>}"    % c+cha
+"\d26\d54"      "\\M{\\<26>}{\\Z\\<54>}"    % c+sha
+"\d26\d48"      "\\M{\\<26>}{\\<124>}"      % c+ra
+
+"\d27\d09"      "\\<130>"                   % chu
+"\d27\d10"      "\\<141>"                   % chuu
+"\d27\d48"      "\\<202>"                   % ch+ra
+
+"\d28\d09"      "\\<131>"                   % ju
+"\d28\d10"      "\\<142>"                   % juu
+"\d28\d28"      "\\<162>"                   % j+ja
+"\d28\d28\d09"  "\\<170>"                   % j+ju
+"\d28\d28\d10"  "\\<171>"                   % j+juu
+"\d28\d30"      "\\<184>"                   % j+nya
+% "\d28\d47"     "\\<28>\\<120>"              % j+ya
+"\d28\d48"      "\\<203>"                   % j+ra
+
+"\d30\d26"      "\\<185>"                   % ny+ca
+"\d30\d28"      "\\<186>"                   % ny+ja
+"\d30\d30"      "\\<163>"                   % ny+nya
+"\d30\d48"      "\\M{\\<30>}{\\<126>}"      % ny+ra
+
+% "\d31\d09"      "\\B{\\<31>}{\\<65>}"      % Tu
+% "\d31\d10"      "\\B{\\<31>}{\\<66>}"      % Tuu
+"\d31\d31"      "\\<164>"                   % T+Ta
+% "\d31\d31\d09"  "\\B{\\<164>}{\\<65>}"     % T+Tu
+% "\d31\d31\d10"  "\\B{\\<164>}{\\<66>}"     % T+Tuu
+"\d31\d32"      "\\B{\\<31>}{\\Z\\<32>}"    % T+Tha
+"\d31\d48"      "\\<204>"                   % T+ra
+
+"\d32\d48"      "\\M{\\<32>}{\\<123>}"       % Th+ra
+
+"\d33\d33"      "\\M{\\<33>}{\\<89>}"       % D+Da
+"\d33\d23"      "\\M{\\<33>}{\\Z\\<23>}"    % D+ga
+"\d33\d48"      "\\M{\\<33>}{\\<126>}"      % D+ra
+
+"\d34\d34"      "\\M{\\<34>}{\\<89>}"       % Dh+Dha
+"\d34\d48"      "\\M{\\<34>}{\\<126>}"      % Dh+ra
+
+"\d35\d09"      "\\<132>"                   % Nu
+"\d35\d10"      "\\<143>"                   % Nuu
+"\d35\d31"      "\\<187>"                   % N+Ta
+"\d35\d32"      "\\M{\\<35>}{\\Z\\<32>}"    % N+Tha
+"\d35\d33"      "\\<188>"                   % N+Da
+"\d35\d35"      "\\<241>"                   % N+Na
+"\d35\d48"      "\\M{\\<35>}{\\<127>}"      % N+ra
+"\d35\d77"      "\\<78>"                    % N+virama
+
+"\d36\d09"      "\\<133>"                   % tu
+"\d36\d10"      "\\<144>"                   % tuu
+"\d36\d11"      "\\<152>"                   % tr
+"\d36\d36"      "\\<165>"                   % t+ta
+"\d36\d36\d09"  "\\<172>"                   % t+tu
+"\d36\d36\d10"  "\\<173>"                   % t+tuu
+"\d36\d37"      "\\<36>\\K{-.5}\\<88>"      % t+tha
+"\d36\d40"      "\\<191>"                   % t+na
+"\d36\d42"      "\\M{\\<36>}{\\Z\\<42>}"    % t+pa
+"\d36\d46"      "\\<190>"                   % t+ma
+"\d36\d48"      "\\<205>"                   % t+ra
+"\d36\d56"      "\\<221>"                   % t+sa
+"\d36\d77"      "\\<81>"                    % t+virama
+
+"\d37\d48"      "\\M{\\<37>}{\\<84>}"       % th+ra
+
+"\d38\d11"      "\\<153>"                   % dr
+"\d38\d38"      "\\<166>"                   % d+da
+"\d38\d39"      "\\<192>"                   % d+dha
+"\d38\d48"      "\\<206>"                   % d+ra
+
+"\d39\d48"      "\\<207>"                   % dh+ra
+
+"\d40\d09"      "\\<134>"                   % nu
+"\d40\d10"      "\\<145>"                   % nuu
+"\d40\d11"      "\\<155>"                   % nr
+"\d40\d36"      "\\<194>"                   % n+ta
+"\d40\d36\d09"  "\\<222>"                   % n+tu
+"\d40\d36\d10"  "\\<223>"                   % n+tuu
+"\d40\d36\d48"  "\\<215>"                   % n+t+ra
+"\d40\d36\d49"  "\\<215>"                   % n+t+Ra
+"\d40\d38"      "\\<195>"                   % n+da
+"\d40\d38\d48"  "\\<216>"                   % n+d+ra
+"\d40\d39"      "\\<219>"                   % n+dha
+"\d40\d40"      "\\<167>"                   % n+na
+"\d40\d40\d09"  "\\<174>"                   % n+nu
+"\d40\d40\d10"  "\\<175>"                   % n+nuu
+"\d40\d42"      "\\<220>"                   % n+pa
+"\d40\d46"      "\\<193>"                   % n+ma
+"\d40\d48"      "\\<208>"                   % n+ra
+"\d40\d49"      "\\<79>\\<49>"              % n+Ra
+%"\d40\d49\d14"  "\\<70>\\<79>\\<49>"        % n+Re
+"\d40\d53"      "\\<40>\\K{-1.5}\\<93>"     % n+va
+"\d40\d77"      "\\<79>"                    % n+virama
+
+"\d42\d36"      "\\M{\\<42>}{\\Z\\<36>}"    % p+ta
+"\d42\d40"      "\\M{\\<42>}{\\Z\\<40>}"    % p+na
+"\d42\d42"      "\\<242>"                   % p+pa
+% "\d42\d42\d47"  "\\<242>\\<122>"            % p+p+ya
+"\d42\d48"      "\\M{\\<42>}{\\<124>}"      % p+ra
+
+"\d43\d48"      "\\M{\\<43>}{\\<125>}"      % ph+ra
+
+"\d44\d38"      "\\M{\\<44>}{\\Z\\<38>}"    % b+da
+"\d44\d39"      "\\M{\\<44>}{\\Z\\<39>}"    % b+dha
+"\d44\d44"      "\\<248>"                   % b+ba
+"\d44\d48"      "\\M{\\<44>}{\\<126>}"      % b+ra
+
+"\d45\d09"      "\\<135>"                   % bhu
+"\d45\d10"      "\\<146>"                   % bhuu
+"\d45\d11"      "\\<156>"                   % bhr
+"\d45\d33"      "\\<196>"                   % bh+Da
+"\d45\d48"      "\\<209>"                   % bh+ra
+
+"\d46\d40"      "\\M{\\<46>}{\\Z\\<40>}"    % m+na
+"\d46\d42"      "\\<220>"                   % m+pa
+"\d46\d46"      "\\<46>\\K{-.32}\\<46>"     % m+ma
+"\d46\d48"      "\\M{\\<46>}{\\<123>}"      % m+ra
+"\d46\d77"      "\\<2>"                     % m+virama (=anusvara)
+
+"\d47\d36"      "\\M{\\<47>}{\\Z\\<36>}"    % y+ta
+"\d47\d36\d09"  "\\M{\\<47>}{\\Z\\<133>}"   % y+tu
+"\d47\d47"      "\\<249>"                   % y+ya
+"\d47\d48"      "\\M{\\<47>}{\\<84>}"       % y+ra
+
+"\d48\d09"      "\\<136>"                   % ru
+"\d48\d10"      "\\<147>"                   % ruu
+"\d48\d77"      "\\<80>"                    % r+virama
+
+"\d49\d49"      "\\<243>"                   % R+Ra
+"\d49\d77"      "\\<80>"                    % R+virama
+
+"\d50\d77"      "\\<81>"                    % l+virama
+"\d50\d36\d36"  "\\B{\\<50>}{\\Z\\<165>}"   % l+t+ta
+"\d50\d48"      "\\M{\\<50>}{\\<84>}"       % l+ra
+
+"\d51\d51"      "\\<51>\\K{-.2}\\<51>"      % L+La
+"\d51\d21\d21"  "\\<82>\\<160>"             % L+k+ka
+"\d51\d21\d21\d09"  "\\<82>\\<168>"         % L+k+ku
+"\d51\d77"      "\\<82>"                    % L+virama
+
+"\d52\d09"      "\\B{\\<52>}{\\<65>}"       % zhu
+"\d52\d10"      "\\B{\\<52>}{\\<66>}"       % zhuu
+"\d52\d21\d21"  "\\B{\\<52>}{\\<115>}"      % zh+k+ka
+
+"\d53\d53"      "\\<250>"                   % v+va
+
+"\d54\d09"      "\\<137>"                   % shu
+"\d54\d10"      "\\<148>"                   % shuu
+"\d54\d11"      "\\<157>"                   % shr
+"\d54\d26"      "\\<197>"                   % sh+ca
+"\d54\d48"      "\\<210>"                   % sh+ra
+"\d54\d54"      "\\<244>"                   % sh+sha
+
+"\d55\d31"      "\\M{\\<55>}{\\Z\\<31>}"    % S+Ta
+"\d55\d31\d48"  "\\M{\\<55>}{\\Z\\<204>}"   % S+T+ra
+"\d55\d35"      "\\M{\\<55>}{\\Z\\<35>}"    % S+Na
+"\d55\d46"      "\\M{\\<55>}{\\Z\\<46>}"    % S+Ma
+"\d55\d48"      "\\M{\\<55>}{\\<125>}"      % S+ra
+
+"\d56\d21"      "\\M{\\<56>}{\\<112>}"      % s+ka
+"\d56\d36"      "\\M{\\<56>}{\\Z\\<36>}"    % s+ta
+"\d56\d36\d09"  "\\M{\\<56>}{\\Z\\<133>}"   % s+tu
+"\d56\d36\d48"  "\\M{\\<56>}{\\Z\\<205>}"   % s+t+ra
+"\d56\d46"      "\\M{\\<56>}{\\Z\\<46>}"    % s+ma
+"\d56\d48"      "\\<211>"                   % s+ra
+"\d56\d56"      "\\<245>"                   % s+sa
+
+"\d57\d09"      "\\<138>"                   % hu
+"\d57\d10"      "\\<149>"                   % huu
+"\d57\d11"      "\\<159>"                   % hr
+"\d57\d40"      "\\<199>"                   % h+na
+"\d57\d46"      "\\<198>"                   % h+ma
+"\d57\d48"      "\\<212>"                   % h+ra
+"\d57\d53"      "\\<57>\\K{-1.5}\\<93>"     % h+va
+
+% cillu/non-cillu variants of $k$ $y$ $n$, $N$, $m$, $t$ $l$ $L$
+
+"\d21\d127\d77"     "\\<94>"        % $k<<+$ cillu-form of ka
+"\d47\d127\d77"     "\\<95>"        % $k<<+$ cillu-form of ya
+
+"\d35\d127\d77"     "\\mmV{\\<35>}"  % $N<<+$ Na with viraama
+"\d36\d127\d77"     "\\mmV{\\<36>}"  % $t<<+$ ta
+"\d40\d127\d77"     "\\mmV{\\<40>}"  %        na
+"\d46\d127\d77"     "\\mmV{\\<46>}"  %        ma
+"\d48\d127\d77"     "\\mmV{\\<48>}"  %        ra
+"\d49\d127\d77"     "\\mmV{\\<49>}"  %        Ra
+"\d50\d127\d77"     "\\mmV{\\<50>}"  %        la
+"\d51\d127\d77"     "\\mmV{\\<51>}"  %        La
+
+@secondary
+% secondary shapes of characters: <codes, glyphs, glyphs> the first set of
+% glyphs (TeX commands) comes in front of the cluster that is being build,
+% the second set comes after it.
+
+% vowels
+
+"\d05"      ""              ""                  % a
+"\d06"      ""              "\\<62>"            % aa
+"\d07"      ""              "\\<63>"            % i
+"\d08"      ""              "\\<64>"            % ii
+"\d09"      "\\M{"          "}{\\<65>}"         % u
+"\d10"      "\\M{"          "}{\\<66>}"         % uu
+"\d11"      "\\M{"          "}{\\<67>}"         % vocalic r
+"\d96"      "\\M{"          "}{\\<68>}"         % vocalic rr
+"\d12"      "\\M{"          "}{\\Z\\<12>}"      % vocalic l
+"\d97"      "\\M{"          "}{\\Z\\<97>}"      % vocalic ll
+"\d14"      "\\<70>"        ""                  % e
+"\d15"      "\\<71>"        ""                  % ee
+"\d16"      "\\<70>\\<70>"  ""                  % ai
+"\d18"      "\\<70>"        "\\<62>"            % o
+"\d19"      "\\<71>"        "\\<62>"            % oo
+"\d20"      "\\<70>"        "\\<87>"            % au
+"\d87"      ""              "\\<87>"            % au length mark
+"\d77"      "\\mmV{"        "}"                 % virama
+
+% secondary shapes of the consonants
+
+"\d47"      ""              "\\<83>"            % secondary ya
+% "\d47"      ""              "\\<92>"            % secondary ya
+"\d48"      "\\M{"          "}{\\<84>}"         % secondary ra
+"\d50"      "\\M{"          "}{\\<85>}"         % secondary la
+"\d53"      ""              "\\K{-.5}\\<86>"    % secondary va
+
+"\d21"      "\\M{"          "}{\\<112>}"        % secondary ka
+"\d37"      ""              "\\K{-.5}\\<88>"    % secondary tha
+"\d38"      "\\M{"          "}{\\Z\\<38>}"      % secondary da
+
+"\d21\d09"  "\\M{"          "}{\\<113>}"        % secondary ku
+"\d21\d10"  "\\M{"          "}{\\<114>}"        % secondary kuu
+"\d21\d21"  "\\M{"          "}{\\<115>}"        % secondary k+ka
+"\d21\d21\d09"  "\\M{"      "}{\\<116>}"        % secondary k+ku
+"\d21\d21\d10"  "\\M{"      "}{\\<117>}"        % secondary k+kuu
+
+@reepham    % we use reepham
+
+@primary
+% primary shapes of characters, occurs only with "ra" (reepham)
+
+"\d48"      "\\T{\\<76>}{\\R{.8ex}{"  "}}"      % ra
+
+% "\d48"     "\\<80>"        ""                  % ra
+
+@end
+% end of file

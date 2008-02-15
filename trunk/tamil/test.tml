@@ -1,0 +1,39 @@
+
+\input tmlmacs
+
+\parindent=0pt
+
+<tamil>
+a aa i ii u uu e ee o oo ai au .h
+
+ka n"a ca n~a .ta .na ta na pa ma ya ra la va zha .la .ra ..na
+
+ja .sa sa ha k.sa
+</tamil>
+
+\bigskip
+
+The following is a typical poem by Mahakavi:
+
+\medskip
+{\obeylines
+<tamil>
+    `ci.ru ..na.n.tu ma.nal miitu pa.tam o..n.ru kii.rum
+    cilavee.lai atai vantu ka.tal ko.n.tu pookum
+    ka.ri co.ru potiyoo.tu taruki..n.ra pootum
+    ka.tal miitu iva.l ko.n.ta payam o..n.ru kaa.num
+
+\medskip
+
+    ve.ru vaa..na ve.li miitu mazhai vantu cii.rum
+    ve.ri ko.n.ta puyal ..ni..n.ru karakan"ka.l aa.tum
+    e.riki..n.ra ka.tal e..n.ru ma..nitarka.l an~jaar
+    etuvantate..ni..ne..n..na atai ve..n.ru celvaar\dots'
+</tamil>
+}
+\medskip
+
+ [from <tamil>`putiyatoru vii.tu'</tamil>, published in 1989]
+
+
+\bye

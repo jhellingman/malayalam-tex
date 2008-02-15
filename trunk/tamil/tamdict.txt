@@ -1,0 +1,313 @@
+\input tamilmax
+\hsize=4in
+\font\norm=cmr10
+\font\roman=cmr10
+\font\vclass=cmr7
+\font\glossy=cmti10
+\font\emphatic=cmb10
+\font\transcribe=cmss10
+\norm
+\newif\ifnewentry
+\def\hw#1{\par\medskip{\emphatic #1\hfil\break\newentrytrue}}
+\def\md#1#2{{\emphatic\ifnewentry\hbox to 25pt{\hfil}\newentryfalse\fi(#1)} #2}
+\def\rt#1{,\ {\transcribe #1}}
+\def\vc#1{,\ {\vclass #1}}
+\def\eg#1{,\ {\glossy #1}}
+\def\syn#1#2{\ $\mapsto$ #1: #2}
+\def\wtvc#1{,\ {\vclass #1}}
+\hw{fascinated, be}
+    \md{1}{~sokku~}\rt{|sokku|}\vc{3 intr}
+    \eg{be charmed, enchanted or absorbed in}
+    \syn{1}{~mayangku~}\wtvc{3 i}
+    \md{2}{~mayangku~}\rt{|mayangu|}\vc{3 intr}
+    \eg{be charmed or enchanted; be enamoured; be confused}
+    \md{3}{~vasappa8u~}\rt{|vasa-pa8u|}\vc{4 intr}
+    \eg{be captivated or enchanted; come under the power or influence of; lose oneself in}
+    \syn{1}{~vayappa8u~}\wtvc{4i}.
+\hw{fashion}
+    \md{1}{~sey~}\wtvc{1t}\rt{|seyyi|}\vc{2b tr}
+    \eg{make; form; shape s.t. out of s.t. else}
+    \syn{1}{~pu2ai~}\wtvc{2t}
+    \md{2}{~amaittukko9~}\wtvc{1t}\rt{|a8p8 pa33u|}\vc{3 tr}
+    \eg{adapt}.
+\hw{fashionable, be}
+    \md{1}{~naakarikamaaka iru~}\wtvc{7i}
+    \eg{be stylish, conforming to the fashion; be liked by people of fashion}
+    \syn{1}{~xpaa4a2aaka iru~}\rt{|fae4anaa iru|}\vc{7 intr}
+    \syn{2}{~s8ailaaka iru~}\rt{|s8aylaa iru|}\vc{7 intr}.
+\hw{fast}
+    \md{1}{~saappi8aamal iru~}\rt{|saappi8aame iru|}\vc{7 intr}
+    \eg{deliberately go without food; fast temporarily}
+    \md{2}{~pa88i2i ke8a~}\rt{|pa8ni ke8a|}\vc{7 intr}
+    \eg{go without food; abstain from food}
+    \md{3}{~u33aaviratam iru~}\rt{|u33aaviradam iru|}\vc{7 intr}
+    \eg{abstain from food, as a religious duty or for political and other reasons}
+    \md{4}{~noo2pu iru~}\wtvc{7i}
+    \eg{go without any or certain kinds of food, as a religious duty}
+    \syn{1}{~upavaacam iru~}\wtvc{7i}.
+\hw{fast, be}
+    \md{1}{~veekamaaka iru~}\rt{|veehamaa iru|}\vc{7 intr}
+    \eg{be rapid, quick, speedy}
+    \syn{1}{~virai~}\wtvc{2i}
+    \md{2}{~veekamaaka oo8u~}\rt{|veehamaa oo8u|}\vc{3 intr}
+    \eg{(of a watch, clock) be in advance; be ahead of time; run rapidly or quickly}
+    \md{3}{~u6utiyaaka iru~}\wtvc{7i}
+    \eg{be firm; be firmly tied, as a knot; be strong or secure}
+    \md{4}{~uutaariyaaka iru~}\rt{|uudaariyaa iru|}\vc{7 intr}
+    \eg{be a spendthrift; lead a carefree, wild life}.
+\hw{fast, become}
+    \md{1}{~u6utiyaaku~}\wtvc{3i}
+    \eg{become firm, strong or secure}.
+\hw{fasten}
+    \md{1}{~ka88u~}\rt{|ka88u|}\vc{3 tr}
+    \eg{bind; pack; tie up, as an animal to a peg}
+    \md{2}{~muu8u~}\rt{|muu8u|}\vc{3 tr}
+    \eg{close, as a window, a door, a box}
+    \md{3}{~a8ai~}\rt{|a8e|}\vc{6 tr}
+    \eg{shut, as a window or door; shut animals up in a fold; put s.t. or s.o. in a cage or enclosure}
+    \md{4}{~puu88u~}\rt{|puu88u|}\vc{3 tr}
+    \eg{lock up, as a door or a box}
+    \md{5}{~poo8u~}\rt{|poo8u|}\vc{4 tr}
+    \eg{make secure, as a shirt with buttons, a door with a bolt}
+    \syn{1}{~maa88u~}\rt{|maa88u|}\vc{3 tr}
+    \eg{hook s.t.}
+    \md{6}{~taa7 i8u~}\wtvc{4t}
+    \eg{bolt, as the door, window, etc.}
+    \md{7}{~poruttu~}\wtvc{3t}
+    \eg{fix; attach firmly; attach s.t. to s.t. else, as sewing buttons on to a shirt, fixing a lock to a door, etc.; fix (one's eyes) on s.t. or s.o.}
+    \md{8}{~to8uttuvai~}\rt{|to8uttu vayyi|}\vc{6b tr}
+    \eg{tie or fasten lightly; string together, as garlands, flowers, etc.}.
+\hw{fasten down}
+    \md{1}{~ka88u~}\rt{|ka88u|}\vc{3 tr}
+    \eg{fasten to a horizontal surface; bind; tie; batten down}.
+\hw{fasten off}
+    \md{1}{~pi3ai~}\rt{|po3e, po3e|}\vc{6 tr}
+    \eg{tie, as two pieces of thread by knotting}
+    \syn{1}{~mu8i~}\rt{|mu8i|}\vc{6b tr}
+    \eg{tie as two pieces of thread by rolling the ends together}.
+\hw{fasten on}
+    \md{1}{~pi8ittuk ko9~}\wtvc{1}\rt{|pi8iccikkoo|}\vc{4 tr}
+    \eg{seize; take a firm hold of; single s.t. or s.o. out for attack}
+        \st{~naa2 co22ataiyee ava2 pi8ittuk ko38aa2~}
+        \sr{|naan sonnadayee aven pi{\d d}iccikki{\d t}{\d t}aan|}
+        \se{He fastened (or) seized upon what I said.}.
+\hw{fasten one's eyes on}
+    \md{1}{~ve6ittup paar~}\rt{|vericci paaru|}\vc{6 tr}
+    \eg{gaze at; focus on; stare at}
+    \syn{1}{~ve6i~}\wtvc{6t}
+    \md{2}{~ka3ka3aip   padi~}\rt{|ka33e padi|}\vc{6b ta}
+    \eg{fix one's eyes, as on s.o. or s.t.}
+        \st{~ava2 e2   miitu   ka3ka3aip patittaa2~}
+        \sr{|avan en meele ka{\d n}{\d n}e padiccaan|}
+        \se{He fixed his eyes on me.}.
+\hw{fasten up}
+    \md{1}{~maa88u~}\rt{|maa88u|}\vc{3 tr}
+    \eg{fasten s.t. to a vertical surface}
+        \st{~intap pa8attai angkee maa88u~}
+        \sr{|indap pa{\d d}atte ange maa{\d t}{\d t}u|}
+        \se{Fasten  this picture  up there.}.
+\hw{fasten upon}
+    \md{1}{~pattikko9~}\wtvc{1t}
+    \eg{sieze; take hold of}
+        \st{cf. fasten on}.
+\hw{fastened, be}
+    \md{1}{~pati~}\rt{|padi|}\vc{2b intr}
+    \eg{be fixed, as one's sight or attention upon s.t.; be coupled firmly, as two planks of wood in joining}
+    \md{2}{~poruntu~}\wtvc{3i}
+    \eg{be attached firmly; dovetail}
+    \md{3}{~i3ai~}\wtvc{2i}
+    \eg{be attached or joined; be tied or made fast}.
+\hw{fat}
+    \md{1}{~paruttuvi8u~}\rt{|paruttu8u|}\vc{4 intr}
+    \eg{become fleshy, stout or heavy}
+    \syn{1}{~paru~}\wtvc{6i}
+    \md{2}{~cataipi8ittiru~}\rt{|sade pi8icc-iru|}\vc{7 intr + dat}
+    \eg{put on flesh; become plump or heavy}
+    \syn{1}{~catai poo88iru~}\rt{|sade poo88iru|}\vc{7 intr}
+    \md{3}{~e8ai kuu8u~}\rt{|e8e kuu8u|}\vc{3 intr + dat}
+    \eg{gain weight}
+    \md{4}{~ta8ittuvi8u~}\rt{|ta8icc-i8u|}\vc{4 ta}
+    \eg{become heavy or stout}
+    \syn{1}{~ta8i~}\wtvc{6i}
+    \md{5}{~ko7uttiru~}\rt{|ko7utt-iru|}\vc{7 intr}
+    \eg{be very fat; be fattened, as a animal, etc.; be thick or well-filled as a purse}
+    \syn{1}{~ko7a~}\wtvc{6i}.
+\hw{fatal, be}
+    \md{1}{~uyirukku aapattaaka iru~}\rt{|uyirukku aabattaa iru|}\vc{7 intr}
+    \eg{be a danger or risk to one's life; cause danger to one's life}
+    \syn{1}{~uyirukku aapattaaku~}\rt{|uyirukku aabatt-aahu|}\vc{3b intr}
+    \syn{2}{~  uyirukku apaayam vi3aivi~}\wtvc{6ta}
+    \syn{3}{~  uyirukku aapattu vi3aivi~}\wtvc{6ta}
+    \md{2}{~caavukkuk kaara3amaaka iru~}\rt{|saavukku kaara3amaa iru|}\vc{7 intr}
+    \eg{bring about death; be the cause of s.o.'s death.}
+    \md{3}{~naacamaakku~}\rt{|naasam aakku|}\vc{3 tr}
+    \eg{destroy, ruin, cause misfortune}
+    \syn{1}{~naacappa8uttu~}\rt{|naasa-pa8uttu|}\vc{3 tr}
+    \syn{2}{~naasamu88u~}\wtvc{3ta}
+    \md{4}{~paa7aakku~}\rt{|paa7-aakku|}\vc{3 tr}
+    \eg{cause ruin, destruction or failure}
+    \syn{1}{~paa7pa8uttu~}\rt{|paa7 pa8uttu|}\vc{3 tr}
+    \syn{2}{~naasamaakku~}\wtvc{3t}
+    \md{5}{~vitivasamaaku~}\rt{|vidivasam-aahu|}\vc{3b intr 3 pn}
+    \eg{be connected with fate or destiny; be fateful, as a meeting, an occurrence, a period}
+        \st{~anta cantippu vitivacamaa2atu~}
+        \sr{|anda sandippu vidivasamaanadu|}
+        \se{That meeting (or) encounter was fatal (fateful).}
+    \md{6}{~talaivitiyaaku~}\rt{|talevidi aahu|}\vc{3b intr 3pn}
+    \eg{be fated or destined; be so written}
+        \st{~anta vipattu ava2 talaiviti (yaakum)~}
+        \sr{|anda vibattu avan talevidi (aahum)|}
+        \se{That accident occurred because of his fate; That accident was fated to occur to him. (both used usually in an unfavourable sense)}
+    \md{7}{~kee8ukaalam pi8ittiru~}\rt{|kee8ukaalam pi8icc-iru|}\vc{7 intr + dat}
+    \eg{be in for a bad time; be on the road to ruin; be under bad stars}
+        \st{~ava2ukku kee8ukaalam pi8ittirukki6atu~}
+        \sr{|avanukku kee{\d d}ukaalam pi{\d d}iccirukku|}
+        \se{Misfortune has caught up with him; (or) He is in for a bad time; he is jinxed.}.
+\hw{fatalistic, be}
+    \md{1}{~vitiyee e26u iru~}\rt{|vidiyee-33u iru|}\vc{7 intr}
+    \eg{hold the attitude of fatality or the doctrine of fatalism; be resigned; have a negative attitude about s.t.}
+    \syn{1}{~uu7vali e26u iru~}\wtvc{7i}
+    \md{2}{~na8appatu na8akka88um e26u iru~}\rt{|na8appadu na8akka88um-33u iru|}\vc{7 intr}
+    \eg{hold the attitude that whatever will be will be; submit to circumstances as inevitable; submit passively to misfortune, calamity, etc.}
+    \syn{1}{~(ka8avu9) vi88ava7i e26u iru~}\rt{|(ka8avu9) vi88ava7i-33u iru|}\vc{7 intr}.
+\hw{fateful, be}
+    \md{1}{~vitivacamaaku~}\rt{|vidivasam-aahu|}\vc{3b intr 3pn (pres \& fut only)}
+    \eg{be connected with fate or destiny; be fatal, as an event, a period, etc.}
+        \st{~ava9 ta6kolai vitivacamaa8um~}
+        \sr{|ava9 tarkolai vidivasam aahum|}
+        \se{Hers was a fateful suicide.}
+    \syn{1}{~uuvi2aiyaaku~}\wtvc{3 3pn}
+    \md{2}{~mukkiyamaaku~}\rt{|mukkiyam aahu|}\vc{3b intr 3pn}
+    \eg{be important; be momentous}
+    \syn{1}{~si6appaaku~}\wtvc{3 3pn}
+    \syn{2}{~viseevimaaku~}\wtvc{3 3pn}.
+\hw{father}
+    \md{1}{~uruvaakku~}\rt{|uruvakku|}\vc{3 tr}
+    \eg{found, originate, as a doctrine, a sect, etc.; propound as a theory, a practice, a way of life}
+    \syn{1}{~too66uvi~}\wtvc{6t}
+    \syn{2}{~u38aakku~}\rt{|u38-aakku|}\vc{3 tr}.
+\hw{fathom}
+    \md{1}{~aa7am ka38upi8i~}\rt{|aa7am ka38u-pi8i|}\vc{6b ta}
+    \eg{find or measure the depth of river, sea, well, pit, crater, etc.}
+    \syn{1}{~aa7am (aa7attaik) ka3akki8u~}\wtvc{4ta}
+    \md{2}{~aa7am paar~}\rt{|aa7am paaru|}\vc{6 tr}
+    \eg{find or measure the depth of river, pit, etc.; test or examine s.o.'s learning, qualification, sincerity, etc.}
+    \md{3}{~parintuko9~}\wtvc{1t}\rt{|purinjikkoo|}\vc{4 tr}
+    \eg{understand, comprehend; get to the bottom of, as an event, a person's motive, etc.}
+    \syn{1}{~a6i~ (or)? ~aa7anka6i~}\wtvc{2t}.
+\hw{fatigue}
+    \md{1}{~ka9aippu u38aakku~}\rt{|ka9eppe u38-aakku|}\vc{3 ta}
+    \eg{cause fatigue; cause to feel fatigued}
+    \syn{1}{~coorvu u38aakku~}\wtvc{3ta}
+    \md{2}{~ka9aippa8aiyac cey~}\wtvc{1t}
+    \eg{cause to fatigue; cause to feel tired or weary}
+    \syn{1}{~coorva8aiyac cey~ (or) ~coorv~}\wtvc{1t}. % synonym truncated?
+\hw{fatigued, be}
+    \md{1}{~aluttup poo~}\rt{|aluttup poo|}\vc{3b intr 3pn (usu + past only)}
+    \eg{become weary; become discouraged}
+        \st{~e2akku aluttup pooyi66u~}
+        \sr{|enakku aluttu pooccu|}
+        \se{I am tired, fed up.}
+    \syn{1}{~salittup poo~}\wtvc{w. dat.}\rt{|saliccu poo|}\vc{3b intr (usu + past only)}
+    \syn{2}{~aluttuvi8u~}\wtvc{4i 3 pn}
+    \syn{3}{~salittuvi8u~}\wtvc{4i 3 pn}
+    \md{2}{~ka9aittup poo~}\rt{|ka9eccip poo|}\vc{3b intr 3pn + dat (usu + past}
+    \eg{become tired or wearied; become exhausted}
+    \syn{1}{~soorntu poo~}\rt{|soondu poo|}\vc{3 intr 3pn + dat (usu + past}
+    \syn{2}{~ayarntu poo~}\rt{|asandu poo|}\vc{3 intr 3pn + dat (usu past onl}
+    \md{3}{~ka9aippaay iru~}\rt{|ka9eppaa iru|}\vc{7 intr + dat}
+    \eg{be tired or exhausted; look or feel tired and weary}
+        \st{~ava2 ka9aippaay iruntaa2~, ~ava2ukku ka9aippaay iruntatu~}
+        \sr{|avan ka9eppaa irundaan,   avanukku ka9eppaa irundadu|}
+        \se{He was (or  felt) fatigued.}
+    \syn{1}{~coorvaay iru~}\rt{|soorvaa iru|}\vc{7 intr + dat}
+    \md{4}{~coorntuvi8i~}\rt{|soondu8u|}\vc{4 intr}
+    \eg{grow weary or exhausted; be tired and worn out}
+    \syn{1}{~ka9aittuvi8u~}\rt{|ka9ecc-i8u|}\vc{4 ta}
+    \syn{2}{~ayarntuvi8u~}\rt{|asandu8u|}\vc{4 intr}
+    \md{5}{~ayarvu6u~}\wtvc{1i}
+    \eg{be tired or weary}
+    \syn{1}{~ayarva8ai~}\wtvc{2i}
+    \syn{2}{~ka9appa8ai~}\wtvc{2i}
+    \syn{3}{~coorva8ai~}\wtvc{2i}
+    \syn{4}{~coorvu6u~}\wtvc{1i}
+    \md{6}{~i2aippaay iru~}\wtvc{7i}
+    \eg{be short of breath or gasp because of over exhaustion; be weak and worn out}.
+\hw{fatten}
+    \md{1}{~ko7u~}\rt{|ko7u|}\vc{6 intr}
+    \eg{grow fat; become plump}
+    \syn{1}{~paruttuvi8u~}\rt{|paattu8u|}\vc{4 intr}
+    \md{2}{~ko7ukka vai~}\rt{|ko7ukka vayyi|}\vc{6b tr}
+    \eg{make fat; fatten up, as sheep for slaughter}
+    \md{3}{~se7ikkas sey~}\wtvc{1t}
+    \eg{help grow better; nourish, as crop, people, etc.; enrich, as soil, ideas, etc.}
+    \syn{1}{~se7ikka vai~}\wtvc{6t}.
+\hw{fatty, be}
+    \md{1}{~koo7uppaay iru~}\rt{|ko7uppaa iru|}\vc{7 intr}
+    \eg{contain excessive fat, as muscle, food, meat, soup, etc.}
+    \md{2}{~ko7uppas sattu u8aiyataay iru~}\wtvc{7i}
+    \eg{contain nutrative fat, as foods etc.}
+    \syn{1}{~ko7uppus sattu   no38iru  ~}\wtvc{7i}.
+\hw{fatuous, be}
+    \md{1}{~ma8atta2amaaka iru~}\rt{|ma8attanamaa iru|}\vc{7 intr}
+    \eg{be silly; be inane}
+    \syn{1}{~peetaitata2amaaka iru~}\wtvc{7i}
+    \md{2}{~mu88aa9ta2amaaka iru~}\rt{|mu88aa9tanamaa iru|}\vc{7 intr}
+    \eg{be foolish; be silly}
+    \syn{1}{~ma8atta2amaaka iru~}\wtvc{7i}.
+\hw{fault}
+    \md{1}{~tappu sol~}\rt{|tappu sollu|}\vc{3c tr}
+    \eg{censure; blame; find fault with}
+    \syn{1}{~tava6u sol~}\wtvc{3t}
+    \syn{2}{~pi7ai sol~}\wtvc{3t}
+    \md{2}{~ku66am sol~}\rt{|kuttam sollu|}\vc{3c tr, ta}
+    \eg{find fault with; blame; criticise}
+    \syn{1}{~ku6ai sol~}\rt{|kore sollu|}\vc{3c tr}
+    \syn{2}{~pi7ai sol~}\wtvc{3t}.
+\hw{faulty, be}
+    \md{1}{~tappaaka iru~}\rt{|tappaa iru|}\vc{7 intr 3pn}
+    \eg{be wrong; contain faults, mistakes or errors}
+    \syn{1}{~pi7aiyaay iru~ (and) ~tavaruk~}\wtvc{7 3pn}
+    \md{2}{~pi7aiyaaka iru~}\wtvc{7i 3pn}
+    \eg{be full of faults or defects}
+    \md{3}{~ku6aipaa8u ko38iru~}\wtvc{7i}
+    \eg{contain faults or blemishes; be defective}.
+\hw{favour}
+    \md{1}{~aatari~}\rt{|aadari|}\vc{6b tr}
+    \eg{support, show favour to}
+    \syn{1}{~aataravu kaa88u~}\rt{|aadaruvu kaa88u|}\vc{3 tr + dat}
+    \syn{2}{~aataravu taa~}\rt{|aadaravu taa|}\vc{2c ta  + dat}
+        \st{~avarka9 ava2ai aakarittaarka9~, ~avarka9 avarukku aataravu ko8uttaarka9~ (or) ~tantaarka9~}
+        \sr{|avanga avane aadariccaanga, avanga avanukku aadaravu ku{\d d}uttaanga (or) tandaanga|}
+        \se{They gave him the benefit of the doubt; they favoured him.}
+    \md{2}{~virumpu~}\rt{|virumbu|}\vc{3 tr}
+    \eg{prefer; like; choose}
+        \st{~naa2 ava2ai virumpuki6ee2~}
+        \sr{|naan avane virumbureen|}
+        \se{I like him.}
+    \syn{1}{~pi8i~}\rt{|pi8i|}\vc{6b tr 3pn + dat}
+        \st{~e2akku ava3aip pi8ikki6atu~}
+        \sr{|enakku avane pi{\d d}ikkidu|}
+        \se{I like him.}
+    \md{3}{~salukai kaa88u~}\rt{|saluhe kaa88u|}\vc{3 tr}
+    \eg{show partiality to; give unfair help or advantages to; give s.o. the benefit of the doubt}
+    \syn{1}{~pa8sa paatam kaa88u~}\rt{|pa8ca paadam kaa88u|}\vc{3 tr}
+    \syn{2}{~ooravanca2ai ka88u~}\wtvc{3ta}
+    \eg{act with partiality}
+    \syn{3}{~ooravanca2ai sey~}\wtvc{1}\rt{|ooravanjane pa33u|}\vc{3 tr}
+    \md{4}{~nalku~}\wtvc{3t}
+    \eg{bestow, grant, give}
+    \syn{1}{~aru9~}\wtvc{3t}
+    \md{5}{~aru9puri~}\wtvc{2ta}
+    \eg{patronise; grace; grant, as a prayer}
+    \syn{1}{~aru9 sey~}\wtvc{1ta}
+    \md{6}{~ottiru~}\rt{|ott-iru|}\vc{7 tr}
+    \eg{resemble; be like or similar to}
+    \md{7}{~caayalaaka iru~}\rt{|saayalaa iru|}\vc{7 intr}
+    \eg{have the likeness of; show the same features of}
+    \syn{1}{~caa8aiyaaka iru~}\rt{|jaa8eyaa iru|}\vc{7 intr}
+        \st{~antak ku7antai ammaavi2 caayalaaka~ (or) ~caa8aiyaaka irukki6atu~}
+        \sr{|anda ko7ende ammaa(voo{\d d}a) saayalaa (or) jaadayaa irukku|}
+        \se{The baby favours her mother}
+\bye
+

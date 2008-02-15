@@ -1,0 +1,51 @@
+% mmfuture.tex
+% (c) 1992 Jeroen Hellingman
+% Last edit: 09-DEC-1992
+
+
+\beginsection On the future of \TeX
+
+Working on Malayalam-\TeX, I met with more and more limitations of
+\TeX, which needed ad-hoc solutions, that will not win an elegance
+price. It made me dream of a future \TeX-like system, that would
+incorporate all scripts in a more elegant way. Several people have
+made suggestions on the future of \TeX, but most of them, again,
+focussed on the Western languages. I think a transition to the
+emerging 16-bit Unicode (ISO 10646) standard will be the most natural
+next step.
+
+\TeX\ was originally designed for two `scripts', English and
+Mathematics, and it does a very good job of typesetting both of them,
+but one gets in problems when one tries to typeset another script with
+it, for example Malayalam, or one of the various other scripts in use
+for writing the spoken languages of the world, or to name the most
+difficult of all, typesetting music. A future-\TeX\ should be build up
+in some modular manner, so that other scripts can be added more
+easily.
+
+Apart from being a typesetting system, \TeX\ is a ful-fledged
+programming language, but a horrible awkward one. As Frank Mittelbach,
+suggested, it would be nice to replace it with a more conventional
+one, although his suggestion to use lisp fills me with new horrors. I
+think a more modern functional language like Miranda would be a much
+candidate. A functional language with some very basic functions needed
+for typesetting would be a good kernel in my eyes. All logic needed
+for typesetting a script could then be coded in the language itself,
+instead of being hardwired into the system.
+
+Adding a new script would then be as easy as designing a font for the
+script (A difficult enough task in itself) and writing the logic for
+composing the script from a character-stream, which then could be
+loaded into the system.
+
+An anachronism that has annoyed me more and more when I started making
+several variants and sizes of my font is the use of bitmaps, with took
+up more and more space on my hard disk.
+
+I would propose to join the powers of \TeX\ and \MF into one program,
+that use the speak the same language, so that one can have direct
+access to character-programs, to create the letter in the size and
+style wanted at the a certain moment.
+
+
+\bye

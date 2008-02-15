@@ -1,0 +1,188 @@
+
+Files included in the Malayalam-TeX package (some are only in the full version)
+
+
+docs:                       Directory with macro-files, demo-files and the user's guide
+  elephant.mm               The fable of the Blind Men and the Elephant in Malayalam
+  elephant.tex
+  lion.mm                   The fable of the Lion and the Mouse in Malayalam
+  lion.tex
+  mmarticl.mm               An article about Malayalam-TeX
+  mmarticl.tex
+  mmchart.tex               A chart showing all characters in the Malayalam font
+  mmconj.mm                 A chart showing all conjuncts of two letters in Malayalam
+  mmconj.tex
+  mmexp.mm                  A demo of more experimental styles of the Malayalam font
+  mmexp.tex
+  mmfont.tex                Macros to load the Malayalam fonts (loaded by mmmacs)
+  mmfuture.tex              some thoughts on the future of Malayalam-TeX
+  mmguide.dvi               DVI-file of the user's guide
+  mmguide.mm                source of the user's guide
+  mmguide.ps                PostScript version of the user's guide
+  mmguide.tex               Pre-processed version of the user's guide
+  mmmacs.tex                Macros to use Malayalam-TeX
+  mmphmacs.tex              Macros to use phonetic letters for Malayalam (requires WSUIPA)
+  mmqfont.tex               Macros to quickly load a subset of the Malayalam fonts
+  mmqmacs.tex               same as mmmacs.tex, but uses a subset of the Malayalam fonts
+  mmsample.mm               Samples of each style and size of the Malayalam font
+  mmsample.tex
+  mmscript.tex
+  mmtable.mm                A table of the transliteration scheme used by Malayalam-TeX
+  mmtable.tex
+  mmtitle.tex               Title page of the user's guide
+  mmtrans.mm                A table of the transliteration scheme used by Malayalam-TeX
+  mmtrans.tex
+  mmtrmacs.tex              macros to use the transcription-mode of Malayalam-TeX
+  mmxfont.tex               macros to load some experimental style fonts
+  ornament.tex              macros to load an ornament font
+  prodigal.mm               The fable of the prodigal son in Malayalam with parallel translation
+  prodigal.tex
+  test.mm                   A simple test
+  test.tex
+  twolines.tex              macros to make parallel translations on two/three lines.
+DNG:                        Directory including files to use Frans Velthuis Devanagari fonts
+  dn2dng.pat                pattern-file to translate from Velthuis' transcription to mine
+  dng.pat                   pattern-file to translate from my transcription to Velthuis'
+  dng.tex                   chapter of user-guide explaining use of Devanagari
+  dngmacs.tex               macros to use Devanagari
+  dngtrans.dng              table of transcription of Devanagari used
+  dngtrans.tex
+  dntrmacs.tex              macros to use Devanagari in transcription
+  misspaal.dng              demo of Devanagari
+MF:                         directory with Metafont sources of the Malayalam font
+  effect.mf                 selects a special effect to be applied to letters
+  esoteric.mf               esoteric effect
+  fnt_code.mf               defines alternative glyph positions in the Malayalam font
+  hstripes.mf               horizontal stripes effect
+  mm.bat                    MS-DOS batch file to create all fonts
+  mm.fts                    Atari-ST CSTeX fts file to create all fonts
+  mm.job                    MS-DOS emTeX job file to create all fonts
+  mm10.mf                   parameters for mm10
+  mm10s.mf
+  mm12.mf
+  mm12s.mf
+  mm17.mf
+  mm17s.mf
+  mm6.mf
+  mm6s.mf
+  mm8.mf
+  mm8s.mf
+  mmb10.mf
+  mmb10s.mf
+  mmb12.mf
+  mmb12s.mf
+  mmb17.mf
+  mmb17s.mf
+  mmbig.mf
+  mmbigo.mf
+  mmc10.mf
+  mmc10s.mf
+  mmc12.mf
+  mmc12s.mf
+  mmc17.mf
+  mmc17s.mf
+  mmcb10.mf
+  mmcb10s.mf
+  mmcb12.mf
+  mmcb12s.mf
+  mmcb17.mf
+  mmcb17s.mf
+  mmcillu.mf                cillu letters
+  mmcoding.mf               defines glyph positions in the Malayalam font
+  mmconj.mf                 conjuncts
+  mmcons.mf                 consonants
+  mmcsl10.mf
+  mmcsl10s.mf
+  mmcsl12.mf
+  mmcsl12s.mf
+  mmcvconj.mf               consonant-vowel combinations
+  mmdefs.mf                 definitions of Metafont macros used by the Malayalam font
+  mmexpa12.mf
+  mmexpb12.mf
+  mmexpc12.mf
+  mmfnt.mf                  galley file using alternative glyph encoding
+  mmfont.mf                 galley file using normal glyph encoding
+  mmlnums.mf                Latin numerals
+  mmnums.mf                 Malayalam numerals
+  mmpunct.mf                punctuation marks
+  mmrconj.mf                conjuncts with subscribed ra
+  mmscons.mf                conjuncts of stacked letters
+  mmsec.mf                  secondary variants of consonants
+  mmsl10.mf
+  mmsl10s.mf
+  mmsl12.mf
+  mmsl12s.mf
+  mmstyles.txt              list of styles defined
+  mmtest.fts                Atari-ST CSTeX test bed file
+  mmtest.mf                 test bed file
+  mmvowels.mf               vowels
+  orn10.mf                  ornamental font
+  outline.mf                outline effect
+  rejected.mf               rejected variant shapes of some Malayalam letters
+  reverse.mf                reverse video effect
+  shadow.mf                 shadow effect
+  var_ja.mf                 variant ja
+MT:                         Directory containing code for another unfinished Malayalam metafont
+  mt12.mf
+  mtdefs.mf
+  mtfont.mf
+Preprocessor:               Directory containing the preprocessor source and support files
+  ack2mm.pat                patterns to translate A.C.K. transcription to mine
+  avltree.c                 AVL tree code used by the pre-processor
+  avltree.h                 AVL tree header file
+  Makefile                  Make file for UNIX
+  ml.bat                    MS-DOS batch file to pre-process a Malayalam text (trad. script)
+  ml.g                      Atari-ST gulam file to pre-process a Malayalam text (trad. script)
+  mlr.bat                   MS-DOS batch file to pre-process a Malayalam text (mod. script)
+  mlr.g                     Atari-ST gulam file to pre-process a Malayalam text (mod. script)
+  mltr.g                    Atari-ST gulam file to pre-process a Malayalam text (mod. & trad. script)
+  mltrth.g                  Atari-ST gulam file to pre-process a Malayalam text (mod. & trad. & Dev. & Tam.)
+  mm.c                      main source of the pre-processor
+  mm.h                      header file of the pre-processor
+  mm.pat                    patters to translate Malayalam transcription to TeX-commands
+  mm.prj                    Atari-ST Pure C project file for the pre-processor
+  mm.scr                    Malayalam script definition (trad. script)
+  mm.trs                    Malayalam transliteration definition (trad. script)
+  mm2ack.pat                patterns to translate my transliteration to that of A.C.K.
+  mmr.scr                   Malayalam script definition (mod. script)
+  mmr.trs                   Malayalam transliteration definition (mod. script)
+  mmrfull.trs               Malayalam transliteration definition (mod. script, alt. punctuation)
+  patc:                     Directory containing the patc program, a transcription translator
+    detex.g                 Atari-ST gulam batch file to remove TeX commands
+    detex.pat               patterns to remove TeX commands
+    patc.c                  the source of the pattern translator
+    patc.prj                Atari-ST Pure C project file for patc
+    patc.txt                manual pages for patc
+    pstree.c                pattern-search tree source
+    pstree.h                pattern-search tree headers
+  pstree.c
+  pstree.h
+  readfile.c                file access
+  readfile.h
+  scr.c                     script definitions
+  scr.h
+  trs.c                     transliteration definitions
+  trs.h
+  Unicode:
+    unicode.txt             some thoughts on using Unicode
+Tamil:                      Directory to handle Tamil with Malayalam tex (requires WNTML)
+  adami.pat                 patterns to translate the ADAMI transliteration to mine
+  tamil.pat                 patterns to translate the Tamil transliteration to TeX-macros
+  tamil.tex                 chapter of user's guide on using Tamil
+  test.tam                  a test in ADAMI transliteration
+  test.tex                  a test in pre-processed form
+  test.tml                  a test in my transliteration
+  tmlmacs.tex               macros to use Tamil
+  tmltrans.tex              table of the Tamil transliteration (pre-processed)
+  tmltrans.tml              macros to use Tamil in transliteration
+  tmltrans.txt              table of the Tamil transliteration (source)
+  wntml.pat                 patterns to translate the original wntml transliteration
+charity                     a file explaining the concept of Charity-ware
+files                       this file
+history                     version history of Malayalam-TeX
+install                     Some notes on Installation
+questions-and-answers       Frequently asked questions about Malayalam-TeX and their answers
+readme                      You should know by now
+todo                        Future extensions, bug fixes, etc. (Hints and comments appreciated)
+
+--

@@ -1,0 +1,115 @@
+
+Malayalam-TeX installation guide
+--------------------------------
+
+Malayalam-TeX has been installed and tested on MS-DOS with emTeX,
+Atari-ST with CSTeX, OxTeX on Macintosh and with TeX on various UNIX
+machines. 
+
+The installation procedures differs on all these machines, so
+look under the heading of your machine.
+
+Included are .PK files intended for use with a CanonCX laser
+printer engine (which is the engine most 300 DPI laser printers
+use) If you need different fonts, you will have to generate the
+fonts yourself using METAFONT.
+
+Atari-ST with CSTeX (assuming you use the command line shell gulam)
+
+To install:
+  1. Unpack the archive. Tools to uncompress gzip files and unpack tar archives
+     on The Atari-ST are available at most ftp servers.
+  2. Place the *.tfm files in a directory where TeX can find them (depending
+     on your configuration, that might be C:\cstex\tfm\)
+  3. Place the *.pk files in a directory font300\ where the DVI previewer and DVI
+     printer driver can find them. (possibly C:\cstex\fonts\font300\)
+  4. Place the mm.ttp, patc.ttp and the gulam batch files (ending with .G)
+     in a directory your shell can find them (normally C:\bin\)
+  5. Set the environment variable MMDIR to the path where mm.trs, mm.scr, etc. are.
+     (mmfont\preproc in the distribution)
+     Everything should be in working order now
+To create the .pk fonts:
+  1. Start C_MF
+  2. Edit the file MM.FTS to include the fonts and magnifications you need
+  3. Set the input directory to the directory where the Malayalam Metafont sources are
+  4. Select the output device
+  5. Create the fonts. (This may take some time)
+     C_MF will automatically place the resulting .PK files in the correct directories.
+
+
+MS-DOS with emTeX
+
+To install:
+  1. Unpack the archive. Tools to uncompress gzip files and unpack tar archives
+     on MS-DOS are available at most ftp servers.
+  2. Place the *.TFM files in a directory where TeX can find them
+  3. Place the *.PK files in the directories where the DVI previewer and DVI printer
+     driver can find them.
+  4. Place the PATCH.EXE, MM.EXE and the batch files (ending with .BAT)
+     in a directory your path points at (normally C:\DOS\)
+  5. Set the environment variable MMDIR to the path where MM.TRS, MM.SCR, etc. are.
+     (MMFONT\PREPROC in the distribution)
+     Everything should be in working order now
+To create the *.PK fonts:
+  1. Edit the file MM.JOB to select the files and device you need
+  2. Run MFJOB with this file.
+
+Macintosh
+
+TODO, not that the preprocessor and patc utility are simple ports of the
+UNIX style tools, and use a commandline. Sorry mac fans!
+
+UNIX
+
+To install:
+  1. Unpack the archive.
+  2. Place the *.tfm files in a directory where TeX can find them. (or tell
+     TeX where they are by setting the environment variable TEXFONTS)
+  3. Place the *.pk fonts in a directory your previewer and printer driver can
+     find them. (or tell TeX where they are by setting the environment variable
+     TEXPKS) For some TeX implementations, it may be required to rename the
+     fonts from *.pk to *.300pk
+  6. Look in mm.c to find the line saying #define ATARI_ST, change this into
+     #define UNIX
+  5. Make the preprocessor and the patc program, by saying make in the directory
+     they reside. (You will have to change the compiler and and include paths in
+     the Makefile to reflect your setup)
+  6. Make the batch programs (ending in .g) executable, if you wish you may remove
+     the .g extension. (It is only needed for gulam on the Atari)
+  7. Set the environment variable MMDIR to point at the directory where
+     the .scr and .trs files are  (mmfont/preproc in the distribution).
+To create the *.*pk fonts:
+  1. run Metafont, for example to make mm10.300gf
+     type `mf &plain "\mode=hplaser; mag:=1; input mm10"'
+     replace hplaser with your favourite mode
+  2. Convert the resulting *.*gf file to a *.*pk file
+     type `gftopk mm10.gf mm10.pk'
+  To make all fonts, run the batch file mm.bat. This may take some time.
+To test
+    type `ml mmtable.mm mmtable.tex'
+    type `tex &plain mmtable'
+    Print or view the resulting mmtable.dvi file.
+
+
+Porting
+
+The included source code has been successfully compiled on
+
+* Turbo-C v2.03 for Atari ST.
+* gcc v2.3.1 on HP-UX.
+* Turbo C++ on MS-DOS. (use Huge memory model and word alignment options, increase
+  stack-size)
+
+If it doesn't work right away, things you may need to do include:
+* change options in the Makefile
+* make a project file for Turbo C++ (the one included is for Atari, and will NOT
+  work with Turbo C on MS-DOS or Windows!)
+* change the line with
+    #define ATARI_ST
+  in the file mm.c to your system type.
+
+Please notify me if you port this to any system, especially Macintosh.
+
+Good luck
+
+Jeroen

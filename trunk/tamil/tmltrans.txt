@@ -1,0 +1,58 @@
+% tmltrans.txt -- Tamil transcription table
+% Copyright Jeroen Hellingman 1992, 1997
+%
+% History:
+%	29-OCT-1997 updated (JH)
+%	22-DEC-1992 previous edit (Jeroen Hellingman).
+
+\bgroup
+\def\tmlstrut{\vtop to4pt{}\vbox to10pt{}}
+\def\q{\quad\hfill}
+\def\x{\vrule\ }
+\def\xx{\vrule width.8pt}
+\offinterlineskip
+\halign{\tmlstrut\xx\ \tt#\q&\x#\q&\x#\q\xx\ &\tt#\q&\x#\q&\x#\q\xx\ &\tt#\q&\x#\q&\x#\q\xx\cr
+\noalign{\hrule height.8pt}
+a       & <tm>a</tm>      	& $$a$$         &
+ka      & <tm>ka</tm>     	& $$ka$$        &
+va      & <tm>va</tm>     	& $$va$$        \cr
+aa      & <tm>aa</tm>     	& $$aa$$        &
+"na     & <tm>"na</tm>   	& $$"na$$       &
+zha     & <tm>zha</tm>     	& $$zha$$       \cr
+i       & <tm>i</tm>      	& $$i$$         &
+ca      & <tm>ca</tm>       & $$ca$$        &
+.la     & <tm>.la</tm>      & $$.la$$       \cr
+ii      & <tm>ii</tm>     	& $$ii$$        &
+\~{}na  & <tm>~na</tm>     	& $$~na$$       &
+.ra 	& <tm>.ra</tm>     	& $$.ra$$       \cr
+u       & <tm>u</tm>      	& $$u$$         &
+.ta     & <tm>.ta</tm>     	& $$.ta$$       &
+_na    	& <tm>_na</tm>     	& $$..na$$      \cr
+uu      & <tm>uu</tm>     	& $$uu$$        &
+.na     & <tm>.na</tm>     	& $$.na$$       &
+ja      & <tm>ja</tm>      	& $$ja$$        \cr
+e       & <tm>e</tm>      	& $$e$$         &
+ta  	& <tm>ta</tm>       & $$ta$$    	&
+.sa     & <tm>.sa</tm>      & $$.sa$$       \cr
+ee      & <tm>ee</tm>     	& $$ee$$        &
+na  	& <tm>na</tm>       & $$na$$    	&
+sa      & <tm>sa</tm>       & $$sa$$        \cr
+ai      & <tm>ai</tm>     	& $$ai$$        &
+pa      & <tm>pa</tm>       & $$pa$$        &
+ha      & <tm>ha</tm>       & $$ha$$        \cr
+o       & <tm>o</tm>      	& $$o$$         &
+ma      & <tm>ma</tm>       & $$ma$$        &
+k.sa    & <tm>k.sa</tm>     & $$k.sa$$      \cr
+oo      & <tm>oo</tm>    	& $$oo$$        &
+ya      & <tm>ya</tm>       & $$ya$$        &
+    &               &       \cr
+au      & <tm>au</tm>     	& $$au$$        &
+ra      & <tm>ra</tm>       & $$ra$$        &
+    &               &       \cr
+.k      & <tm>.k</tm>       & $$.k$$        &
+la      & <tm>la</tm>       & $$la$$        &
+    &               &       \cr
+\noalign{\hrule height.8pt}
+}\egroup
+
+\endinput

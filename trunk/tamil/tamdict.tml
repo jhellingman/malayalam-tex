@@ -1,0 +1,313 @@
+\input tamilmax
+\input tmlmacs
+\hsize=4in
+\font\norm=cmr10
+\font\roman=cmr10
+\font\vclass=cmr7
+\font\glossy=cmti10
+\font\emphatic=cmb10
+\font\transcribe=cmss10
+\norm
+\newif\ifnewentry
+\def\hw#1{\par\medskip{\emphatic #1\hfil\break\newentrytrue}}
+\def\md#1#2{{\emphatic\ifnewentry\hbox to 25pt{\hfil}\newentryfalse\fi(#1)} #2}
+\def\rt#1{,\ {\transcribe #1}}
+\def\vc#1{,\ {\vclass #1}}
+\def\eg#1{,\ {\glossy #1}}
+\def\syn#1#2{\ $\mapsto$ #1: #2}
+\def\wtvc#1{,\ {\vclass #1}}
+\hw{fascinated, be}
+ \md{1}{<tamil>sokku</tamil>}\rt{|sokku|}\vc{3 intr}
+ \eg{be charmed, enchanted or absorbed in}
+ \syn{1}{<tamil>mayan"ku</tamil>}\wtvc{3 i}
+ \md{2}{<tamil>mayan"ku</tamil>}\rt{|mayangu|}\vc{3 intr}
+ \eg{be charmed or enchanted; be enamoured; be confused}
+ \md{3}{<tamil>vasappaTu</tamil>}\rt{|vasa-pa8u|}\vc{4 intr}
+ \eg{be captivated or enchanted; come under the power or influence of; lose oneself in}
+ \syn{1}{<tamil>vayappaTu</tamil>}\wtvc{4i}.
+\hw{fashion}
+ \md{1}{<tamil>sey</tamil>}\wtvc{1t}\rt{|seyyi|}\vc{2b tr}
+ \eg{make; form; shape s.t. out of s.t. else}
+ \syn{1}{<tamil>pun_ai</tamil>}\wtvc{2t}
+ \md{2}{<tamil>amaittukkoL</tamil>}\wtvc{1t}\rt{|a8p8 pa33u|}\vc{3 tr}
+ \eg{adapt}.
+\hw{fashionable, be}
+ \md{1}{<tamil>naakarikamaaka iru</tamil>}\wtvc{7i}
+ \eg{be stylish, conforming to the fashion; be liked by people of fashion}
+ \syn{1}{<tamil>kSpaaSan_aaka iru</tamil>}\rt{|fae4anaa iru|}\vc{7 intr}
+ \syn{2}{<tamil>sTailaaka iru</tamil>}\rt{|s8aylaa iru|}\vc{7 intr}.
+\hw{fast}
+ \md{1}{<tamil>saappiTaamal iru</tamil>}\rt{|saappi8aame iru|}\vc{7 intr}
+ \eg{deliberately go without food; fast temporarily}
+ \md{2}{<tamil>paTTin_i keTa</tamil>}\rt{|pa8ni ke8a|}\vc{7 intr}
+ \eg{go without food; abstain from food}
+ \md{3}{<tamil>uNNaaviratam iru</tamil>}\rt{|u33aaviradam iru|}\vc{7 intr}
+ \eg{abstain from food, as a religious duty or for political and other reasons}
+ \md{4}{<tamil>noon_pu iru</tamil>}\wtvc{7i}
+ \eg{go without any or certain kinds of food, as a religious duty}
+ \syn{1}{<tamil>upavaacam iru</tamil>}\wtvc{7i}.
+\hw{fast, be}
+ \md{1}{<tamil>veekamaaka iru</tamil>}\rt{|veehamaa iru|}\vc{7 intr}
+ \eg{be rapid, quick, speedy}
+ \syn{1}{<tamil>virai</tamil>}\wtvc{2i}
+ \md{2}{<tamil>veekamaaka ooTu</tamil>}\rt{|veehamaa oo8u|}\vc{3 intr}
+ \eg{(of a watch, clock) be in advance; be ahead of time; run rapidly or quickly}
+ \md{3}{<tamil>uRutiyaaka iru</tamil>}\wtvc{7i}
+ \eg{be firm; be firmly tied, as a knot; be strong or secure}
+ \md{4}{<tamil>uutaariyaaka iru</tamil>}\rt{|uudaariyaa iru|}\vc{7 intr}
+ \eg{be a spendthrift; lead a carefree, wild life}.
+\hw{fast, become}
+ \md{1}{<tamil>uRutiyaaku</tamil>}\wtvc{3i}
+ \eg{become firm, strong or secure}.
+\hw{fasten}
+ \md{1}{<tamil>kaTTu</tamil>}\rt{|ka88u|}\vc{3 tr}
+ \eg{bind; pack; tie up, as an animal to a peg}
+ \md{2}{<tamil>muuTu</tamil>}\rt{|muu8u|}\vc{3 tr}
+ \eg{close, as a window, a door, a box}
+ \md{3}{<tamil>aTai</tamil>}\rt{|a8e|}\vc{6 tr}
+ \eg{shut, as a window or door; shut animals up in a fold; put s.t. or s.o. in a cage or enclosure}
+ \md{4}{<tamil>puuTTu</tamil>}\rt{|puu88u|}\vc{3 tr}
+ \eg{lock up, as a door or a box}
+ \md{5}{<tamil>pooTu</tamil>}\rt{|poo8u|}\vc{4 tr}
+ \eg{make secure, as a shirt with buttons, a door with a bolt}
+ \syn{1}{<tamil>maaTTu</tamil>}\rt{|maa88u|}\vc{3 tr}
+ \eg{hook s.t.}
+ \md{6}{<tamil>taazh iTu</tamil>}\wtvc{4t}
+ \eg{bolt, as the door, window, etc.}
+ \md{7}{<tamil>poruttu</tamil>}\wtvc{3t}
+ \eg{fix; attach firmly; attach s.t. to s.t. else, as sewing buttons on to a shirt, fixing a lock to a door, etc.; fix (one's eyes) on s.t. or s.o.}
+ \md{8}{<tamil>toTuttuvai</tamil>}\rt{|to8uttu vayyi|}\vc{6b tr}
+ \eg{tie or fasten lightly; string together, as garlands, flowers, etc.}.
+\hw{fasten down}
+ \md{1}{<tamil>kaTTu</tamil>}\rt{|ka88u|}\vc{3 tr}
+ \eg{fasten to a horizontal surface; bind; tie; batten down}.
+\hw{fasten off}
+ \md{1}{<tamil>piNai</tamil>}\rt{|po3e, po3e|}\vc{6 tr}
+ \eg{tie, as two pieces of thread by knotting}
+ \syn{1}{<tamil>muTi</tamil>}\rt{|mu8i|}\vc{6b tr}
+ \eg{tie as two pieces of thread by rolling the ends together}.
+\hw{fasten on}
+ \md{1}{<tamil>piTittuk koL</tamil>}\wtvc{1}\rt{|pi8iccikkoo|}\vc{4 tr}
+ \eg{seize; take a firm hold of; single s.t. or s.o. out for attack}
+  \st{<tamil>naan_ con_n_ataiyee avan_ piTittuk koNTaan_</tamil>}
+  \sr{|naan sonnadayee aven pi{\d d}iccikki{\d t}{\d t}aan|}
+  \se{He fastened (or) seized upon what I said.}.
+\hw{fasten one's eyes on}
+ \md{1}{<tamil>veRittup paar</tamil>}\rt{|vericci paaru|}\vc{6 tr}
+ \eg{gaze at; focus on; stare at}
+ \syn{1}{<tamil>veRi</tamil>}\wtvc{6t}
+ \md{2}{<tamil>kaNkaNaip   pati</tamil>}\rt{|ka33e padi|}\vc{6b ta}
+ \eg{fix one's eyes, as on s.o. or s.t.}
+  \st{<tamil>avan_ en_   miitu   kaNkaNaip patittaan_</tamil>}
+  \sr{|avan en meele ka{\d n}{\d n}e padiccaan|}
+  \se{He fixed his eyes on me.}.
+\hw{fasten up}
+ \md{1}{<tamil>maaTTu</tamil>}\rt{|maa88u|}\vc{3 tr}
+ \eg{fasten s.t. to a vertical surface}
+  \st{<tamil>intap paTattai an"kee maaTTu</tamil>}
+  \sr{|indap pa{\d d}atte ange maa{\d t}{\d t}u|}
+  \se{Fasten  this picture  up there.}.
+\hw{fasten upon}
+ \md{1}{<tamil>pattikkoL</tamil>}\wtvc{1t}
+ \eg{sieze; take hold of}
+  \st{cf. fasten on}.
+\hw{fastened, be}
+ \md{1}{<tamil>pati</tamil>}\rt{|padi|}\vc{2b intr}
+ \eg{be fixed, as one's sight or attention upon s.t.; be coupled firmly, as two planks of wood in joining}
+ \md{2}{<tamil>poruntu</tamil>}\wtvc{3i}
+ \eg{be attached firmly; dovetail}
+ \md{3}{<tamil>iNai</tamil>}\wtvc{2i}
+ \eg{be attached or joined; be tied or made fast}.
+\hw{fat}
+ \md{1}{<tamil>paruttuviTu</tamil>}\rt{|paruttu8u|}\vc{4 intr}
+ \eg{become fleshy, stout or heavy}
+ \syn{1}{<tamil>paru</tamil>}\wtvc{6i}
+ \md{2}{<tamil>cataipiTittiru</tamil>}\rt{|sade pi8icc-iru|}\vc{7 intr + dat}
+ \eg{put on flesh; become plump or heavy}
+ \syn{1}{<tamil>catai pooTTiru</tamil>}\rt{|sade poo88iru|}\vc{7 intr}
+ \md{3}{<tamil>eTai kuuTu</tamil>}\rt{|e8e kuu8u|}\vc{3 intr + dat}
+ \eg{gain weight}
+ \md{4}{<tamil>taTittuviTu</tamil>}\rt{|ta8icc-i8u|}\vc{4 ta}
+ \eg{become heavy or stout}
+ \syn{1}{<tamil>taTi</tamil>}\wtvc{6i}
+ \md{5}{<tamil>kozhuttiru</tamil>}\rt{|ko7utt-iru|}\vc{7 intr}
+ \eg{be very fat; be fattened, as a animal, etc.; be thick or well-filled as a purse}
+ \syn{1}{<tamil>kozha</tamil>}\wtvc{6i}.
+\hw{fatal, be}
+ \md{1}{<tamil>uyirukku aapattaaka iru</tamil>}\rt{|uyirukku aabattaa iru|}\vc{7 intr}
+ \eg{be a danger or risk to one's life; cause danger to one's life}
+ \syn{1}{<tamil>uyirukku aapattaaku</tamil>}\rt{|uyirukku aabatt-aahu|}\vc{3b intr}
+ \syn{2}{<tamil>  uyirukku apaayam viNaivi</tamil>}\wtvc{6ta}
+ \syn{3}{<tamil>  uyirukku aapattu viNaivi</tamil>}\wtvc{6ta}
+ \md{2}{<tamil>caavukkuk kaaraNamaaka iru</tamil>}\rt{|saavukku kaara3amaa iru|}\vc{7 intr}
+ \eg{bring about death; be the cause of s.o.'s death.}
+ \md{3}{<tamil>naacamaakku</tamil>}\rt{|naasam aakku|}\vc{3 tr}
+ \eg{destroy, ruin, cause misfortune}
+ \syn{1}{<tamil>naacappaTuttu</tamil>}\rt{|naasa-pa8uttu|}\vc{3 tr}
+ \syn{2}{<tamil>naasamuTTu</tamil>}\wtvc{3ta}
+ \md{4}{<tamil>paazhaakku</tamil>}\rt{|paa7-aakku|}\vc{3 tr}
+ \eg{cause ruin, destruction or failure}
+ \syn{1}{<tamil>paazhpaTuttu</tamil>}\rt{|paa7 pa8uttu|}\vc{3 tr}
+ \syn{2}{<tamil>naasamaakku</tamil>}\wtvc{3t}
+ \md{5}{<tamil>vitivasamaaku</tamil>}\rt{|vidivasam-aahu|}\vc{3b intr 3 pn}
+ \eg{be connected with fate or destiny; be fateful, as a meeting, an occurrence, a period}
+  \st{<tamil>anta cantippu vitivacamaan_atu</tamil>}
+  \sr{|anda sandippu vidivasamaanadu|}
+  \se{That meeting (or) encounter was fatal (fateful).}
+ \md{6}{<tamil>talaivitiyaaku</tamil>}\rt{|talevidi aahu|}\vc{3b intr 3pn}
+ \eg{be fated or destined; be so written}
+  \st{<tamil>anta vipattu avan_ talaiviti (yaakum)</tamil>}
+  \sr{|anda vibattu avan talevidi (aahum)|}
+  \se{That accident occurred because of his fate; That accident was fated to occur to him. (both used usually in an unfavourable sense)}
+ \md{7}{<tamil>keeTukaalam piTittiru</tamil>}\rt{|kee8ukaalam pi8icc-iru|}\vc{7 intr + dat}
+ \eg{be in for a bad time; be on the road to ruin; be under bad stars}
+  \st{<tamil>avan_ukku keeTukaalam piTittirukkiRatu</tamil>}
+  \sr{|avanukku kee{\d d}ukaalam pi{\d d}iccirukku|}
+  \se{Misfortune has caught up with him; (or) He is in for a bad time; he is jinxed.}.
+\hw{fatalistic, be}
+ \md{1}{<tamil>vitiyee en_Ru iru</tamil>}\rt{|vidiyee-33u iru|}\vc{7 intr}
+ \eg{hold the attitude of fatality or the doctrine of fatalism; be resigned; have a negative attitude about s.t.}
+ \syn{1}{<tamil>uuzhvali en_Ru iru</tamil>}\wtvc{7i}
+ \md{2}{<tamil>naTappatu naTakkaTTum en_Ru iru</tamil>}\rt{|na8appadu na8akka88um-33u iru|}\vc{7 intr}
+ \eg{hold the attitude that whatever will be will be; submit to circumstances as inevitable; submit passively to misfortune, calamity, etc.}
+ \syn{1}{<tamil>(kaTavuL) viTTavazhi en_Ru iru</tamil>}\rt{|(ka8avu9) vi88ava7i-33u iru|}\vc{7 intr}.
+\hw{fateful, be}
+ \md{1}{<tamil>vitivacamaaku</tamil>}\rt{|vidivasam-aahu|}\vc{3b intr 3pn (pres \& fut only)}
+ \eg{be connected with fate or destiny; be fatal, as an event, a period, etc.}
+  \st{<tamil>avaL taRkolai vitivacamaaTum</tamil>}
+  \sr{|ava9 tarkolai vidivasam aahum|}
+  \se{Hers was a fateful suicide.}
+ \syn{1}{<tamil>uuvin_aiyaaku</tamil>}\wtvc{3 3pn}
+ \md{2}{<tamil>mukkiyamaaku</tamil>}\rt{|mukkiyam aahu|}\vc{3b intr 3pn}
+ \eg{be important; be momentous}
+ \syn{1}{<tamil>siRappaaku</tamil>}\wtvc{3 3pn}
+ \syn{2}{<tamil>viseevimaaku</tamil>}\wtvc{3 3pn}.
+\hw{father}
+ \md{1}{<tamil>uruvaakku</tamil>}\rt{|uruvakku|}\vc{3 tr}
+ \eg{found, originate, as a doctrine, a sect, etc.; propound as a theory, a practice, a way of life}
+ \syn{1}{<tamil>tooRRuvi</tamil>}\wtvc{6t}
+ \syn{2}{<tamil>uNTaakku</tamil>}\rt{|u38-aakku|}\vc{3 tr}.
+\hw{fathom}
+ \md{1}{<tamil>aazham kaNTupiTi</tamil>}\rt{|aa7am ka38u-pi8i|}\vc{6b ta}
+ \eg{find or measure the depth of river, sea, well, pit, crater, etc.}
+ \syn{1}{<tamil>aazham (aazhattaik) kaNakkiTu</tamil>}\wtvc{4ta}
+ \md{2}{<tamil>aazham paar</tamil>}\rt{|aa7am paaru|}\vc{6 tr}
+ \eg{find or measure the depth of river, pit, etc.; test or examine s.o.'s learning, qualification, sincerity, etc.}
+ \md{3}{<tamil>parintukoL</tamil>}\wtvc{1t}\rt{|purinjikkoo|}\vc{4 tr}
+ \eg{understand, comprehend; get to the bottom of, as an event, a person's motive, etc.}
+ \syn{1}{<tamil>aRi</tamil> (or)? <tamil>aazhankaRi</tamil>}\wtvc{2t}.
+\hw{fatigue}
+ \md{1}{<tamil>kaLaippu uNTaakku</tamil>}\rt{|ka9eppe u38-aakku|}\vc{3 ta}
+ \eg{cause fatigue; cause to feel fatigued}
+ \syn{1}{<tamil>coorvu uNTaakku</tamil>}\wtvc{3ta}
+ \md{2}{<tamil>kaLaippaTaiyac cey</tamil>}\wtvc{1t}
+ \eg{cause to fatigue; cause to feel tired or weary}
+ \syn{1}{<tamil>coorvaTaiyac cey</tamil> (or) <tamil>coorv</tamil>}\wtvc{1t}. \hw{fatigued, be}
+ \md{1}{<tamil>aluttup poo</tamil>}\rt{|aluttup poo|}\vc{3b intr 3pn (usu + past only)}
+ \eg{become weary; become discouraged}
+  \st{<tamil>en_akku aluttup pooyiRRu</tamil>}
+  \sr{|enakku aluttu pooccu|}
+  \se{I am tired, fed up.}
+ \syn{1}{<tamil>salittup poo</tamil>}\wtvc{w. dat.}\rt{|saliccu poo|}\vc{3b intr (usu + past only)}
+ \syn{2}{<tamil>aluttuviTu</tamil>}\wtvc{4i 3 pn}
+ \syn{3}{<tamil>salittuviTu</tamil>}\wtvc{4i 3 pn}
+ \md{2}{<tamil>kaLaittup poo</tamil>}\rt{|ka9eccip poo|}\vc{3b intr 3pn + dat (usu + past}
+ \eg{become tired or wearied; become exhausted}
+ \syn{1}{<tamil>soorntu poo</tamil>}\rt{|soondu poo|}\vc{3 intr 3pn + dat (usu + past}
+ \syn{2}{<tamil>ayarntu poo</tamil>}\rt{|asandu poo|}\vc{3 intr 3pn + dat (usu past onl}
+ \md{3}{<tamil>kaLaippaay iru</tamil>}\rt{|ka9eppaa iru|}\vc{7 intr + dat}
+ \eg{be tired or exhausted; look or feel tired and weary}
+  \st{<tamil>avan_ kaLaippaay iruntaan_</tamil>, <tamil>avan_ukku kaLaippaay iruntatu</tamil>}
+  \sr{|avan ka9eppaa irundaan,   avanukku ka9eppaa irundadu|}
+  \se{He was (or  felt) fatigued.}
+ \syn{1}{<tamil>coorvaay iru</tamil>}\rt{|soorvaa iru|}\vc{7 intr + dat}
+ \md{4}{<tamil>coorntuviTi</tamil>}\rt{|soondu8u|}\vc{4 intr}
+ \eg{grow weary or exhausted; be tired and worn out}
+ \syn{1}{<tamil>kaLaittuviTu</tamil>}\rt{|ka9ecc-i8u|}\vc{4 ta}
+ \syn{2}{<tamil>ayarntuviTu</tamil>}\rt{|asandu8u|}\vc{4 intr}
+ \md{5}{<tamil>ayarvuRu</tamil>}\wtvc{1i}
+ \eg{be tired or weary}
+ \syn{1}{<tamil>ayarvaTai</tamil>}\wtvc{2i}
+ \syn{2}{<tamil>kaLappaTai</tamil>}\wtvc{2i}
+ \syn{3}{<tamil>coorvaTai</tamil>}\wtvc{2i}
+ \syn{4}{<tamil>coorvuRu</tamil>}\wtvc{1i}
+ \md{6}{<tamil>in_aippaay iru</tamil>}\wtvc{7i}
+ \eg{be short of breath or gasp because of over exhaustion; be weak and worn out}.
+\hw{fatten}
+ \md{1}{<tamil>kozhu</tamil>}\rt{|ko7u|}\vc{6 intr}
+ \eg{grow fat; become plump}
+ \syn{1}{<tamil>paruttuviTu</tamil>}\rt{|paattu8u|}\vc{4 intr}
+ \md{2}{<tamil>kozhukka vai</tamil>}\rt{|ko7ukka vayyi|}\vc{6b tr}
+ \eg{make fat; fatten up, as sheep for slaughter}
+ \md{3}{<tamil>sezhikkas sey</tamil>}\wtvc{1t}
+ \eg{help grow better; nourish, as crop, people, etc.; enrich, as soil, ideas, etc.}
+ \syn{1}{<tamil>sezhikka vai</tamil>}\wtvc{6t}.
+\hw{fatty, be}
+ \md{1}{<tamil>koozhuppaay iru</tamil>}\rt{|ko7uppaa iru|}\vc{7 intr}
+ \eg{contain excessive fat, as muscle, food, meat, soup, etc.}
+ \md{2}{<tamil>kozhuppas sattu uTaiyataay iru</tamil>}\wtvc{7i}
+ \eg{contain nutrative fat, as foods etc.}
+ \syn{1}{<tamil>kozhuppus sattu   noNTiru  </tamil>}\wtvc{7i}.
+\hw{fatuous, be}
+ \md{1}{<tamil>maTattan_amaaka iru</tamil>}\rt{|ma8attanamaa iru|}\vc{7 intr}
+ \eg{be silly; be inane}
+ \syn{1}{<tamil>peetaitatan_amaaka iru</tamil>}\wtvc{7i}
+ \md{2}{<tamil>muTTaaLtan_amaaka iru</tamil>}\rt{|mu88aa9tanamaa iru|}\vc{7 intr}
+ \eg{be foolish; be silly}
+ \syn{1}{<tamil>maTattan_amaaka iru</tamil>}\wtvc{7i}.
+\hw{fault}
+ \md{1}{<tamil>tappu sol</tamil>}\rt{|tappu sollu|}\vc{3c tr}
+ \eg{censure; blame; find fault with}
+ \syn{1}{<tamil>tavaRu sol</tamil>}\wtvc{3t}
+ \syn{2}{<tamil>pizhai sol</tamil>}\wtvc{3t}
+ \md{2}{<tamil>kuRRam sol</tamil>}\rt{|kuttam sollu|}\vc{3c tr, ta}
+ \eg{find fault with; blame; criticise}
+ \syn{1}{<tamil>kuRai sol</tamil>}\rt{|kore sollu|}\vc{3c tr}
+ \syn{2}{<tamil>pizhai sol</tamil>}\wtvc{3t}.
+\hw{faulty, be}
+ \md{1}{<tamil>tappaaka iru</tamil>}\rt{|tappaa iru|}\vc{7 intr 3pn}
+ \eg{be wrong; contain faults, mistakes or errors}
+ \syn{1}{<tamil>pizhaiyaay iru</tamil> (and) <tamil>tavaruk</tamil>}\wtvc{7 3pn}
+ \md{2}{<tamil>pizhaiyaaka iru</tamil>}\wtvc{7i 3pn}
+ \eg{be full of faults or defects}
+ \md{3}{<tamil>kuRaipaaTu koNTiru</tamil>}\wtvc{7i}
+ \eg{contain faults or blemishes; be defective}.
+\hw{favour}
+ \md{1}{<tamil>aatari</tamil>}\rt{|aadari|}\vc{6b tr}
+ \eg{support, show favour to}
+ \syn{1}{<tamil>aataravu kaaTTu</tamil>}\rt{|aadaruvu kaa88u|}\vc{3 tr + dat}
+ \syn{2}{<tamil>aataravu taa</tamil>}\rt{|aadaravu taa|}\vc{2c ta  + dat}
+  \st{<tamil>avarkaL avan_ai aakarittaarkaL</tamil>, <tamil>avarkaL avarukku aataravu koTuttaarkaL</tamil> (or) <tamil>tantaarkaL</tamil>}
+  \sr{|avanga avane aadariccaanga, avanga avanukku aadaravu ku{\d d}uttaanga (or) tandaanga|}
+  \se{They gave him the benefit of the doubt; they favoured him.}
+ \md{2}{<tamil>virumpu</tamil>}\rt{|virumbu|}\vc{3 tr}
+ \eg{prefer; like; choose}
+  \st{<tamil>naan_ avan_ai virumpukiReen_</tamil>}
+  \sr{|naan avane virumbureen|}
+  \se{I like him.}
+ \syn{1}{<tamil>piTi</tamil>}\rt{|pi8i|}\vc{6b tr 3pn + dat}
+  \st{<tamil>en_akku avaNaip piTikkiRatu</tamil>}
+  \sr{|enakku avane pi{\d d}ikkidu|}
+  \se{I like him.}
+ \md{3}{<tamil>salukai kaaTTu</tamil>}\rt{|saluhe kaa88u|}\vc{3 tr}
+ \eg{show partiality to; give unfair help or advantages to; give s.o. the benefit of the doubt}
+ \syn{1}{<tamil>paTsa paatam kaaTTu</tamil>}\rt{|pa8ca paadam kaa88u|}\vc{3 tr}
+ \syn{2}{<tamil>ooravancan_ai kaTTu</tamil>}\wtvc{3ta}
+ \eg{act with partiality}
+ \syn{3}{<tamil>ooravancan_ai sey</tamil>}\wtvc{1}\rt{|ooravanjane pa33u|}\vc{3 tr}
+ \md{4}{<tamil>nalku</tamil>}\wtvc{3t}
+ \eg{bestow, grant, give}
+ \syn{1}{<tamil>aruL</tamil>}\wtvc{3t}
+ \md{5}{<tamil>aruLpuri</tamil>}\wtvc{2ta}
+ \eg{patronise; grace; grant, as a prayer}
+ \syn{1}{<tamil>aruL sey</tamil>}\wtvc{1ta}
+ \md{6}{<tamil>ottiru</tamil>}\rt{|ott-iru|}\vc{7 tr}
+ \eg{resemble; be like or similar to}
+ \md{7}{<tamil>caayalaaka iru</tamil>}\rt{|saayalaa iru|}\vc{7 intr}
+ \eg{have the likeness of; show the same features of}
+ \syn{1}{<tamil>caaTaiyaaka iru</tamil>}\rt{|jaa8eyaa iru|}\vc{7 intr}
+  \st{<tamil>antak kuzhantai ammaavin_ caayalaaka</tamil> (or) <tamil>caaTaiyaaka irukkiRatu</tamil>}
+  \sr{|anda ko7ende ammaa(voo{\d d}a) saayalaa (or) jaadayaa irukku|}
+  \se{The baby favours her mother}
+\bye
+

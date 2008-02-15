@@ -1,0 +1,32 @@
+% MM1kottayam.fd
+% font definition for the Kottayam family in MM1 encoding.
+% Copyright 1997 Jeroen Hellingman
+
+\ProvidesFile{MM1kotta}[1997/04/26 Malayalam font definition]
+
+\DeclareFontFamily{MM1}{kotta}{}
+
+\DeclareFontShape{MM1}{kotta}{m}{n}{
+	<5> <6> <7> <8> <9> <10> <10.95>		mmc10
+	<12> <14.4>					mmc12
+	<17.28> <20.74> <24.88-> 			mmc17
+}{}
+\DeclareFontShape{MM1}{kotta}{bx}{n}{
+	<5> <6> <7> <8> <9> <10> <10.95>		mmcb10
+	<12> <14.4>					mmcb12
+	<17.28> <20.74> <24.88-> 			mmcb17
+}{}
+\DeclareFontShape{MM1}{kotta}{m}{sl}{
+	<5> <6> <7> <8> <9> <10> <10.95>		mmcsl10
+	<12> <14.4>					mmcsl12
+	<17.28> <20.74> <24.88-> 			mmcsl17
+}{}
+\DeclareFontShape{MM1}{kotta}{bx}{sl}{   <-> ssub * kotta/m/sl}{}
+\DeclareFontShape{MM1}{kotta}{m}{sc}{    <-> ssub * kotta/m/n}{}
+\DeclareFontShape{MM1}{kotta}{m}{it}{    <-> ssub * kotta/m/sl}{}
+\DeclareFontShape{MM1}{kotta}{m}{itsc}{  <-> ssub * kotta/m/sl}{}
+\DeclareFontShape{MM1}{kotta}{m}{slsc}{  <-> ssub * kotta/m/sl}{}
+\DeclareFontShape{MM1}{kotta}{bx}{sc}{   <-> ssub * kotta/bx/n}{}
+\DeclareFontShape{MM1}{kotta}{bx}{it}{   <-> ssub * kotta/m/sl}{}
+\DeclareFontShape{MM1}{kotta}{bx}{itsc}{ <-> ssub * kotta/m/sl}{}
+\DeclareFontShape{MM1}{kotta}{bx}{slsc}{ <-> ssub * kotta/m/sl}{}

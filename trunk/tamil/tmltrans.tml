@@ -1,0 +1,58 @@
+% tmltrans.tml -- Tamil transcription table
+% Copyright Jeroen Hellingman 1992, 1997
+%
+% History:
+%	29-OCT-1997 updated
+%	22-DEC-1992 previous edit.
+
+\bgroup
+\def\tmlstrut{\vtop to4pt{}\vbox to10pt{}}
+\def\q{\quad\hfill}
+\def\x{\vrule\ }
+\def\xx{\vrule width.8pt}
+\offinterlineskip
+\halign{\tmlstrut\xx\ \tt#\q&\x#\q&\x#\q\xx\ &\tt#\q&\x#\q&\x#\q\xx\ &\tt#\q&\x#\q&\x#\q\xx\cr
+\noalign{\hrule height.8pt}
+a       & <tamil>a</tamil>  	& {\mmtr a}         	&
+ka      & <tamil>ka</tamil>  	& {\mmtr ka}        	&
+va      & <tamil>va</tamil>  	& {\mmtr va}        	\cr
+aa      & <tamil>aa</tamil>  	& {\mmtr \=a}        	&
+"na     & <tamil>"na</tamil>    & {\mmtr \.na}       	&
+zha     & <tamil>zha</tamil> 	& {\mmtr \b za}       	\cr
+i       & <tamil>i</tamil>  	& {\mmtr i}         	&
+ca      & <tamil>ca</tamil>   	& {\mmtr ca}        	&
+.la     & <tamil>.la</tamil>  	& {\mmtr \d la}       	\cr
+ii      & <tamil>ii</tamil>  	& {\mmtr {\=\i}}        &
+\~{}na  & <tamil>~na</tamil>  	& {\mmtr \~na}       	&
+.ra 	& <tamil>.ra</tamil>  	& {\mmtr \b ra}    		\cr
+u       & <tamil>u</tamil>   	& {\mmtr u}         	&
+.ta     & <tamil>.ta</tamil>    & {\mmtr \d ta}       	&
+\_na 	& <tamil>_na</tamil>    & {\mmtr \b na}    		\cr
+uu    	& <tamil>uu</tamil>  	& {\mmtr \=u}        	&
+.na     & <tamil>.na</tamil>    & {\mmtr \d na}       	&
+ja      & <tamil>ja</tamil>     & {\mmtr ja}        	\cr
+e       & <tamil>e</tamil>  	& {\mmtr e}         	&
+ta 		& <tamil>ta</tamil>    	& {\mmtr ta}    		&
+.sa     & <tamil>.sa</tamil>	& {\mmtr \d sa}       	\cr
+ee      & <tamil>ee</tamil>  	& {\mmtr \=e}        	&
+na 		& <tamil>na</tamil> 	& {\mmtr na}    		&
+sa      & <tamil>sa</tamil>     & {\mmtr sa}        	\cr
+ai      & <tamil>ai</tamil>		& {\mmtr ai}        	&
+pa      & <tamil>pa</tamil>    	& {\mmtr pa}        	&
+ha      & <tamil>ha</tamil>   	& {\mmtr ha}        	\cr
+o       & <tamil>o</tamil>  	& {\mmtr o}         	&
+ma      & <tamil>ma</tamil>     & {\mmtr ma}        	&
+k.sa    & <tamil>k.sa</tamil>	& {\mmtr k\d sa}      	\cr
+oo    	& <tamil>oo</tamil>  	& {\mmtr \=o}        	&
+ya      & <tamil>ya</tamil>    	& {\mmtr ya}        	&
+ 		&    &   \cr
+au      & <tamil>au</tamil>  	& {\mmtr au}        	&
+ra      & <tamil>ra</tamil>     & {\mmtr ra}        	&
+ 		&    &   \cr
+.k      & <tamil>.k</tamil>     & {\mmtr \d k}        	&
+la      & <tamil>la</tamil>     & {\mmtr la}        	&
+ 		&    &   \cr
+\noalign{\hrule height.8pt}
+}\egroup
+
+\endinput

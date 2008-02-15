@@ -1,0 +1,13 @@
+mm.ttp
+.C [-A -K -G]       ; [ -Y -A -K -G -T ]
+.L [-S=32000]       ; [ -Y -L -G -S=32000 ]
+=
+PCSTART.O
+mm.c                (mm.h, trs.h, scr.h, readfile.h)
+readfile.c          (readfile.h)
+trs.c               (trs.h, readfile.h, mm.h)
+scr.c               (scr.h, readfile.h, mm.h)
+pstree.c            (pstree.h)
+avltree.c           (avltree.h)
+
+PCSTDLIB.LIB

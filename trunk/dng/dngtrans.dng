@@ -1,0 +1,83 @@
+@hindi
+% dngtrans.dng -- Devanagari transcription table
+% Copyright 1993, 1995 Jeroen Hellingman
+%
+% History:
+%   23-NOV-1995 Updated for new transcription scheme (JH)
+%   07-JAN-1993 Created (Jeroen Hellingman)
+
+\bgroup
+\def\dngstrut{\vtop to4pt{}\vbox to10pt{}}
+\def\q{\quad\hfill}
+\def\x{\vrule\ }
+\def\xx{\vrule width.8pt}
+\offinterlineskip
+\halign{\dngstrut\xx\ \tt#\q&\x#\q&\x#\q\xx\ &\tt#\q&\x#\q&\x#\q\xx\ &\tt#\q&\x#\q&\x#\q\xx\cr
+\noalign{\hrule height.8pt}
+OM      & $OM$      & $$OM$$        &
+ka, qa      & $ka, qa$  & $$ka, qa$$        &
+pa      & $pa$      & $$pa$$        \cr
+a       & $a$       & $$a$$         &
+kha, .kha   & $kha, .kha$   & $$kha, .kha$$     &
+pha, fa     & $pha, fa$     & $$pha, fa$$       \cr
+*       & $*$       & $$*$$         &
+ga, .ga     & $ga, .ga$ & $$ga, .ga$$       &
+ba      & $ba$      & $$ba$$        \cr
+aa      & $aa$      & $$aa$$        &
+gha     & $gha$     & $$gha$$       &
+bha     & $bha$     & $$bha$$       \cr
+i       & $i$       & $$i$$         &
+"na     & $"na$     & $$"na$$       &
+ma      & $ma$      & $$ma$$        \cr
+ii      & $ii$      & $$ii$$        &
+ca      & $ca$      & $$ca$$        &
+ya      & $ya$      & $$ya$$        \cr
+u       & $u$       & $$u$$         &
+cha     & $cha$     & $$cha$$       &
+ra      & $ra$      & $$ra$$        \cr
+uu      & $uu$      & $$uu$$        &
+ja, za      & $ja, za$  & $$ja, za$$        &
+la      & $la$      & $$la$$        \cr
+R       & $R$       & $$R$$             &
+jha     & $jha$     & $$jha$$       &
+va      & $va$      & $$va$$        \cr
+RR      & $RR$      & $$RR$$        &
+\~{}na      & $~na$     & $$~na$$       &
+sha     & $sha$     & $$sha$$       \cr
+L       & $L$       & $$L$$             &
+.ta     & $.ta$     & $$.ta$$       &
+.sa     & $.sa$     & $$.sa$$       \cr
+LL      & $LL$      & $$LL$$        &
+.tha        & $.tha$    & $$.tha$$      &
+sa      & $sa$      & $$sa$$        \cr
+e       & $e$       & $$e$$         &
+.da, .ra    & $.da, .ra$    & $$.da, .ra$$      &
+ha      & $ha$      & $$ha$$        \cr
+ai      & $ai$      & $$ai$$        &
+.dha, .rha  & $.dha, .rha$  & $$.dha, .rha$$    &
+.la     & $.la$     & $$.la$$       \cr
+o       & $o$       & $$o$$         &
+.na     & $.na$     & $$.na$$       &
+"r      & $"r$      & $$"r$$        \cr
+au      & $au$      & $$au$$        &
+ta      & $ta$      & $$ta$$        &
+k+      & $k+$      & $$k+$$        \cr
+a.m     & $a.m$     & $$a.m$$       &
+tha     & $tha$     & $$tha$$       &
+|       & $|$       & $$|$$         \cr
+a/      & $a/$      & $$a/$$        &
+da      & $da$      & $$da$$        &
+\#      & $#$       & $$#$$         \cr
+a.h     & $a.h$     & $$a.h$$       &
+dha     & $dha$     & $$dha$$       &
+\#\#\#      & $###$     & $$###$$       \cr
+.e      & $.e$      & $$.e$$        &
+na      & $na$      & $$na$$        &
+@       & $@$       & $$@$$         \cr
+.o      & $.o$      & $$.o$$        &
+        &       &           &
+.a      & $.a$      & $$.a$$        \cr
+\noalign{\hrule height.8pt}
+}\egroup
+
+\endinput

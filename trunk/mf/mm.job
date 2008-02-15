@@ -1,0 +1,17 @@
+% emTeX mfjob file to make Malayalam fonts:
+{
+base=plain;
+mode=hplaser[300];
+output=tfm[c:\tex\fonts\@f]  pk[c:\tex\pixel\dpi@Rr\@f];
+{
+fonts=  mm6 mmz6 mm8 mmz8
+        mm10 mmz10 mmsl10 mmslz10 mmb10 mmbz10
+        mmc10 mmcz10 mmcsl10 mmcslz10 mmcb10 mmcbz10
+        mm12 mmz12 mmsl12 mmslz12 mmb12 mmbz12
+        mmc12 mmcz12 mmcsl12 mmcslz12 mmcb12 mmcbz12
+        mm17 mmz17 mmc17 mmcz17 mmb17 mmbz17 mmcb17 mmcbz17
+        mmbig mmbigo
+        mmexpa12 mmexpb12 mmexpc12;
+mags=s0;
+}
+}

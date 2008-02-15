@@ -1,0 +1,71 @@
+
+Malayalam-TeX v1.6
+
+Note:
+This is a quick-and-dirty release, to give people access to the
+MF code as it is now. Some parts of the package have not been fully
+updated, but will be anyday soon. If you have had an older version
+of Malayalam-TeX, you will have to replace all TFM files and
+rebuild all fonts with metafont.
+
+Malayalam-TeX is a package to typeset Malayalam with TeX 3.0 and
+higher, in both the traditional and reformed script. The complete package
+includes a pre-processor and fonts in various styles (regular, bold,
+slanted, calligraphic) and various sizes (6, 8, 10, 12, 17 pts). Text
+can be entered in an ASCII transcription with can be converted to
+traditional or reformed script or to scientific transcription in
+TeX using a pre-processor. The transcription is adaptable via tables.
+
+The package includes
+
+--  the executables of the preprocessor for MS-DOS and Atari-ST.
+    (Macintosh version coming)
+--  macro files for TeX.
+--  the MF (source) and TFM (font metrics) files.
+--  the source code for the preprocessor in ANSI-C. This will enable
+    you to use the package on any machine that supports C and TeX, and
+    the source code for METAFONT, so that you can generate fonts at
+    various sizes and for various output devices.
+--  executables for MS-Dos, Atari ST, and Macintosh.
+	(Mac users: these are just the MS-Dos tools ported to a mac, with a
+	simple command line interface.)
+--  a user manual, explaining the use of Malayalam TeX.
+--  several samples of Malayalam texts
+
+Obtaining Malayalam-TeX
+
+Malayalam-TeX is freeware, and can be downloaded from various sites that
+hoist the CTAN archives. Malayalam-TeX is copyright 1998 by Jeroen Hellingman.
+
+You may copy Malayalam-TeX, give it to your friends, or distribute it via the
+internet or on CD-Roms, and use it as much as you like for any matter, however
+I retain the copyright on the package.
+
+You may modify the sources as long as you clearly indicate that you have
+changed them and what you've changed, and inform me of any improvements
+and additions you've made. Do not distribute changed sources.
+
+I would love to hear about any major project you are involved with that
+use Malayalam-TeX, or might use Malayalam-TeX.
+
+Also available:
+
+Oriya-TeX
+Unicode Shapes font (TeX, PostScript, TrueType)
+Tamazight-TeX
+Tamazight PostScript and TrueType fonts
+
+Contact me if you want other fonts made available for TeX.
+
+
+Contact:
+
+
+Jeroen Hellingman               E-mail: <jehe@kabelfoon.nl>
+Aletta Jacobsstraat 5           Phone +31 30 6875444
+3404 XD IJsselstein             (18.00--21.00 MET)
+The Netherlands
+  
+Postbank account no 5025409 (Amsterdam office)
+
+

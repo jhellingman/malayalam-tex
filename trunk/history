@@ -1,0 +1,19 @@
+Version History
+
+04-MAY-1998 minor modifications, change to 1.6.
+29-OCT-1997	changed transcription and documentation in Tamil sub-directory.
+01-MAY-1997 release version 1.5, with changed conditions.
+-----------
+30-NOV-1996 Changed design of i and u.
+23-NOV-1996 Changed naming scheme of subfonts to work better with the NFSS.
+06-JAN-1996 Working towards version 2.0, font spacing has been changed
+            (made a bit looser)
+29-MAR-1994 Various minor changes in the documentation.
+29-MAR-1994 Preprocessor/mmr.scr: changed typesetting of combination nRa,
+            now treated as single conjunct, build up from n-cillu Ra, change
+            made to typeset -nRe suffix correctly
+            (i.e. vowelsign-e, n-cillu, Ra).
+-----------
+22-JAN-1994 Version 1.1
+
+[End.]

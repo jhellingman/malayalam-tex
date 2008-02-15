@@ -1,0 +1,174 @@
+% mmrfull.trs --- Malayalam transcription definition for 
+%                 TeX pre-processor using Malayalam font punctuation
+% Copyright 1992, 1998 Jeroen Hellingman
+%
+% HISTORY:
+%   04-MAY-1998 minor changes in transcription scheme
+%   13-SEP-1995 added .m .h .t .th .d .dh .n .s ..t ..n
+%   31-DEC-1992
+
+% This .TRS file defines the transcription used in the input text.
+% It translates (sequences of) ASCII-characters (patterns) 
+% into the internal codes of the pre-processor.
+% You should never change the (UNICODE based) codes of the letters,
+% but you can redefine the transcription if you take care that the
+% table does not define a pattern twice, or that it is ambigious
+% otherwise.
+
+@atbegin "<malayalam>" "<mlr>" "$"      % this starts Malayalam text in ASCII
+@atend   "</malayalam>" "</mlr>" "$"    % this ends Malayalam text in ASCII
+
+% @table format:
+% <pattern> <space> <command> <space> [ <parameter> ][ <comment> ]
+
+@table
+
+% vowels
+
+"a"     = "\d05"                % a
+"aa"    = "\d06"                % aa
+% "A"     = "\d06"
+"i"     = "\d07"                % i
+"ii"    = "\d08"                % ii
+"I"     = "\d08"
+"u"     = "\d09"
+"uu"    = "\d10"
+% "U"     = "\d10"
+"R"     = "\d11"                % vocalic r
+"RR"    = "\d96"                % vocalic rr
+%".R"    = "\d96"
+"L"     = "\d12"                % vocalic l
+"LL"    = "\d97"                % vocalic ll
+%".L"    = "\d97"
+"e"     = "\d14"
+"ee"    = "\d15"
+%"E"     = "\d15"
+"ai"    = "\d16"
+"o"     = "\d18"
+"oo"    = "\d19"
+%"O"     = "\d19"
+"au"    = "\d20"
+"~au"   = "\d87"                % au length mark
+
+% modifiers
+
+%"M"     = "\d02"                % anusvara
+".m"	= "\d02"
+%"H"     = "\d03"                % visarga
+".h"	= "\d03"
+
+% consonants will be print in cillu form if no vowel follows
+
+"k"     = "\d21"
+"kh"    = "\d22"
+"g"     = "\d23"
+"gh"    = "\d24"
+"\"n"   = "\d25"                % nga
+
+"c"     = "\d26"
+"ch"    = "\d27"
+"j"     = "\d28"
+"jh"    = "\d29"
+"~n"    = "\d30"                % nya
+
+%"T"     = "\d31"
+".t"	= "\d31"
+%"Th"    = "\d32"
+".th"	= "\d32"
+%"D"     = "\d33"
+".d"	= "\d33"
+%"Dh"    = "\d34"
+".dh"	= "\d34"
+%"N"     = "\d35"
+".n"	= "\d35"
+
+"t"     = "\d36"
+"th"    = "\d37"
+"d"     = "\d38"
+"dh"    = "\d39"
+"n"     = "\d40"
+%"n_"    = "\d40"
+"..n"	= "\d40"
+
+"p"     = "\d42"
+"ph"    = "\d43"
+"f"     = "\d43"
+"b"     = "\d44"
+"bh"    = "\d45"
+"m"     = "\d46"
+
+"y"     = "\d47"
+"r"     = "\d48"
+".r"     = "\d49"
+%"t_"    = "\d49"
+%"..t"	= "\d49"
+"l"     = "\d50"
+".l"     = "\d51"
+"zh"    = "\d52"
+"v"     = "\d53"
+"sh"    = "\d54"
+%"S"     = "\d55"
+".s"	= "\d55"
+"s"     = "\d56"
+"h"     = "\d57"
+
+"+"     = "\d77"                % virama
+"u+"    = "\d77"                % half u
+
+% digits
+
+"0"     = "\d102"
+"1"     = "\d103"
+"2"     = "\d104"
+"3"     = "\d105"
+"4"     = "\d106"
+"5"     = "\d107"
+"6"     = "\d108"
+"7"     = "\d109"
+"8"     = "\d110"
+"9"     = "\d111"
+
+% special (arbitrary code positions)
+
+"<<"    = "\d127"               % join
+">>"    = "\d126"               % non join
+"[]"    = "\d125"               % dotted circle
+" "     = "\d124"               % space
+"\t"    = "\d124"               % tab = space
+
+% interpunction
+
+% non malayalam things
+
+">"     f                       % eliminate ambiguities
+"\\"    t                       % copy TeX command
+"^"     f                       % forget about capital letters
+"\\$"   p "\\$"
+"%"     s                       % skip comment
+"{"     p "{"
+"}"     p "}"
+"\n"    p "\n"                  % newline
+
+% things (not borrowed from) roman
+
+"."     p "\\<59>"
+","     p "\\<58>"
+":"     p "\\<61>"
+";"     p "\\<60>"
+"`"     p "\\<19>"
+"``"    p "\\<19>\\<19>"
+"'"     p "\\<20>"
+"''"    p "\\<20>\\<20>"
+"-"     p "\\<69>"
+"--"    p "\\<98>"
+"---"   p "\\<99>"
+"?"     p "\\<41>"
+"!"     p "\\<13>"
+"("     p "\\<16>"
+")"     p "\\<17>"
+"["     p "\\<8>"
+"]"     p "\\<10>"
+"/"     p "\\<4>"
+"\\%"   p "{\\RMF\\%}"
+
+@end

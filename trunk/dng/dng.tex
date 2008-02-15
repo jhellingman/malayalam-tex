@@ -1,0 +1,63 @@
+% dng.tex -- guide for using Devanagari with Malayalam-TeX
+% Copyright 1993 Jeroen Hellingman
+% Last edit: 07-JAN-1993
+
+\input dngmacs
+\input mmtrmacs
+\input dntrmacs
+
+\beginsection {\twelvebf How To Type Devanagari}
+
+Since a package for typesetting Devanagari,
+{\tt devnag}, designed by Frans Velthuis, was already available
+I~decided to adapt it to Malayalam-\TeX s input conventions.
+
+To start using Devanagari, all you have to do is say
+
+\medskip
+{\tt \bslash input dngmacs}
+
+{\tt \bslash input dntrmacs}
+\medskip
+
+Somewhere near the start of your document. Then you can switch to
+any of the principle languages that use Devanagari-script by saying
+{\tt<{}sanskrit>}, {\tt<{}hindi>}, {\tt<{}marathi>}, or {\tt<{}nepali>}.
+You will then enter the mode of the indicated language --~together
+called {\it Devanagari-mode}.
+You can switch back to normal mode by saying respectively
+{\tt<{}/sanskrit>}, {\tt<{}/hindi>}, {\tt<{}/marathi>}, or {\tt<{}/nepali>}.
+If you wish to use Roman transcription for any of those
+languages, you will have to append {\tt .transcription} to the language
+name in the start-tag; so Hindi in transcription can be started
+with {\tt<{}hindi.transcription>}. No modification of the end-tag is
+required (or even allowed).
+
+The following table shows the character(s) you have to type to produce
+a Devanagari character.
+
+\bigskip
+\input dngtrans
+\bigskip
+
+If you want to view or print your document after typing (a part of) it,
+you will have to do some extra pre-processing\footnote*{I admit, if you
+use several languages in one document, this can get pretty boring.}.
+Saying
+
+\medskip
+{\tt patc -p dng.pat {\it input-file}.dng {\it temporary-file}.dn }
+
+{\tt devnag {\it temporary-file}.dn {\it output-file}.tex}
+\medskip
+
+{\it after} pre-processing for Malayalam, if it is used,
+will do all the necessary pre-processing for Devanagari. As you
+can see, you will still have to use Frans Velthuis'
+pre-processor\footnote{**}{As a matter of fact, I have only changed
+the transcription --~all functionality of {\tt devnag}, including
+{\tt@}-directives to it is still there.}.
+To find out how it should be used exactly, read the manual that
+comes with {\tt devnag}.
+
+\endinput

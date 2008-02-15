@@ -1,0 +1,139 @@
+% mmnew.mf -- Malayalam characters under design for Malayalam-TeX version 2.0
+% Copyright 1993, 1995, 1996 Jeroen Hellingman
+%
+% History:
+%   04-FEB-1996 copied from mmtest.mf (Jeroen Hellingman)
+%
+%%%%%%
+
+input var_ja
+
+%%%%%% characters under design
+%
+% TODO for version 2.0
+%
+%   a       joint
+%   aa      joint
+% * i       not as deep, joint
+% * u       not as deep, joint
+%   ri      not as deep, smaller bottom loop
+%
+%   gha     deep variant (looks like reversed tha with pa-head)
+%   nga     joint
+%   ja      joint
+%   jha     joint
+%   nya     joint
+%   tta     balance (bottom fatter, no longer symmetrical)
+%   dda     joint
+%   ddha    joint
+%   nna     joint (twice), make a bit narrower
+%   dha     joint
+% * na      joint
+%   n+      joint, tail
+%   ba      joint
+%   sa      joint
+%   lla     not as deep
+%
+%   conjuncts of the above.
+%   virama tails
+%
+%%%%% new parameter "joint"
+
+joint := 6uh;               % height of the joints in letter dha, na
+                            % (measured from top)
+
+
+def virama_tail(suffix a,b,c,d,e,f,g) =
+% define points of the tail for virama in "n", "nn", "r", and "ll"
+% x values relative to x.a, which is supposed to be the right most point of the
+%                           curve to which the viram is to be attached
+% y values absolute
+  z.b = (.55[x.a, x.c], 0);
+  z.c = (x.a-9uw, 6uh);
+  z.d = (x.a-7uw, 15uh);
+  z.e = (x.a-4uw, 24uh);
+  z.f = (x.a-8uw, 28uh);
+  z.g = (x.a-12uw, 27uh);       % changed 04-FEB-1996
+enddef;
+
+def letter_na(suffix a,b,c,i,d,j,e,f,g,h) =
+% define points of "malayalam letter na"
+% x coordinates relative to x.b
+% y coordinates absolute;
+  z.a=(x.b+4uw, 0);
+  z.b=(x.b, 10uh);
+  z.c=(x.b+8uw, 20uh);
+  z.i=(0.550[x.b, x.d], y.c);
+  z.d=(x.b+16uw, 10uh);
+  z.j=(x.d, 20uh-joint);       % changed 24-DEC-1995 JH
+  z.e=(x.d, .5uh);
+  z.f=(x.b+24uw, 20uh);
+  z.g=(x.b+32uw, 10uh);
+  z.h=(x.b+28uw, 0);
+enddef;
+
+def draw_letter_na(suffix a,b,c,i,d,j,e,f,g,h) =
+  draw z.a..z.b{up}..z.i{right}..{down}z.j---z.e;   % changed 24-DEC-1995 JH
+  draw z.j{curl 0}..z.f{right}..z.g{down}..z.h;
+enddef;
+
+beginchar(c_na,32uw#+rm#,20uh#,0); "U+0D28 malayalam letter na";
+  pickup frame_pen;
+  x2=0;
+  letter_na(1,2,3,9,4,10,5,6,7,8);
+  draw_letter_na(1,2,3,9,4,10,5,6,7,8);
+  penlabels(1,2,3,9,4,10,5,6,7,8);
+endchar;
+
+beginchar(c_n_virama,33uw#+rm#,28uh#,0); "n+virama";
+  pickup frame_pen;
+  x2=0;
+  letter_na(1,2,3,14,4,15,5,6',7',8');
+  z7 = z7' + (1uw, 0uh);          % make the letter a bit wider
+  z6 = (.5[x5,x7], y6');
+  virama_tail(7,8,9,10,11,12,13);
+  draw z1..z2{up}..z14{right}..{down}z15---z5;
+  draw z15{curl 0}..z6{right}..z7{down}..z8{left}..z9{up}..
+         z10..z11{up}..z12{left}..z13;
+  penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15);
+endchar;
+
+% The following i is experimental, the eye not being an ellipse
+% sofar the results are unsatisfactory
+
+beginchar(c_i,32uw#+rm#,20uh#,8uh#); "U+0D07 malayalam letter i";
+  pickup frame_pen;
+  % pickup skeleton_pen;
+  x5=0uw;
+  half_ba(1',2',3',4',5',6,7,8',9,10,11');
+  y4=4uh;
+  x1=1uw;
+  eye(1,2,3,4)(9uw,9uh);
+  z5=(x5', .5[y4,y6]);
+  z8=(x8', y4+.5uh);
+
+  z11=(23uw, 0uh);
+  z12=(6uw, y11);
+  z13=(-1uw, -4uh);
+  z14=(x12, -8uh);
+  z15=(34uw, y14);
+
+  % draw_eye(1,2,3,4);
+  z16=(.3uw, 9uh);
+  z17=(x7, 20uh-joint);
+  z18=(0.550[x5, x17], y6);
+  draw z16..z2{right}..z3{down}..z4{left}..z5{up}..z18{right}..z17{down}--z8;
+  draw z17..z9{right}..z10{down}..z11---z12..z13{down}..z14---z15;
+  % draw z4{left}..z5{up}..z6{right}..z7{down}--z8;
+  % draw z7{up}..z9{right}..z10{down}..z11---z12..z13{down}..
+  %      z14---z15;
+  penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18);
+
+  % cutoff(z8, -rot); cutoff(z8, -rot);
+  % cutoff(z15, -rot); cutoff(z8, -rot);
+endchar;
+
+
+"no more characters under design";
+
+end.

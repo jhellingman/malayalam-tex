@@ -1,0 +1,33 @@
+% dntrmacs.tex -- macro's for transcription of devanaagarii.
+% Copyright 1993 Jeroen Hellingman
+% last edit: 07-JAN-1993
+%
+% macro for two accents on one letter
+%
+% put accent #1 centered on top of #2
+\def\putaccentontop#1#2{\hskip0pt{\setbox0=\hbox{#2}\setbox1=\hbox{#1}%
+    \dimen0=.5\wd0\advance\dimen0by.5\wd1%
+    \dimen1=\ht0\advance\dimen1by-1ex% was: .45em%
+    \dimen3=.5\wd0\advance\dimen3by-.5\wd1%
+    \box0\kern-\dimen0\raise\dimen1\box1\kern\dimen3}}
+%
+% macros for special letters
+%
+\def\dntr{\hyphenpenalty=10000%
+    \def\ltwig##1{\putaccentontop{\char"7E}{\hbox{\=##1}}}%
+    \def\rii{\putaccentontop{\char"16}{\hbox{\d r}}}%
+    \def\RII{\putaccentontop{\char"16}{\hbox{\d R}}}%
+    \def\lii{\putaccentontop{\char"16}{\hbox{\d l}}}%
+    \def\LII{\putaccentontop{\char"16}{\hbox{\d L}}}%
+    \def\kh{{$\underline{\hbox{kh}}$}}%
+    \def\Kh{{$\underline{\hbox{Kh}}$}}%
+    \def\KH{{$\underline{\hbox{KH}}$}}%
+    \def\G{\b G}\def\g{\b g}}
+%
+% make math-modes and dollar-sign available again
+%
+\def\math{$}
+\def\Math{$$}
+\def\dollar{{\$}}
+%
+% end of dntrmacs.tex
